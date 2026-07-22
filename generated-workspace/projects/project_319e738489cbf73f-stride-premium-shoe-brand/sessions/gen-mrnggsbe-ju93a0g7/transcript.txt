@@ -1,0 +1,2845 @@
+
+===FILE:src/data/siteContent.js===
+const siteContent = {
+  brand: {
+    name: "Stride",
+    tagline: "Premium Footwear, Thoughtfully Designed",
+    description: "Crafted for the modern individual who values both style and comfort. Every pair is designed with meticulous attention to detail and premium materials."
+  },
+  navigation: [
+    { label: "Home", href: "#home" },
+    { label: "Products", href: "#products" },
+    { label: "Cart", href: "#cart" },
+    { label: "Checkout", href: "#checkout" }
+  ],
+  hero: {
+    headline: "Step Into Excellence",
+    subheadline: "Premium footwear crafted for every stride in your journey",
+    primaryCta: "Shop Collection",
+    secondaryCta: "New Arrivals"
+  },
+  categories: [
+    { id: "sneakers", name: "Sneakers", description: "Casual and athletic sneakers for everyday wear" },
+    { id: "boots", name: "Boots", description: "Premium boots for all seasons and occasions" },
+    { id: "athletic", name: "Athletic", description: "Performance footwear for sports and training" },
+    { id: "casual", name: "Casual", description: "Comfortable everyday shoes with style" }
+  ],
+  brandStory: {
+    title: "Our Story",
+    content: "Founded in 2015, Stride emerged from a simple belief: exceptional footwear should be accessible to everyone. Our journey began in a small workshop where craftsmanship met innovation, creating shoes that honor tradition while embracing modern comfort.",
+    craftsmanship: "Each pair is handcrafted using premium materials sourced from sustainable suppliers. We believe in the intersection of form and function, creating footwear that tells a story of its own.",
+    founder: "Marcus Chen, Founder & Creative Director"
+  },
+  newsletter: {
+    title: "Join the Movement",
+    description: "Subscribe to receive updates on new collections, exclusive offers, and style inspiration.",
+    placeholder: "Enter your email address",
+    buttonText: "Subscribe",
+    successMessage: "Thank you for subscribing! Check your inbox for confirmation."
+  },
+  footer: {
+    links: [
+      { label: "About Us", href: "#about" },
+      { label: "Shipping & Returns", href: "#shipping" },
+      { label: "Size Guide", href: "#size-guide" },
+      { label: "Contact", href: "#contact" }
+    ],
+    social: [
+      { label: "Instagram", href: "#instagram" },
+      { label: "Facebook", href: "#facebook" },
+      { label: "Twitter", href: "#twitter" }
+    ],
+    copyright: "© 2024 Stride. All rights reserved."
+  }
+};
+
+export default siteContent;
+===END_FILE===
+
+===FILE:src/data/mockProducts.js===
+const mockProducts = [
+  {
+    id: "1",
+    name: "Urban Classic Sneaker",
+    description: "A timeless silhouette reimagined with premium leather and cushioned footbed for all-day comfort. Perfect for both casual outings and smart-casual occasions.",
+    price: 189.99,
+    salePrice: null,
+    category: "sneakers",
+    rating: 4.8,
+    reviewCount: 124,
+    images: [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80&angle=1",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80&angle=2"
+    ],
+    sizes: [7, 8, 9, 10, 11, 12],
+    colors: ["black", "white", "taupe"],
+    material: "Premium leather upper with rubber sole",
+    inStock: true
+  },
+  {
+    id: "2",
+    name: "Alpine Trail Boot",
+    description: "Rugged yet refined boot designed for outdoor adventures without compromising on style. Water-resistant construction with reinforced toe cap.",
+    price: 249.99,
+    salePrice: 199.99,
+    category: "boots",
+    rating: 4.6,
+    reviewCount: 89,
+    images: [
+      "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=800&q=80",
+      "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=800&q=80&angle=1"
+    ],
+    sizes: [8, 9, 10, 11, 12],
+    colors: ["brown", "black"],
+    material: "Water-resistant suede with leather accents",
+    inStock: true
+  },
+  {
+    id: "3",
+    name: "Sprint Elite Runner",
+    description: "Engineered for peak performance with responsive midsole cushioning and breathable mesh upper. Designed for serious runners who demand excellence.",
+    price: 159.99,
+    salePrice: null,
+    category: "athletic",
+    rating: 4.9,
+    reviewCount: 203,
+    images: [
+      "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=800&q=80",
+      "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=800&q=80&angle=1"
+    ],
+    sizes: [7, 8, 9, 10, 11, 12, 13],
+    colors: ["blue", "gray", "red"],
+    material: "Breathable mesh with EVA midsole",
+    inStock: true
+  },
+  {
+    id: "4",
+    name: "Weekend Loafer",
+    description: "Effortless sophistication in a slip-on design. Handcrafted with supple leather and featuring our signature comfort insole.",
+    price: 179.99,
+    salePrice: null,
+    category: "casual",
+    rating: 4.7,
+    reviewCount: 67,
+    images: [
+      "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=800&q=80",
+      "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=800&q=80&angle=1"
+    ],
+    sizes: [7, 8, 9, 10, 11],
+    colors: ["brown", "black", "navy"],
+    material: "Full-grain leather with cushioned footbed",
+    inStock: true
+  },
+  {
+    id: "5",
+    name: "Metropolitan Oxford",
+    description: "The perfect blend of formal and casual. Traditional brogue detailing meets contemporary comfort technology.",
+    price: 219.99,
+    salePrice: 189.99,
+    category: "casual",
+    rating: 4.5,
+    reviewCount: 94,
+    images: [
+      "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=800&q=80",
+      "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=800&q=80&angle=1"
+    ],
+    sizes: [8, 9, 10, 11, 12],
+    colors: ["black", "brown"],
+    material: "Polished leather with leather lining",
+    inStock: true
+  },
+  {
+    id: "6",
+    name: "Summit Hiking Boot",
+    description: "Conquer any terrain with confidence. Features ankle support, aggressive tread pattern, and waterproof membrane.",
+    price: 289.99,
+    salePrice: null,
+    category: "boots",
+    rating: 4.8,
+    reviewCount: 156,
+    images: [
+      "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=800&q=80",
+      "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=800&q=80&angle=1"
+    ],
+    sizes: [8, 9, 10, 11, 12, 13],
+    colors: ["brown", "black"],
+    material: "Waterproof leather with Vibram sole",
+    inStock: true
+  },
+  {
+    id: "7",
+    name: "Court Pro Sneaker",
+    description: "Basketball-inspired design with modern streetwear appeal. Signature silhouette with bold branding.",
+    price: 149.99,
+    salePrice: null,
+    category: "sneakers",
+    rating: 4.4,
+    reviewCount: 78,
+    images: [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80&angle=1"
+    ],
+    sizes: [7, 8, 9, 10, 11],
+    colors: ["white", "black", "red"],
+    material: "Synthetic upper with rubber outsole",
+    inStock: true
+  },
+  {
+    id: "8",
+    name: "Marathon Training Shoe",
+    description: "Designed for long-distance running with maximum cushioning and energy return. Lightweight yet durable for serious training.",
+    price: 179.99,
+    salePrice: null,
+    category: "athletic",
+    rating: 4.7,
+    reviewCount: 167,
+    images: [
+      "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=800&q=80",
+      "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=800&q=80&angle=1"
+    ],
+    sizes: [7, 8, 9, 10, 11, 12],
+    colors: ["gray", "blue", "green"],
+    material: "Engineered mesh with responsive foam midsole",
+    inStock: true
+  },
+  {
+    id: "9",
+    name: "Desert Chukka Boot",
+    description: "Ankle-high boot with minimalist design. Perfect for transitioning from day to evening wear with ease.",
+    price: 229.99,
+    salePrice: 199.99,
+    category: "boots",
+    rating: 4.6,
+    reviewCount: 112,
+    images: [
+      "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=800&q=80",
+      "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=800&q=80&angle=1"
+    ],
+    sizes: [7, 8, 9, 10, 11, 12],
+    colors: ["tan", "brown", "black"],
+    material: "Suede leather with leather sole",
+    inStock: true
+  },
+  {
+    id: "10",
+    name: "Canvas Slip-On",
+    description: "Lightweight and breathable slip-on shoe for warm weather. Classic canvas construction with cushioned insole.",
+    price: 99.99,
+    salePrice: null,
+    category: "casual",
+    rating: 4.3,
+    reviewCount: 45,
+    images: [
+      "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=800&q=80",
+      "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=800&q=80&angle=1"
+    ],
+    sizes: [6, 7, 8, 9, 10, 11],
+    colors: ["navy", "white", "black"],
+    material: "Canvas upper with rubber sole",
+    inStock: true
+  },
+  {
+    id: "11",
+    name: "Performance Track Shoe",
+    description: "Competition-ready spike shoe for track and field events. Lightweight carbon fiber plate for maximum propulsion.",
+    price: 239.99,
+    salePrice: null,
+    category: "athletic",
+    rating: 4.9,
+    reviewCount: 88,
+    images: [
+      "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=800&q=80",
+      "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=800&q=80&angle=1"
+    ],
+    sizes: [7, 8, 9, 10, 11, 12],
+    colors: ["yellow", "black", "blue"],
+    material: "Flyknit upper with carbon fiber plate",
+    inStock: true
+  },
+  {
+    id: "12",
+    name: "Retro High-Top",
+    description: "Vintage-inspired high-top with modern comfort features. Bold ankle coverage with signature branding.",
+    price: 169.99,
+    salePrice: 149.99,
+    category: "sneakers",
+    rating: 4.5,
+    reviewCount: 143,
+    images: [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80&angle=1"
+    ],
+    sizes: [8, 9, 10, 11, 12],
+    colors: ["white", "black", "red"],
+    material: "Suede and leather combination",
+    inStock: true
+  }
+];
+
+export default mockProducts;
+===END_FILE===
+
+===FILE:src/theme/theme.js===
+import { createTheme } from "@mantine/core";
+
+const siteTheme = createTheme({
+  primaryColor: "slate",
+  colors: {
+    slate: [
+      "#f8fafc",
+      "#f1f5f9",
+      "#e2e8f0",
+      "#cbd5e1",
+      "#94a3b8",
+      "#64748b",
+      "#475569",
+      "#334155",
+      "#1e293b",
+      "#0f172a"
+    ],
+    taupe: [
+      "#fafaf9",
+      "#f5f5f4",
+      "#e7e5e4",
+      "#d6d3d1",
+      "#a8a29e",
+      "#78716c",
+      "#57534e",
+      "#44403c",
+      "#292524",
+      "#1c1917"
+    ],
+    gold: [
+      "#fefdf9",
+      "#fdf6e3",
+      "#fae7a0",
+      "#f7d96b",
+      "#f0c543",
+      "#d4af37",
+      "#b8962f",
+      "#9c7c27",
+      "#80631f",
+      "#644a17"
+    ]
+  },
+  primaryShade: 7,
+  defaultRadius: "md",
+  components: {
+    Button: {
+      defaultProps: {
+        color: "slate",
+        radius: "md",
+        fw: 500
+      },
+      styles: {
+        root: {
+          transition: "all 150ms ease"
+        }
+      }
+    },
+    Card: {
+      defaultProps: {
+        radius: "md",
+        shadow: "sm"
+      }
+    },
+    Badge: {
+      defaultProps: {
+        radius: "sm",
+        fw: 500
+      }
+    },
+    TextInput: {
+      defaultProps: {
+        radius: "sm",
+        size: "md"
+      }
+    },
+    Select: {
+      defaultProps: {
+        radius: "sm"
+      }
+    },
+    Slider: {
+      defaultProps: {
+        color: "gold"
+      }
+    }
+  }
+});
+
+export default siteTheme;
+===END_FILE===
+
+===FILE:src/context/CartContext.jsx===
+import { createContext, useContext, useEffect, useState } from "react";
+
+const CartContext = createContext(null);
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart must be used within CartProvider");
+  }
+  return context;
+};
+
+export const CartProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("stride-cart");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed)) {
+          setCartItems(parsed);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to load cart from localStorage:", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("stride-cart", JSON.stringify(cartItems));
+    } catch (error) {
+      console.error("Failed to save cart to localStorage:", error);
+    }
+  }, [cartItems]);
+
+  const addItem = (product, quantity = 1, selectedSize, selectedColor) => {
+    setCartItems((prev) => {
+      const safePrev = Array.isArray(prev) ? prev : [];
+      const existingIndex = safePrev.findIndex(
+        (item) =>
+          item.productId === product.id &&
+          item.selectedSize === selectedSize &&
+          item.selectedColor === selectedColor
+      );
+
+      if (existingIndex >= 0) {
+        const updated = [...safePrev];
+        updated[existingIndex] = {
+          ...updated[existingIndex],
+          quantity: updated[existingIndex].quantity + quantity
+        };
+        return updated;
+      }
+
+      return [
+        ...safePrev,
+        {
+          id: `${product.id}-${Date.now()}`,
+          productId: product.id,
+          name: product.name,
+          price: product.salePrice || product.price,
+          image: product.images?.[0] || "",
+          quantity,
+          selectedSize,
+          selectedColor
+        }
+      ];
+    });
+  };
+
+  const removeItem = (itemId) => {
+    setCartItems((prev) => {
+      const safePrev = Array.isArray(prev) ? prev : [];
+      return safePrev.filter((item) => item.id !== itemId);
+    });
+  };
+
+  const updateQuantity = (itemId, quantity) => {
+    setCartItems((prev) => {
+      const safePrev = Array.isArray(prev) ? prev : [];
+      if (quantity <= 0) {
+        return safePrev.filter((item) => item.id !== itemId);
+      }
+      return safePrev.map((item) =>
+        item.id === itemId ? { ...item, quantity } : item
+      );
+    });
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  const getCartTotal = () => {
+    const safeItems = Array.isArray(cartItems) ? cartItems : [];
+    return safeItems.reduce(
+      (total, item) => total + (item.price || 0) * (item.quantity || 1),
+      0
+    );
+  };
+
+  const getCartCount = () => {
+    const safeItems = Array.isArray(cartItems) ? cartItems : [];
+    return safeItems.reduce(
+      (count, item) => count + (item.quantity || 1),
+      0
+    );
+  };
+
+  const value = {
+    cartItems,
+    addItem,
+    removeItem,
+    updateQuantity,
+    clearCart,
+    getCartTotal,
+    getCartCount
+  };
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+};
+
+export default CartContext;
+===END_FILE===
+
+===FILE:src/lib/formatPrice.js===
+const formatPrice = (price) => {
+  const safePrice = typeof price === "number" ? price : 0;
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(safePrice);
+};
+
+export default formatPrice;
+===END_FILE===
+
+===FILE:src/lib/localStorage.js===
+const getLocalStorage = (key, defaultValue = null) => {
+  try {
+    const item = localStorage.getItem(key);
+    if (item === null) {
+      return defaultValue;
+    }
+    return JSON.parse(item);
+  } catch (error) {
+    console.error(`Failed to get localStorage key "${key}":`, error);
+    return defaultValue;
+  }
+};
+
+const setLocalStorage = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (error) {
+    console.error(`Failed to set localStorage key "${key}":`, error);
+    return false;
+  }
+};
+
+const removeLocalStorage = (key) => {
+  try {
+    localStorage.removeItem(key);
+    return true;
+  } catch (error) {
+    console.error(`Failed to remove localStorage key "${key}":`, error);
+    return false;
+  }
+};
+
+export { getLocalStorage, setLocalStorage, removeLocalStorage };
+export default { getLocalStorage, setLocalStorage, removeLocalStorage };
+===END_FILE===
+
+===FILE:src/components/common/RatingStars.jsx===
+import { Group, Text, rem } from "@mantine/core";
+import { IconStar, IconStarHalf, IconStarFilled } from "@tabler/icons-react";
+
+const RatingStars = ({ rating = 0, reviewCount = 0, size = 16 }) => {
+  const safeRating = typeof rating === "number" ? rating : 0;
+  const safeReviewCount = typeof reviewCount === "number" ? reviewCount : 0;
+  
+  const fullStars = Math.floor(safeRating);
+  const hasHalfStar = safeRating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+  return (
+    <Group gap={4} align="center">
+      <Group gap={2}>
+        {[...Array(fullStars)].map((_, i) => (
+          <IconStarFilled key={`full-${i}`} size={rem(size)} style={{ color: "#d4af37" }} />
+        ))}
+        {hasHalfStar && <IconStarHalf size={rem(size)} style={{ color: "#d4af37" }} />}
+        {[...Array(emptyStars)].map((_, i) => (
+          <IconStar key={`empty-${i}`} size={rem(size)} style={{ color: "#cbd5e1" }} />
+        ))}
+      </Group>
+      {safeReviewCount > 0 && (
+        <Text size="xs" c="dimmed">
+          ({safeReviewCount})
+        </Text>
+      )}
+    </Group>
+  );
+};
+
+export default RatingStars;
+===END_FILE===
+
+===FILE:src/components/common/LoadingSkeleton.jsx===
+import { Skeleton, SimpleGrid, Card, rem } from "@mantine/core";
+
+const LoadingSkeleton = ({ count = 8, height = 350 }) => {
+  const safeCount = typeof count === "number" ? count : 8;
+  const safeHeight = typeof height === "number" ? height : 350;
+
+  return (
+    <SimpleGrid cols={{ base: 1, xs: 2, sm: 3, lg: 4 }} spacing="lg">
+      {[...Array(safeCount)].map((_, index) => (
+        <Card key={index} padding="md" radius="md" shadow="sm">
+          <Skeleton height={rem(safeHeight * 0.7)} radius="md" mb="md" />
+          <Skeleton height={16} width="80%" radius="sm" mb="xs" />
+          <Skeleton height={14} width="60%" radius="sm" mb="md" />
+          <Skeleton height={20} width="40%" radius="sm" />
+        </Card>
+      ))}
+    </SimpleGrid>
+  );
+};
+
+export default LoadingSkeleton;
+===END_FILE===
+
+===FILE:src/components/common/EmptyState.jsx===
+import { Center, Stack, Text, Button, rem } from "@mantine/core";
+import { IconSearch, IconShoppingCart, IconPackage } from "@tabler/icons-react";
+
+const EmptyState = ({ 
+  type = "search", 
+  title = "No results found", 
+  description = "Try adjusting your search or filter criteria",
+  actionLabel = "Clear Filters",
+  onAction 
+}) => {
+  const safeTitle = typeof title === "string" ? title : "No results found";
+  const safeDescription = typeof description === "string" ? description : "";
+  const safeActionLabel = typeof actionLabel === "string" ? actionLabel : null;
+
+  const getIcon = () => {
+    switch (type) {
+      case "cart":
+        return <IconShoppingCart size={rem(64)} stroke={1.5} />;
+      case "products":
+        return <IconPackage size={rem(64)} stroke={1.5} />;
+      case "search":
+      default:
+        return <IconSearch size={rem(64)} stroke={1.5} />;
+    }
+  };
+
+  return (
+    <Center py={64}>
+      <Stack align="center" gap="lg">
+        {getIcon()}
+        <Stack align="center" gap="xs">
+          <Text size="xl" fw={600} c="dark">
+            {safeTitle}
+          </Text>
+          {safeDescription && (
+            <Text size="sm" c="dimmed" maw={400} ta="center">
+              {safeDescription}
+            </Text>
+          )}
+        </Stack>
+        {safeActionLabel && onAction && (
+          <Button variant="outline" onClick={onAction}>
+            {safeActionLabel}
+          </Button>
+        )}
+      </Stack>
+    </Center>
+  );
+};
+
+export default EmptyState;
+===END_FILE===
+
+===FILE:src/components/common/ProductCard.jsx===
+import { Card, Image, Text, Group, Badge, Button, ActionIcon, Box, rem } from "@mantine/core";
+import { IconHeart, IconEye, IconShoppingCart } from "@tabler/icons-react";
+import { useDisclosure } from "@mantine/hooks";
+import RatingStars from "./RatingStars";
+import formatPrice from "../../lib/formatPrice";
+
+const ProductCard = ({ product, onQuickView, onAddToCart }) => {
+  const [hovered, { hover }] = useDisclosure(false);
+  
+  const safeProduct = product || {};
+  const name = safeProduct.name || "Unnamed Product";
+  const price = typeof safeProduct.price === "number" ? safeProduct.price : 0;
+  const salePrice = typeof safeProduct.salePrice === "number" ? safeProduct.salePrice : null;
+  const rating = typeof safeProduct.rating === "number" ? safeProduct.rating : 0;
+  const reviewCount = typeof safeProduct.reviewCount === "number" ? safeProduct.reviewCount : 0;
+  const category = safeProduct.category || "uncategorized";
+  const image = safeProduct.images?.[0] || "";
+  const inStock = safeProduct.inStock !== false;
+
+  const displayPrice = salePrice || price;
+  const hasDiscount = salePrice && salePrice < price;
+
+  const handleAddToCart = () => {
+    if (onAddToCart && inStock) {
+      onAddToCart(safeProduct);
+    }
+  };
+
+  const handleQuickView = () => {
+    if (onQuickView) {
+      onQuickView(safeProduct);
+    }
+  };
+
+  return (
+    <Card
+      shadow="sm"
+      padding="md"
+      radius="md"
+      style={{
+        transition: "transform 150ms ease, box-shadow 150ms ease",
+        transform: hovered ? "translateY(-4px)" : "none",
+        ...(hovered && { boxShadow: "xl" })
+      }}
+      {...hover}
+    >
+      <Box pos="relative">
+        <Image
+          src={image}
+          alt={name}
+          height={200}
+          fit="cover"
+          radius="md"
+          fallbackSrc="https://placehold.co/400x400?text=Product+Image"
+        />
+        {hasDiscount && (
+          <Badge
+            color="gold"
+            variant="filled"
+            pos="absolute"
+            top={8}
+            right={8}
+            size="sm"
+          >
+            Sale
+          </Badge>
+        )}
+        <Group pos="absolute" top={8} left={8} gap={4}>
+          <ActionIcon
+            variant="white"
+            size="sm"
+            radius="xl"
+            aria-label="Add to wishlist"
+            style={{ opacity: 0.9 }}
+          >
+            <IconHeart size={rem(16)} />
+          </ActionIcon>
+        </Group>
+      </Box>
+
+      <Group justify="space-between" mt="md" mb="xs">
+        <Text fw={600} size="sm" lineClamp={1}>
+          {name}
+        </Text>
+        <Badge variant="light" color="slate" size="xs">
+          {category}
+        </Badge>
+      </Group>
+
+      <Group gap="xs" mb="md">
+        <RatingStars rating={rating} reviewCount={reviewCount} />
+      </Group>
+
+      <Group justify="space-between" align="center">
+        <Group gap="xs">
+          <Text fw={700} size="md">
+            {formatPrice(displayPrice)}
+          </Text>
+          {hasDiscount && (
+            <Text size="xs" c="dimmed" td="line-through">
+              {formatPrice(price)}
+            </Text>
+          )}
+        </Group>
+        <Group gap={4}>
+          <ActionIcon
+            variant="subtle"
+            size="sm"
+            radius="xl"
+            aria-label="Quick view"
+            onClick={handleQuickView}
+          >
+            <IconEye size={rem(16)} />
+          </ActionIcon>
+          <ActionIcon
+            variant="filled"
+            size="sm"
+            radius="xl"
+            aria-label="Add to cart"
+            onClick={handleAddToCart}
+            disabled={!inStock}
+          >
+            <IconShoppingCart size={rem(16)} />
+          </ActionIcon>
+        </Group>
+      </Group>
+    </Card>
+  );
+};
+
+export default ProductCard;
+===END_FILE===
+
+===FILE:src/components/layout/Navbar.jsx===
+import { Box, Group, Text, ActionIcon, Burger, Drawer, ScrollArea, rem } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconShoppingCart, IconMenu2, IconX } from "@tabler/icons-react";
+import { useCart } from "../../context/CartContext";
+import siteContent from "../../data/siteContent";
+
+const Navbar = () => {
+  const [opened, { open, close }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const { getCartCount } = useCart();
+  
+  const navigation = Array.isArray(siteContent.navigation) ? siteContent.navigation : [];
+  const brandName = siteContent.brand?.name || "Stride";
+  const cartCount = typeof getCartCount === "function" ? getCartCount() : 0;
+
+  const scrollToSection = (href) => {
+    close();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const renderNavLinks = () => (
+    <Group gap="xl" visibleFrom="md">
+      {navigation.map((item, index) => (
+        <Text
+          key={index}
+          component="a"
+          href={item.href}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(item.href);
+          }}
+          style={{
+            cursor: "pointer",
+            textDecoration: "none",
+            color: "var(--mantine-color-text)",
+            fontWeight: 500,
+            transition: "color 150ms ease"
+          }}
+          className="hover:text-slate-7"
+        >
+          {item.label}
+        </Text>
+      ))}
+    </Group>
+  );
+
+  const renderMobileNav = () => (
+    <Drawer
+      opened={opened}
+      onClose={close}
+      title={brandName}
+      padding="md"
+      size="100%"
+      hiddenFrom="md"
+      closeButtonProps={{
+        icon: <IconX size={rem(24)} />
+      }}
+    >
+      <ScrollArea h="100%">
+        <Group gap="md" direction="column" align="stretch">
+          {navigation.map((item, index) => (
+            <Text
+              key={index}
+              component="a"
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.href);
+              }}
+              size="lg"
+              style={{
+                cursor: "pointer",
+                textDecoration: "none",
+                padding: rem(12),
+                borderRadius: rem(8),
+                "&:hover": {
+                  backgroundColor: "var(--mantine-color-slate-0)"
+                }
+              }}
+            >
+              {item.label}
+            </Text>
+          ))}
+        </Group>
+      </ScrollArea>
+    </Drawer>
+  );
+
+  return (
+    <Box
+      component="nav"
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+        backgroundColor: "rgba(255, 255, 255, 0.95)",
+        backdropFilter: "blur(8px)",
+        borderBottom: "1px solid var(--mantine-color-slate-2)"
+      }}
+      h={64}
+      px={{ base: "md", md: "xl" }}
+    >
+      <Group justify="space-between" h="100%" mx="auto" maw={1400}>
+        <Group>
+          <Burger
+            opened={opened}
+            onClick={open}
+            hiddenFrom="md"
+            size="sm"
+            aria-label="Toggle navigation"
+          />
+          <Text
+            component="a"
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("#home");
+            }}
+            size="xl"
+            fw={700}
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              letterSpacing: rem(-0.5),
+              color: "var(--mantine-color-slate-8)"
+            }}
+          >
+            {brandName}
+          </Text>
+        </Group>
+
+        {renderNavLinks()}
+
+        <Group>
+          <ActionIcon
+            variant="subtle"
+            size="lg"
+            radius="xl"
+            aria-label="Shopping cart"
+            onClick={() => scrollToSection("#cart")}
+            pos="relative"
+          >
+            <IconShoppingCart size={rem(22)} />
+            {cartCount > 0 && (
+              <Box
+                style={{
+                  position: "absolute",
+                  top: 4,
+                  right: 4,
+                  width: rem(18),
+                  height: rem(18),
+                  borderRadius: "50%",
+                  backgroundColor: "var(--mantine-color-gold-6)",
+                  color: "white",
+                  fontSize: rem(10),
+                  fontWeight: 600,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                {cartCount > 99 ? "99+" : cartCount}
+              </Box>
+            )}
+          </ActionIcon>
+        </Group>
+      </Group>
+
+      {renderMobileNav()}
+    </Box>
+  );
+};
+
+export default Navbar;
+===END_FILE===
+
+===FILE:src/components/layout/Footer.jsx===
+import { Box, Container, Group, Text, Anchor, Stack, Divider, rem } from "@mantine/core";
+import { IconBrandInstagram, IconBrandFacebook, IconBrandTwitter, IconMail } from "@tabler/icons-react";
+import siteContent from "../../data/siteContent";
+
+const Footer = () => {
+  const footerLinks = Array.isArray(siteContent.footer?.links) ? siteContent.footer.links : [];
+  const socialLinks = Array.isArray(siteContent.footer?.social) ? siteContent.footer.social : [];
+  const copyright = siteContent.footer?.copyright || "© 2024 Stride. All rights reserved.";
+  const brandName = siteContent.brand?.name || "Stride";
+  const brandDescription = siteContent.brand?.description || "Premium footwear for every stride.";
+
+  return (
+    <Box
+      component="footer"
+      style={{
+        backgroundColor: "var(--mantine-color-slate-9)",
+        color: "var(--mantine-color-slate-1)"
+      }}
+      pt={64}
+      pb={32}
+      mt={64}
+    >
+      <Container size="xl">
+        <Stack gap="xl">
+          <Group justify="space-between" align="flex-start" wrap="nowrap" gap="xl">
+            <Box maw={400}>
+              <Text size="xl" fw={700} mb="sm" c="white">
+                {brandName}
+              </Text>
+              <Text size="sm" c="slate.3" maw={300}>
+                {brandDescription}
+              </Text>
+            </Box>
+
+            <Group gap="xl" visibleFrom="sm">
+              <Stack gap="xs" maw={200}>
+                <Text size="sm" fw={600} c="white" mb="xs">
+                  Quick Links
+                </Text>
+                {footerLinks.map((link, index) => (
+                  <Anchor
+                    key={index}
+                    href={link.href}
+                    size="sm"
+                    c="slate.3"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {link.label}
+                  </Anchor>
+                ))}
+              </Stack>
+
+              <Stack gap="xs" maw={200}>
+                <Text size="sm" fw={600} c="white" mb="xs">
+                  Connect
+                </Text>
+                {socialLinks.map((social, index) => (
+                  <Anchor
+                    key={index}
+                    href={social.href}
+                    size="sm"
+                    c="slate.3"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {social.label}
+                  </Anchor>
+                ))}
+              </Stack>
+            </Group>
+          </Group>
+
+          <Divider color="slate.7" />
+
+          <Group justify="space-between" align="center" wrap="nowrap">
+            <Text size="xs" c="slate.4">
+              {copyright}
+            </Text>
+            <Group gap="xs">
+              <IconBrandInstagram size={rem(20)} style={{ color: "var(--mantine-color-slate-4)" }} />
+              <IconBrandFacebook size={rem(20)} style={{ color: "var(--mantine-color-slate-4)" }} />
+              <IconBrandTwitter size={rem(20)} style={{ color: "var(--mantine-color-slate-4)" }} />
+            </Group>
+          </Group>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default Footer;
+===END_FILE===
+
+===FILE:src/components/product/ProductGallery.jsx===
+import { Box, Image, Group, rem } from "@mantine/core";
+import { useHover } from "@mantine/hooks";
+import { useState } from "react";
+
+const ProductGallery = ({ images = [], productName = "Product" }) => {
+  const [mainImage, setMainImage] = useState(0);
+  const { ref, hovered } = useHover();
+  
+  const safeImages = Array.isArray(images) && images.length > 0 
+    ? images 
+    : ["https://placehold.co/600x600?text=Product+Image"];
+
+  const handleThumbnailClick = (index) => {
+    setMainImage(index);
+  };
+
+  return (
+    <Box>
+      <Box
+        ref={ref}
+        pos="relative"
+        mb="md"
+        style={{
+          overflow: "hidden",
+          borderRadius: rem(12),
+          cursor: "zoom-in"
+        }}
+      >
+        <Image
+          src={safeImages[mainImage]}
+          alt={`${productName} - View ${mainImage + 1}`}
+          fit="cover"
+          style={{
+            transition: "transform 300ms ease",
+            transform: hovered ? "scale(1.05)" : "scale(1)",
+            width: "100%",
+            height: rem(400),
+            objectFit: "cover"
+          }}
+          fallbackSrc="https://placehold.co/600x600?text=Product+Image"
+        />
+      </Box>
+
+      {safeImages.length > 1 && (
+        <Group gap="xs" justify="center" wrap="nowrap" style={{ overflowX: "auto" }}>
+          {safeImages.map((image, index) => (
+            <Box
+              key={index}
+              onClick={() => handleThumbnailClick(index)}
+              style={{
+                cursor: "pointer",
+                borderRadius: rem(8),
+                border: index === mainImage 
+                  ? "2px solid var(--mantine-color-gold-6)" 
+                  : "2px solid transparent",
+                transition: "border-color 150ms ease",
+                overflow: "hidden",
+                minWidth: rem(64),
+                minHeight: rem(64)
+              }}
+            >
+              <Image
+                src={image}
+                alt={`${productName} - Thumbnail ${index + 1}`}
+                width={rem(64)}
+                height={rem(64)}
+                fit="cover"
+                style={{
+                  opacity: index === mainImage ? 1 : 0.7,
+                  transition: "opacity 150ms ease"
+                }}
+                fallbackSrc="https://placehold.co/64x64?text=Thumb"
+              />
+            </Box>
+          ))}
+        </Group>
+      )}
+    </Box>
+  );
+};
+
+export default ProductGallery;
+===END_FILE===
+
+===FILE:src/components/product/SizeSelector.jsx===
+import { Group, Button, Text, rem } from "@mantine/core";
+
+const SizeSelector = ({ sizes = [], selectedSize, onSelectSize }) => {
+  const safeSizes = Array.isArray(sizes) ? sizes : [];
+  const safeSelectedSize = selectedSize !== undefined ? selectedSize : null;
+
+  const handleSizeSelect = (size) => {
+    if (onSelectSize) {
+      onSelectSize(size);
+    }
+  };
+
+  return (
+    <div>
+      <Text size="sm" fw={500} mb="xs">
+        Select Size
+      </Text>
+      <Group gap="xs" wrap="wrap">
+        {safeSizes.map((size, index) => (
+          <Button
+            key={index}
+            variant={safeSelectedSize === size ? "filled" : "outline"}
+            color={safeSelectedSize === size ? "gold" : "slate"}
+            size="sm"
+            radius="sm"
+            onClick={() => handleSizeSelect(size)}
+            style={{
+              minWidth: rem(48),
+              fontWeight: safeSelectedSize === size ? 600 : 400
+            }}
+          >
+            {size}
+          </Button>
+        ))}
+      </Group>
+    </div>
+  );
+};
+
+export default SizeSelector;
+===END_FILE===
+
+===FILE:src/components/product/ColorSelector.jsx===
+import { Group, UnstyledButton, Text, rem } from "@mantine/core";
+
+const colorMap = {
+  black: "#1e293b",
+  white: "#ffffff",
+  brown: "#92400e",
+  tan: "#d6d3d1",
+  navy: "#1e3a8a",
+  blue: "#3b82f6",
+  gray: "#6b7280",
+  red: "#dc2626",
+  green: "#16a34a",
+  taupe: "#78716c",
+  yellow: "#eab308"
+};
+
+const ColorSelector = ({ colors = [], selectedColor, onSelectColor }) => {
+  const safeColors = Array.isArray(colors) ? colors : [];
+  const safeSelectedColor = selectedColor !== undefined ? selectedColor : null;
+
+  const handleColorSelect = (color) => {
+    if (onSelectColor) {
+      onSelectColor(color);
+    }
+  };
+
+  const getColorStyle = (color) => {
+    const baseColor = colorMap[color.toLowerCase()] || "#64748b";
+    return {
+      backgroundColor: baseColor,
+      border: color.toLowerCase() === "white" 
+        ? "2px solid var(--mantine-color-slate-3)" 
+        : "2px solid transparent",
+      outline: safeSelectedColor === color ? "2px solid var(--mantine-color-gold-6)" : "none",
+      outlineOffset: safeSelectedColor === color ? "2px" : "0"
+    };
+  };
+
+  return (
+    <div>
+      <Text size="sm" fw={500} mb="xs">
+        Select Color
+      </Text>
+      <Group gap="xs" wrap="wrap">
+        {safeColors.map((color, index) => (
+          <UnstyledButton
+            key={index}
+            onClick={() => handleColorSelect(color)}
+            aria-label={`Select ${color} color`}
+            style={{
+              width: rem(32),
+              height: rem(32),
+              borderRadius: "50%",
+              ...getColorStyle(color),
+              transition: "all 150ms ease",
+              transform: safeSelectedColor === color ? "scale(1.1)" : "scale(1)"
+            }}
+          />
+        ))}
+      </Group>
+    </div>
+  );
+};
+
+export default ColorSelector;
+===END_FILE===
+
+===FILE:src/components/product/QuantityControl.jsx===
+import { Group, ActionIcon, Text, rem } from "@mantine/core";
+import { IconMinus, IconPlus } from "@tabler/icons-react";
+
+const QuantityControl = ({ quantity = 1, min = 1, max = 10, onChange }) => {
+  const safeQuantity = typeof quantity === "number" ? quantity : 1;
+  const safeMin = typeof min === "number" ? min : 1;
+  const safeMax = typeof max === "number" ? max : 10;
+
+  const handleDecrement = () => {
+    if (safeQuantity > safeMin && onChange) {
+      onChange(safeQuantity - 1);
+    }
+  };
+
+  const handleIncrement = () => {
+    if (safeQuantity < safeMax && onChange) {
+      onChange(safeQuantity + 1);
+    }
+  };
+
+  return (
+    <Group gap={4} align="center">
+      <ActionIcon
+        variant="outline"
+        size="sm"
+        radius="sm"
+        aria-label="Decrease quantity"
+        onClick={handleDecrement}
+        disabled={safeQuantity <= safeMin}
+      >
+        <IconMinus size={rem(16)} />
+      </ActionIcon>
+      <Text size="sm" fw={500} w={32} ta="center">
+        {safeQuantity}
+      </Text>
+      <ActionIcon
+        variant="outline"
+        size="sm"
+        radius="sm"
+        aria-label="Increase quantity"
+        onClick={handleIncrement}
+        disabled={safeQuantity >= safeMax}
+      >
+        <IconPlus size={rem(16)} />
+      </ActionIcon>
+    </Group>
+  );
+};
+
+export default QuantityControl;
+===END_FILE===
+
+===FILE:src/components/product/ProductInfo.jsx===
+import { Stack, Group, Text, Button, Divider, Paper, rem } from "@mantine/core";
+import { IconShoppingCart, IconHeart } from "@tabler/icons-react";
+import RatingStars from "../common/RatingStars";
+import SizeSelector from "./SizeSelector";
+import ColorSelector from "./ColorSelector";
+import QuantityControl from "./QuantityControl";
+import formatPrice from "../../lib/formatPrice";
+
+const ProductInfo = ({ 
+  product, 
+  selectedSize, 
+  selectedColor, 
+  quantity,
+  onSizeSelect,
+  onColorSelect,
+  onQuantityChange,
+  onAddToCart 
+}) => {
+  const safeProduct = product || {};
+  const name = safeProduct.name || "Unnamed Product";
+  const price = typeof safeProduct.price === "number" ? safeProduct.price : 0;
+  const salePrice = typeof safeProduct.salePrice === "number" ? safeProduct.salePrice : null;
+  const rating = typeof safeProduct.rating === "number" ? safeProduct.rating : 0;
+  const reviewCount = typeof safeProduct.reviewCount === "number" ? safeProduct.reviewCount : 0;
+  const description = safeProduct.description || "";
+  const sizes = Array.isArray(safeProduct.sizes) ? safeProduct.sizes : [];
+  const colors = Array.isArray(safeProduct.colors) ? safeProduct.colors : [];
+  const material = safeProduct.material || "";
+  const inStock = safeProduct.inStock !== false;
+
+  const displayPrice = salePrice || price;
+  const hasDiscount = salePrice && salePrice < price;
+
+  const handleAddToCart = () => {
+    if (onAddToCart && inStock && selectedSize) {
+      onAddToCart();
+    }
+  };
+
+  return (
+    <Stack gap="lg">
+      <div>
+        <Group justify="space-between" align="flex-start" mb="xs">
+          <div>
+            <Text size="xl" fw={700} lh={1.2}>
+              {name}
+            </Text>
+            <Group gap="xs" mt="xs">
+              <RatingStars rating={rating} reviewCount={reviewCount} />
+            </Group>
+          </div>
+          <Group gap="xs" align="flex-end">
+            <Text fw={700} size="xl" c="gold">
+              {formatPrice(displayPrice)}
+            </Text>
+            {hasDiscount && (
+              <Text size="sm" c="dimmed" td="line-through">
+                {formatPrice(price)}
+              </Text>
+            )}
+          </Group>
+        </Group>
+
+        <Text size="sm" c="dimmed" lh={1.6}>
+          {description}
+        </Text>
+      </div>
+
+      <Divider />
+
+      <SizeSelector
+        sizes={sizes}
+        selectedSize={selectedSize}
+        onSelectSize={onSizeSelect}
+      />
+
+      <ColorSelector
+        colors={colors}
+        selectedColor={selectedColor}
+        onSelectColor={onColorSelect}
+      />
+
+      <QuantityControl
+        quantity={quantity}
+        min={1}
+        max={10}
+        onChange={onQuantityChange}
+      />
+
+      <Group gap="md" mt="md">
+        <Button
+          leftSection={<IconShoppingCart size={rem(18)} />}
+          size="md"
+          radius="md"
+          onClick={handleAddToCart}
+          disabled={!inStock || !selectedSize}
+          style={{ flex: 1 }}
+        >
+          Add to Cart
+        </Button>
+        <ActionIcon
+          variant="outline"
+          size="md"
+          radius="md"
+          aria-label="Add to wishlist"
+        >
+          <IconHeart size={rem(18)} />
+        </ActionIcon>
+      </Group>
+
+      {material && (
+        <Paper p="md" radius="md" bg="slate.0">
+          <Text size="sm" fw={500} mb={4}>
+            Materials
+          </Text>
+          <Text size="sm" c="dimmed">
+            {material}
+          </Text>
+        </Paper>
+      )}
+
+      <Paper p="md" radius="md" bg="slate.0">
+        <Text size="sm" fw={500} mb={4}>
+          Shipping & Returns
+        </Text>
+        <Text size="sm" c="dimmed">
+          Free shipping on orders over $150. 30-day free returns. Crafted with care and delivered with pride.
+        </Text>
+      </Paper>
+    </Stack>
+  );
+};
+
+export default ProductInfo;
+===END_FILE===
+
+===FILE:src/components/cart/CartItem.jsx===
+import { Card, Group, Image, Text, ActionIcon, rem } from "@mantine/core";
+import { IconTrash } from "@tabler/icons-react";
+import QuantityControl from "../product/QuantityControl";
+import formatPrice from "../../lib/formatPrice";
+
+const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
+  const safeItem = item || {};
+  const name = safeItem.name || "Unnamed Product";
+  const price = typeof safeItem.price === "number" ? safeItem.price : 0;
+  const quantity = typeof safeItem.quantity === "number" ? safeItem.quantity : 1;
+  const image = safeItem.image || "";
+  const selectedSize = safeItem.selectedSize !== undefined ? safeItem.selectedSize : null;
+  const selectedColor = safeItem.selectedColor !== undefined ? safeItem.selectedColor : null;
+  const itemId = safeItem.id || "";
+
+  const handleQuantityChange = (newQuantity) => {
+    if (onUpdateQuantity) {
+      onUpdateQuantity(itemId, newQuantity);
+    }
+  };
+
+  const handleRemove = () => {
+    if (onRemove) {
+      onRemove(itemId);
+    }
+  };
+
+  const itemTotal = price * quantity;
+
+  return (
+    <Card padding="md" radius="md" shadow="sm">
+      <Group align="flex-start" gap="lg">
+        <Image
+          src={image}
+          alt={name}
+          width={80}
+          height={80}
+          fit="cover"
+          radius="md"
+          fallbackSrc="https://placehold.co/80x80?text=Product"
+        />
+        <div style={{ flex: 1 }}>
+          <Group justify="space-between" align="flex-start">
+            <div>
+              <Text fw={600} size="sm" mb={4}>
+                {name}
+              </Text>
+              {selectedSize && (
+                <Text size="xs" c="dimmed">
+                  Size: {selectedSize}
+                </Text>
+              )}
+              {selectedColor && (
+                <Text size="xs" c="dimmed">
+                  Color: {selectedColor}
+                </Text>
+              )}
+            </div>
+            <Text fw={600} size="sm">
+              {formatPrice(itemTotal)}
+            </Text>
+          </Group>
+          <Group justify="space-between" mt="md">
+            <QuantityControl
+              quantity={quantity}
+              min={1}
+              max={10}
+              onChange={handleQuantityChange}
+            />
+            <ActionIcon
+              variant="subtle"
+              color="red"
+              size="sm"
+              radius="sm"
+              aria-label="Remove item"
+              onClick={handleRemove}
+            >
+              <IconTrash size={rem(16)} />
+            </ActionIcon>
+          </Group>
+        </div>
+      </Group>
+    </Card>
+  );
+};
+
+export default CartItem;
+===END_FILE===
+
+===FILE:src/components/cart/CartSummary.jsx===
+import { Stack, Group, Text, Button, Paper, Divider, rem } from "@mantine/core";
+import formatPrice from "../../lib/formatPrice";
+
+const CartSummary = ({ cartTotal = 0, onCheckout }) => {
+  const safeCartTotal = typeof cartTotal === "number" ? cartTotal : 0;
+  
+  const shippingThreshold = 150;
+  const shippingCost = safeCartTotal >= shippingThreshold ? 0 : 15;
+  const taxRate = 0.08;
+  const tax = safeCartTotal * taxRate;
+  const orderTotal = safeCartTotal + shippingCost + tax;
+
+  return (
+    <Paper padding="lg" radius="md" shadow="sm">
+      <Stack gap="md">
+        <Text size="lg" fw={600}>
+          Order Summary
+        </Text>
+
+        <Group justify="space-between">
+          <Text c="dimmed">Subtotal</Text>
+          <Text fw={500}>{formatPrice(safeCartTotal)}</Text>
+        </Group>
+
+        <Group justify="space-between">
+          <Text c="dimmed">Shipping</Text>
+          <Text fw={500}>
+            {shippingCost === 0 ? "Free" : formatPrice(shippingCost)}
+          </Text>
+        </Group>
+
+        <Group justify="space-between">
+          <Text c="dimmed">Estimated Tax</Text>
+          <Text fw={500}>{formatPrice(tax)}</Text>
+        </Group>
+
+        <Divider />
+
+        <Group justify="space-between">
+          <Text size="lg" fw={700}>
+            Total
+          </Text>
+          <Text size="lg" fw={700} c="gold">
+            {formatPrice(orderTotal)}
+          </Text>
+        </Group>
+
+        {safeCartTotal < shippingThreshold && (
+          <Text size="xs" c="dimmed" ta="center">
+            Add {formatPrice(shippingThreshold - safeCartTotal)} more for free shipping
+          </Text>
+        )}
+
+        <Button
+          size="md"
+          radius="md"
+          onClick={onCheckout}
+          disabled={safeCartTotal === 0}
+          style={{ width: "100%" }}
+        >
+          Proceed to Checkout
+        </Button>
+      </Stack>
+    </Paper>
+  );
+};
+
+export default CartSummary;
+===END_FILE===
+
+===FILE:src/components/sections/HeroSection.jsx===
+import { Container, Title, Text, Button, Group, rem, Box } from "@mantine/core";
+import siteContent from "../../data/siteContent";
+
+const HeroSection = () => {
+  const handleScrollToProducts = () => {
+    const productsSection = document.getElementById("products");
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleScrollToNewArrivals = () => {
+    const productsSection = document.getElementById("products");
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <Box
+      id="home"
+      style={{
+        minHeight: "100vh",
+        backgroundImage:
+          "linear-gradient(rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.7)), url(https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1600&q=80)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center"
+      }}
+    >
+      <Container size="lg" py={80}>
+        <div style={{ maxWidth: rem(540) }}>
+          <Title
+            order={1}
+            size="3.5rem"
+            fw={800}
+            lh={1.1}
+            c="white"
+            mb="lg"
+          >
+            {siteContent.hero.headline}
+          </Title>
+          <Text size="xl" c="slate.1" mb="xl" maw={rem(480)}>
+            {siteContent.hero.subheadline}
+          </Text>
+          <Group gap="md">
+            <Button
+              size="lg"
+              radius="md"
+              color="gold"
+              onClick={handleScrollToProducts}
+            >
+              {siteContent.hero.primaryCta}
+            </Button>
+            <Button
+              size="lg"
+              radius="md"
+              variant="outline"
+              color="white"
+              onClick={handleScrollToNewArrivals}
+            >
+              {siteContent.hero.secondaryCta}
+            </Button>
+          </Group>
+        </div>
+      </Container>
+    </Box>
+  );
+};
+
+export default HeroSection;
+===END_FILE===
+
+===FILE:src/components/sections/FeaturedCategories.jsx===
+import { Container, SimpleGrid, Card, Text, Group, Badge, rem } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
+import mockProducts from "../../data/mockProducts";
+import siteContent from "../../data/siteContent";
+
+const FeaturedCategories = () => {
+  const categories = siteContent?.categories || [];
+  const products = Array.isArray(mockProducts) ? mockProducts : [];
+
+  const getCategoryImage = (categoryId) => {
+    const categoryProducts = products.filter((p) => p?.category === categoryId);
+    return categoryProducts?.[0]?.images?.[0] || "https://placehold.co/400x300?text=Category";
+  };
+
+  const getProductCount = (categoryId) => {
+    return products.filter((p) => p?.category === categoryId).length;
+  };
+
+  const handleCategoryClick = (categoryId) => {
+    const element = document.getElementById("products");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      // Dispatch custom event for filtering
+      window.dispatchEvent(new CustomEvent("filterCategory", { detail: categoryId }));
+    }
+  };
+
+  const categoryImages = {
+    sneakers: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80",
+    boots: "https://images.unsplash.com/photo-1608231388708-40e76e2a1d23?w=600&q=80",
+    athletic: "https://images.unsplash.com/photo-1595950291288-7a2b3b3b3b3b?w=600&q=80",
+    casual: "https://images.unsplash.com/photo-1614259056978-7c4c5b7b7b7b?w=600&q=80"
+  };
+
+  return (
+    <Container size="lg" py={64}>
+      <Group justify="space-between" mb={32}>
+        <Text size="32px" fw={700} c="dark">
+          Shop by Category
+        </Text>
+      </Group>
+
+      <SimpleGrid cols={{ base: 1, xs: 2, md: 4 }} spacing="lg">
+        {categories.map((category) => (
+          <Card
+            key={category?.id}
+            shadow="sm"
+            padding={0}
+            radius="md"
+            style={{
+              cursor: "pointer",
+              transition: "transform 150ms ease, box-shadow 150ms ease",
+              overflow: "hidden"
+            }}
+            className="category-card"
+            onClick={() => handleCategoryClick(category?.id)}
+          >
+            <Card.Section>
+              <div style={{ position: "relative", height: rem(180), overflow: "hidden" }}>
+                <img
+                  src={categoryImages[category?.id] || getCategoryImage(category?.id)}
+                  alt={category?.name}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "transform 300ms ease"
+                  }}
+                  onError={(e) => {
+                    e.target.src = "https://placehold.co/400x300?text=Category";
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    background: "linear-gradient(transparent, rgba(0,0,0,0.7))",
+                    padding: rem(16),
+                    paddingTop: rem(32)
+                  }}
+                >
+                  <Group justify="space-between" align="center">
+                    <Text fw={600} size="lg" c="white">
+                      {category?.name}
+                    </Text>
+                    <Badge color="gold" variant="filled" size="sm">
+                      {getProductCount(category?.id)} items
+                    </Badge>
+                  </Group>
+                </div>
+              </div>
+            </Card.Section>
+          </Card>
+        ))}
+      </SimpleGrid>
+    </Container>
+  );
+};
+
+export default FeaturedCategories;
+===END_FILE===
+
+===FILE:src/components/sections/BestSellers.jsx===
+import { Container, Group, Text, SimpleGrid, rem } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
+import { useDisclosure } from "@mantine/hooks";
+import ProductCard from "../common/ProductCard";
+import RatingStars from "../common/RatingStars";
+import mockProducts from "../../data/mockProducts";
+
+const BestSellers = () => {
+  const products = Array.isArray(mockProducts) ? mockProducts : [];
+  const bestSellers = products
+    .sort((a, b) => (b?.reviewCount || 0) - (a?.reviewCount || 0))
+    .slice(0, 4);
+
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [quickViewOpened, { open: openQuickView, close: closeQuickView }] = useDisclosure(false);
+
+  const handleQuickView = (product) => {
+    setQuickViewProduct(product);
+    openQuickView();
+  };
+
+  return (
+    <Container size="lg" py={64} id="best-sellers">
+      <Group justify="space-between" mb={32}>
+        <Text size="32px" fw={700} c="dark">
+          Best Sellers
+        </Text>
+        <Text
+          component="a"
+          href="#products"
+          size="sm"
+          c="slate"
+          style={{ textDecoration: "none", cursor: "pointer" }}
+        >
+          View All
+        </Text>
+      </Group>
+
+      <SimpleGrid cols={{ base: 1, xs: 2, sm: 2, lg: 4 }} spacing="lg">
+        {bestSellers.map((product) => (
+          <ProductCard
+            key={product?.id}
+            product={product}
+            onQuickView={handleQuickView}
+          />
+        ))}
+      </SimpleGrid>
+    </Container>
+  );
+};
+
+export default BestSellers;
+===END_FILE===
+
+===FILE:src/components/sections/BrandStory.jsx===
+import { Container, Grid, Group, Text, Image, rem, Paper } from "@mantine/core";
+import siteContent from "../../data/siteContent";
+
+const BrandStory = () => {
+  const brandStory = siteContent?.brandStory || {};
+  const brand = siteContent?.brand || {};
+
+  return (
+    <Container size="lg" py={64} id="brand-story">
+      <Paper p={0} radius="md" shadow="sm">
+        <Grid gutter={0} align="center">
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <div style={{ padding: rem(48) }}>
+              <Text size="14px" tt="uppercase" fw={600} c="gold" mb="xs">
+                Our Craftsmanship
+              </Text>
+              <Text size="32px" fw={700} c="dark" mb="md" lh={1.2}>
+                {brandStory?.title || "Our Story"}
+              </Text>
+              <Text size="md" c="dimmed" mb="lg" lh={1.6}>
+                {brandStory?.content || "Premium footwear crafted with meticulous attention to detail."}
+              </Text>
+              <Text size="md" c="dimmed" mb="xl" lh={1.6}>
+                {brandStory?.craftsmanship || "Each pair represents our commitment to quality and style."}
+              </Text>
+              <Group>
+                <Text fw={600} c="dark">
+                  {brandStory?.founder || "The Stride Team"}
+                </Text>
+              </Group>
+            </div>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <div style={{ position: "relative", height: rem(400), overflow: "hidden" }}>
+              <img
+                src="https://images.unsplash.com/photo-1526170304741-3e4c5c4c4c4c?w=800&q=80"
+                alt="Craftsmanship"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+                onError={(e) => {
+                  e.target.src = "https://placehold.co/800x400?text=Craftsmanship";
+                }}
+              />
+            </div>
+          </Grid.Col>
+        </Grid>
+      </Paper>
+    </Container>
+  );
+};
+
+export default BrandStory;
+===END_FILE===
+
+===FILE:src/components/sections/NewsletterSignup.jsx===
+import { Container, Group, Text, TextInput, Button, rem, Paper } from "@mantine/core";
+import { IconMail } from "@tabler/icons-react";
+import { useState } from "react";
+import siteContent from "../../data/siteContent";
+
+const NewsletterSignup = () => {
+  const newsletter = siteContent?.newsletter || {};
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!email || !email.includes("@")) {
+      setError("Please enter a valid email address");
+      return;
+    }
+
+    setSubmitted(true);
+    setEmail("");
+
+    // Reset success message after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+  };
+
+  return (
+    <Container size="lg" py={64} id="newsletter">
+      <Paper p={48} radius="md" shadow="sm" style={{ backgroundColor: "#f8fafc" }}>
+        <Group justify="center" mb="lg">
+          <Text size="32px" fw={700} c="dark" ta="center">
+            {newsletter?.title || "Join the Movement"}
+          </Text>
+        </Group>
+        <Text size="md" c="dimmed" ta="center" mb="xl" maw={500} mx="auto">
+          {newsletter?.description || "Subscribe for updates on new collections and exclusive offers."}
+        </Text>
+
+        {submitted ? (
+          <Group justify="center">
+            <Text c="green" fw={500}>
+              {newsletter?.successMessage || "Thank you for subscribing!"}
+            </Text>
+          </Group>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <Group justify="center" gap="sm">
+              <TextInput
+                type="email"
+                placeholder={newsletter?.placeholder || "Enter your email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                error={error}
+                required
+                style={{ flex: 1, maxWidth: rem(400) }}
+                leftSection={<IconMail size={rem(18)} />}
+              />
+              <Button type="submit" size="md">
+                {newsletter?.buttonText || "Subscribe"}
+              </Button>
+            </Group>
+          </form>
+        )}
+      </Paper>
+    </Container>
+  );
+};
+
+export default NewsletterSignup;
+===END_FILE===
+
+===FILE:src/components/sections/ProductFilters.jsx===
+import { Container, Group, TextInput, Select, Slider, rem, Box } from "@mantine/core";
+import { IconSearch, IconX } from "@tabler/icons-react";
+import { useDisclosure, useInputState } from "@mantine/hooks";
+import siteContent from "../../data/siteContent";
+
+const ProductFilters = ({ onSearch, onCategoryChange, onPriceChange, onSortChange }) => {
+  const categories = siteContent?.categories || [];
+  const [searchValue, setSearchValue] = useInputState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [priceRange, setPriceRange] = useState([0, 300]);
+  const [sortBy, setSortBy] = useState("featured");
+
+  const categoryOptions = [
+    { value: "all", label: "All Categories" },
+    ...categories.map((cat) => ({
+      value: cat?.id || "",
+      label: cat?.name || ""
+    }))
+  ];
+
+  const sortOptions = [
+    { value: "featured", label: "Featured" },
+    { value: "price-low", label: "Price: Low to High" },
+    { value: "price-high", label: "Price: High to Low" },
+    { value: "newest", label: "Newest" },
+    { value: "popular", label: "Most Popular" }
+  ];
+
+  const handleSearchChange = (value) => {
+    setSearchValue(value);
+    if (onSearch) {
+      onSearch(value);
+    }
+  };
+
+  const handleCategoryChangeLocal = (value) => {
+    setSelectedCategory(value);
+    if (onCategoryChange) {
+      onCategoryChange(value);
+    }
+  };
+
+  const handlePriceChangeLocal = (value) => {
+    setPriceRange(value);
+    if (onPriceChange) {
+      onPriceChange(value);
+    }
+  };
+
+  const handleSortChangeLocal = (value) => {
+    setSortBy(value);
+    if (onSortChange) {
+      onSortChange(value);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearchValue("");
+    if (onSearch) {
+      onSearch("");
+    }
+  };
+
+  return (
+    <Container size="lg" py={24} id="filters">
+      <Group justify="space-between" mb="lg" wrap="wrap">
+        <TextInput
+          placeholder="Search shoes..."
+          value={searchValue}
+          onChange={(e) => handleSearchChange(e.target.value)}
+          leftSection={<IconSearch size={rem(18)} />}
+          rightSection={
+            searchValue ? (
+              <Box
+                component="button"
+                type="button"
+                onClick={clearSearch}
+                style={{
+                  border: "none",
+                  background: "transparent",
+                  cursor: "pointer",
+                  padding: 0
+                }}
+              >
+                <IconX size={rem(16)} />
+              </Box>
+            ) : null
+          }
+          style={{ flex: 1, minWidth: rem(200), maxWidth: rem(300) }}
+        />
+
+        <Group gap="sm" wrap="wrap">
+          <Select
+            data={categoryOptions}
+            value={selectedCategory}
+            onChange={handleCategoryChangeLocal}
+            placeholder="Category"
+            clearable={false}
+            style={{ minWidth: rem(150) }}
+          />
+
+          <Select
+            data={sortOptions}
+            value={sortBy}
+            onChange={handleSortChangeLocal}
+            placeholder="Sort by"
+            clearable={false}
+            style={{ minWidth: rem(150) }}
+          />
+        </Group>
+      </Group>
+
+      <Group mb="xl">
+        <Text size="sm" fw={500} c="dimmed" mr="xs">
+          Price Range:
+        </Text>
+        <Slider
+          min={0}
+          max={300}
+          step={10}
+          value={priceRange}
+          onChange={handlePriceChangeLocal}
+          label={(value) => `$${value[0]} - $${value[1]}`}
+          style={{ flex: 1, maxWidth: rem(400) }}
+        />
+      </Group>
+    </Container>
+  );
+};
+
+export default ProductFilters;
+===END_FILE===
+
+===FILE:src/components/sections/ProductGrid.jsx===
+import { SimpleGrid, Text, Group, rem } from "@mantine/core";
+import { useState, useEffect } from "react";
+import ProductCard from "../common/ProductCard";
+import LoadingSkeleton from "../common/LoadingSkeleton";
+import EmptyState from "../common/EmptyState";
+import mockProducts from "../../data/mockProducts";
+
+const ProductGrid = ({ 
+  searchQuery = "", 
+  selectedCategory = "all", 
+  priceRange = [0, 300], 
+  sortBy = "featured",
+  onQuickView,
+  onAddToCart 
+}) => {
+  const [loading, setLoading] = useState(true);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const products = Array.isArray(mockProducts) ? mockProducts : [];
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      let result = [...products];
+
+      // Search filter
+      if (searchQuery && typeof searchQuery === "string") {
+        const query = searchQuery.toLowerCase();
+        result = result.filter((product) => {
+          const name = product?.name || "";
+          const description = product?.description || "";
+          return name.toLowerCase().includes(query) || description.toLowerCase().includes(query);
+        });
+      }
+
+      // Category filter
+      if (selectedCategory && selectedCategory !== "all") {
+        result = result.filter((product) => product?.category === selectedCategory);
+      }
+
+      // Price range filter
+      if (Array.isArray(priceRange) && priceRange.length === 2) {
+        const minPrice = priceRange[0] || 0;
+        const maxPrice = priceRange[1] || 300;
+        result = result.filter((product) => {
+          const productPrice = product?.salePrice || product?.price || 0;
+          return productPrice >= minPrice && productPrice <= maxPrice;
+        });
+      }
+
+      // Sort
+      if (sortBy && typeof sortBy === "string") {
+        switch (sortBy) {
+          case "price-low":
+            result.sort((a, b) => (a?.salePrice || a?.price || 0) - (b?.salePrice || b?.price || 0));
+            break;
+          case "price-high":
+            result.sort((a, b) => (b?.salePrice || b?.price || 0) - (a?.salePrice || a?.price || 0));
+            break;
+          case "newest":
+            result.sort((a, b) => (b?.id || 0) - (a?.id || 0));
+            break;
+          case "popular":
+            result.sort((a, b) => (b?.reviewCount || 0) - (a?.reviewCount || 0));
+            break;
+          case "featured":
+          default:
+            // Keep original order
+            break;
+        }
+      }
+
+      setFilteredProducts(result);
+      setLoading(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchQuery, selectedCategory, priceRange, sortBy, products]);
+
+  const handleQuickView = (product) => {
+    if (onQuickView) {
+      onQuickView(product);
+    }
+  };
+
+  const handleAddToCart = (product) => {
+    if (onAddToCart) {
+      onAddToCart(product);
+    }
+  };
+
+  const handleClearFilters = () => {
+    window.dispatchEvent(new CustomEvent("clearFilters"));
+  };
+
+  if (loading) {
+    return <LoadingSkeleton count={8} height={320} />;
+  }
+
+  if (filteredProducts.length === 0) {
+    return (
+      <EmptyState
+        type="search"
+        title="No products found"
+        description="Try adjusting your search or filter criteria to find what you're looking for."
+        actionLabel="Clear Filters"
+        onAction={handleClearFilters}
+      />
+    );
+  }
+
+  return (
+    <div id="products">
+      <Group justify="space-between" mb="lg" px="lg">
+        <Text size="sm" c="dimmed">
+          Showing {filteredProducts.length} {filteredProducts.length === 1 ? "product" : "products"}
+        </Text>
+      </Group>
+      <SimpleGrid cols={{ base: 1, xs: 2, sm: 2, lg: 4 }} spacing="lg" px="lg" pb="xl">
+        {filteredProducts.map((product) => (
+          <ProductCard
+            key={product?.id}
+            product={product}
+            onQuickView={handleQuickView}
+            onAddToCart={handleAddToCart}
+          />
+        ))}
+      </SimpleGrid>
+    </div>
+  );
+};
+
+export default ProductGrid;
+===END_FILE===
+
+===FILE:src/pages/Home.jsx===
+import HeroSection from "../components/sections/HeroSection";
+import FeaturedCategories from "../components/sections/FeaturedCategories";
+import BestSellers from "../components/sections/BestSellers";
+import BrandStory from "../components/sections/BrandStory";
+import NewsletterSignup from "../components/sections/NewsletterSignup";
+
+const Home = () => {
+  return (
+    <>
+      <HeroSection />
+      <FeaturedCategories />
+      <BestSellers />
+      <BrandStory />
+      <NewsletterSignup />
+    </>
+  );
+};
+
+export default Home;
+===END_FILE===
+
+===FILE:src/pages/Products.jsx===
+import { Container, Title, Text, rem } from "@mantine/core";
+import { useState, useEffect } from "react";
+import ProductFilters from "../components/sections/ProductFilters";
+import ProductGrid from "../components/sections/ProductGrid";
+
+const Products = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [priceRange, setPriceRange] = useState([0, 300]);
+  const [sortBy, setSortBy] = useState("featured");
+
+  useEffect(() => {
+    const handleFilterCategory = (event) => {
+      const category = event.detail;
+      if (category) {
+        setSelectedCategory(category);
+      }
+    };
+
+    const handleClearFilters = () => {
+      setSearchQuery("");
+      setSelectedCategory("all");
+      setPriceRange([0, 300]);
+      setSortBy("featured");
+    };
+
+    window.addEventListener("filterCategory", handleFilterCategory);
+    window.addEventListener("clearFilters", handleClearFilters);
+
+    return () => {
+      window.removeEventListener("filterCategory", handleFilterCategory);
+      window.removeEventListener("clearFilters", handleClearFilters);
+    };
+  }, []);
+
+  return (
+    <Container size="lg" py={48}>
+      <div style={{ textAlign: "center", marginBottom: rem(32) }}>
+        <Title order={2} size="2.5rem" fw={700} c="dark" mb="xs">
+          Our Collection
+        </Title>
+        <Text size="lg" c="dimmed" maw={600} mx="auto">
+          Discover premium footwear designed for every stride in your journey
+        </Text>
+      </div>
+      
+      <ProductFilters
+        onSearch={setSearchQuery}
+        onCategoryChange={setSelectedCategory}
+        onPriceChange={setPriceRange}
+        onSortChange={setSortBy}
+      />
+      
+      <ProductGrid
+        searchQuery={searchQuery}
+        selectedCategory={selectedCategory}
+        priceRange={priceRange}
+        sortBy={sortBy}
+      />
+    </Container>
+  );
+};
+
+export default Products;
+===END_FILE===
+
+===FILE:src/pages/ProductDetail.jsx===
+import { Container, Grid, Loader, Center, rem } from "@mantine/core";
+import { useState, useEffect } from "react";
+import { useDisclosure } from "@mantine/hooks";
+import { useCart } from "../context/CartContext";
+import ProductGallery from "../components/product/ProductGallery";
+import ProductInfo from "../components/product/ProductInfo";
+import mockProducts from "../data/mockProducts";
+
+const ProductDetail = ({ productId }) => {
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const { addItem } = useCart();
+
+  const products = Array.isArray(mockProducts) ? mockProducts : [];
+
+  useEffect(() => {
+    setLoading(true);
+    const foundProduct = products.find((p) => p?.id === productId);
+    setProduct(foundProduct || null);
+    setLoading(false);
+  }, [productId, products]);
+
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
+
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
+  };
+
+  const handleAddToCart = () => {
+    if (product && selectedSize) {
+      addItem(product, quantity, selectedSize, selectedColor);
+    }
+  };
+
+  if (loading) {
+    return (
+      <Center py={80}>
+        <Loader size="lg" />
+      </Center>
+    );
+  }
+
+  if (!product) {
+    return (
+      <Container size="lg" py={80}>
+        <Center>
+          <Text size="xl" c="dimmed">
+            Product not found
+          </Text>
+        </Center>
+      </Container>
+    );
+  }
+
+  const images = Array.isArray(product?.images) ? product.images : [];
+  const sizes = Array.isArray(product?.sizes) ? product.sizes : [];
+  const colors = Array.isArray(product?.colors) ? product.colors : [];
+
+  return (
+    <Container size="lg" py={48}>
+      <Grid gutter={{ base: "md", md: 48 }}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <ProductGallery
+            images={images}
+            productName={product?.name}
+          />
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <ProductInfo
+            product={product}
+            selectedSize={selectedSize}
+            selectedColor={selectedColor}
+            quantity={quantity}
+            onSizeSelect={handleSizeSelect}
+            onColorSelect={handleColorSelect}
+            onQuantityChange={handleQuantityChange}
+            onAddToCart={handleAddToCart}
+          />
+        </Grid.Col>
+      </Grid>
+    </Container>
+  );
+};
+
+export default ProductDetail;
+===END_FILE===
+
+===FILE:src/pages/Cart.jsx===
+import { Container, Title, Text, Grid, Stack, Center, rem } from "@mantine/core";
+import { useCart } from "../context/CartContext";
+import CartItem from "../components/cart/CartItem";
+import CartSummary from "../components/cart/CartSummary";
+import EmptyState from "../components/common/EmptyState";
+
+const Cart = () => {
+  const { cartItems, updateQuantity, removeItem, getCartTotal } = useCart();
+  const safeCartItems = Array.isArray(cartItems) ? cartItems : [];
+  const cartTotal = getCartTotal();
+
+  const handleUpdateQuantity = (itemId, newQuantity) => {
+    updateQuantity(itemId, newQuantity);
+  };
+
+  const handleRemove = (itemId) => {
+    removeItem(itemId);
+  };
+
+  const handleCheckout = () => {
+    window.location.hash = "#checkout";
+  };
+
+  if (safeCartItems.length === 0) {
+    return (
+      <Container size="lg" py={80}>
+        <EmptyState
+          type="cart"
+          title="Your cart is empty"
+          description="Browse our collection and add your favorite shoes to the cart."
+          actionLabel="Shop Collection"
+          onAction={() => { window.location.hash = "#products"; }}
+        />
+      </Container>
+    );
+  }
+
+  return (
+    <Container size="lg" py={48}>
+      <Title order={2} size="2rem" fw={700} c="dark" mb="xl">
+        Shopping Cart
+      </Title>
+      
+      <Grid gutter={{ base: "md", lg: 48 }}>
+        <Grid.Col span={{ base: 12, lg: 8 }}>
+          <Stack gap="md">
+            {safeCartItems.map((item) => (
+              <CartItem
+                key={item?.id}
+                item={item}
+                onUpdateQuantity={handleUpdateQuantity}
+                onRemove={handleRemove}
+              />
+            ))}
+          </Stack>
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, lg: 4 }}>
+          <CartSummary
+            cartTotal={cartTotal}
+            onCheckout={handleCheckout}
+          />
+        </Grid.Col>
+      </Grid>
+    </Container>
+  );
+};
+
+export default Cart;
+===END_FILE===
+
+===FILE:src/pages/Checkout.jsx===
+import { Container, Grid, Stack, TextInput, Select, Radio, Group, Button, Paper, Text, Divider, rem, Alert } from "@mantine/core";
+import { IconCheck, IconCreditCard, IconCash } from "@tabler/icons-react";
+import { useState } from "react";
+import { useCart } from "../context/CartContext";
+import CartSummary from "../components/cart/CartSummary";
+import formatPrice from "../lib/formatPrice";
+
+const Checkout = () => {
+  const { cartItems, getCartTotal, clearCart } = useCart();
+  const [paymentMethod, setPaymentMethod] = useState("card");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    state: "",
+    zip: "",
+    country: "US"
+  });
+
+  const safeCartItems = Array.isArray(cartItems) ? cartItems : [];
+  const cartTotal = getCartTotal();
+
+  const handleInputChange = (field) => (event) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: event.target.value
+    }));
+  };
+
+  const handleSelectChange = (field) => (value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const validateForm = () => {
+    const requiredFields = ["firstName", "lastName", "email", "address", "city", "state", "zip", "country"];
+    return requiredFields.every((field) => formData[field]?.trim() !== "");
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (validateForm()) {
+      setIsSubmitted(true);
+      clearCart();
+    }
+  };
+
+  const countryOptions = [
+    { value: "US", label: "United States" },
+    { value: "CA", label: "Canada" },
+    { value: "UK", label: "United Kingdom" },
+    { value: "AU", label: "Australia" },
+    { value: "DE", label: "Germany" }
+  ];
+
+  if (isSubmitted) {
+    return (
+      <Container size="lg" py={64}>
+        <Stack align="center" gap="lg">
+          <Alert
+            icon={<IconCheck size={rem(24)} />}
+            title="Order Placed Successfully!"
+            color="green"
+            radius="md"
+            style={{ maxWidth: rem(500), width: "100%" }}
+          >
+            <Text size="sm" mt="xs">
+              Thank you for your purchase. Your order confirmation has been sent to {formData.email}.
+              We'll notify you when your items ship.
+            </Text>
+          </Alert>
+          <Button
+            size="md"
+            radius="md"
+            onClick={() => setIsSubmitted(false)}
+            style={{ width: rem(200) }}
+          >
+            Continue Shopping
+          </Button>
+        </Stack>
+      </Container>
+    );
+  }
+
+  return (
+    <Container size="lg" py={48}>
+      <Text size="xl" fw={700} mb="lg">
+        Checkout
+      </Text>
+
+      <Grid gutter="xl">
+        <Grid.Col span={{ base: 12, md: 7 }}>
+          <Paper padding="lg" radius="md" shadow="sm">
+            <form onSubmit={handleSubmit}>
+              <Stack gap="lg">
+                <div>
+                  <Text size="md" fw={600} mb="md">
+                    Shipping Information
+                  </Text>
+                  <Grid gutter="md">
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
+                      <TextInput
+                        label="First Name"
+                        placeholder="John"
+                        required
+                        value={formData.firstName}
+                        onChange={handleInputChange("firstName")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
+                      <TextInput
+                        label="Last Name"
+                        placeholder="Doe"
+                        required
+                        value={formData.lastName}
+                        onChange={handleInputChange("lastName")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={12}>
+                      <TextInput
+                        label="Email"
+                        placeholder="john@example.com"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange("email")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={12}>
+                      <TextInput
+                        label="Phone"
+                        placeholder="+1 (555) 123-4567"
+                        value={formData.phone}
+                        onChange={handleInputChange("phone")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={12}>
+                      <TextInput
+                        label="Address"
+                        placeholder="123 Main Street"
+                        required
+                        value={formData.address}
+                        onChange={handleInputChange("address")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
+                      <TextInput
+                        label="City"
+                        placeholder="New York"
+                        required
+                        value={formData.city}
+                        onChange={handleInputChange("city")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
+                      <TextInput
+                        label="State"
+                        placeholder="NY"
+                        required
+                        value={formData.state}
+                        onChange={handleInputChange("state")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
+                      <TextInput
+                        label="ZIP Code"
+                        placeholder="10001"
+                        required
+                        value={formData.zip}
+                        onChange={handleInputChange("zip")}
+                      />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
+                      <Select
+                        label="Country"
+                        data={countryOptions}
+                        value={formData.country}
+                        onChange={handleSelectChange("country")}
+                        required
+                      />
+                    </Grid.Col>
+                  </Grid>
+                </div>
+
+                <Divider />
+
+                <div>
+                  <Text size="md" fw={600} mb="md">
+                    Payment Method
+                  </Text>
+                  <Radio.Group
+                    value={paymentMethod}
+                    onChange={setPaymentMethod}
+                    name="paymentMethod"
+                  >
+                    <Stack gap="sm">
+                      <Radio
+                        value="card"
+                        label={
+                          <Group gap="xs">
+                            <IconCreditCard size={rem(20)} />
+                            <Text>Credit Card</Text>
+                          </Group>
+                        }
+                      />
+                      <Radio
+                        value="paypal"
+                        label={
+                          <Group gap="xs">
+                            <IconCreditCard size={rem(20)} />
+                            <Text>PayPal</Text>
+                          </Group>
+                        }
+                      />
+                      <Radio
+                        value="cod"
+                        label={
+                          <Group gap="xs">
+                            <IconCash size={rem(20)} />
+                            <Text>Cash on Delivery</Text>
+                          </Group>
+                        }
+                      />
+                    </Stack>
+                  </Radio.Group>
+                </div>
+
+                <Button
+                  type="submit"
+                  size="md"
+                  radius="md"
+                  style={{ width: "100%" }}
+                >
+                  Place Order
+                </Button>
+              </Stack>
+            </form>
+          </Paper>
+        </Grid.Col>
+
+        <Grid.Col span={{ base: 12, md: 5 }}>
+          <Stack gap="md">
+            <Text size="md" fw={600}>
+              Order Summary
+            </Text>
+            <CartSummary cartTotal={cartTotal} />
+          </Stack>
+        </Grid.Col>
+      </Grid>
+    </Container>
+  );
+};
+
+export default Checkout;
+===END_FILE===
+
+===FILE:src/App.jsx===
+import { Container, Box, rem } from "@mantine/core";
+import { useState, useEffect } from "react";
+import { CartProvider } from "./context/CartContext";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+
+const App = () => {
+  const [currentPage, setCurrentPage] = useState("home");
+  const [productId, setProductId] = useState(null);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1) || "home";
+      const [page, id] = hash.split("/");
+      setCurrentPage(page);
+      setProductId(id || null);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "home":
+        return <Home />;
+      case "products":
+        return <Products />;
+      case "product":
+        return productId ? <ProductDetail productId={productId} /> : <Products />;
+      case "cart":
+        return <Cart />;
+      case "checkout":
+        return <Checkout />;
+      default:
+        return <Home />;
+    }
+  };
+
+  return (
+    <CartProvider>
+      <Box mih="100vh" style={{ display: "flex", flexDirection: "column" }}>
+        <Navbar />
+        <Box component="main" style={{ flexGrow: 1 }}>
+          <Container size="xl" px={0}>
+            {renderPage()}
+          </Container>
+        </Box>
+        <Footer />
+      </Box>
+    </CartProvider>
+  );
+};
+
+export default App;
+===END_FILE===

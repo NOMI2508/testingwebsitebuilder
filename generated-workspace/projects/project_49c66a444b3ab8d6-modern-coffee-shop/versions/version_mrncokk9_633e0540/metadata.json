@@ -1,0 +1,9 @@
+{
+  "id": "version_mrncokk9_633e0540",
+  "prompt": "A modern coffee shop site with hero, menu and contact form.brown and cream colors",
+  "createdAt": "2026-07-16T10:12:37.023Z",
+  "changedFiles": [
+    "src/components/layout/Navbar.jsx"
+  ],
+  "status": "working"
+}

@@ -1,0 +1,2272 @@
+
+===FILE:src/theme/theme.js===
+import { createTheme } from "@mantine/core";
+
+const siteTheme = createTheme({
+  colors: {
+    brand: [
+      "#eff6ff",
+      "#dbeafe",
+      "#bfdbfe",
+      "#93c5fd",
+      "#60a5fa",
+      "#3b82f6",
+      "#2563eb",
+      "#1d4ed8",
+      "#2563eb",
+      "#1e40af",
+    ],
+    success: [
+      "#ecfdf5",
+      "#d1fae5",
+      "#a7f3d0",
+      "#6ee7b7",
+      "#34d399",
+      "#10b981",
+      "#059669",
+      "#047857",
+      "#065f46",
+      "#064e3b",
+    ],
+    warning: [
+      "#fffbeb",
+      "#fef3c7",
+      "#fde68a",
+      "#fcd34d",
+      "#fbbf24",
+      "#f59e0b",
+      "#d97706",
+      "#b45309",
+      "#92400e",
+      "#7c2d12",
+    ],
+    error: [
+      "#fef2f2",
+      "#fee2e2",
+      "#fecaca",
+      "#fca5a5",
+      "#f87171",
+      "#ef4444",
+      "#dc2626",
+      "#b91c1c",
+      "#991b1b",
+      "#7f1d1d",
+    ],
+  },
+  primaryColor: "brand",
+  primaryShade: 6,
+  defaultColorScheme: "light",
+  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  fontSizes: {
+    xs: "0.75rem",
+    sm: "0.875rem",
+    md: "1rem",
+    lg: "1.125rem",
+    xl: "1.25rem",
+    "2xl": "1.5rem",
+    "3xl": "1.875rem",
+    "4xl": "2.25rem",
+  },
+  lineHeights: {
+    xs: "1.5",
+    sm: "1.55",
+    md: "1.6",
+    lg: "1.65",
+    xl: "1.7",
+  },
+  spacing: {
+    xs: "0.5rem",
+    sm: "0.75rem",
+    md: "1rem",
+    lg: "1.5rem",
+    xl: "2rem",
+    "2xl": "3rem",
+    "3xl": "4rem",
+  },
+  radius: {
+    xs: "0.25rem",
+    sm: "0.375rem",
+    md: "0.5rem",
+    lg: "0.75rem",
+    xl: "1rem",
+  },
+  shadows: {
+    sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    md: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
+    lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+    xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+  },
+  components: {
+    Button: {
+      defaultProps: {
+        radius: "md",
+        fontWeight: 500,
+      },
+      styles: {
+        root: {
+          transition: "all 150ms ease",
+        },
+      },
+    },
+    Card: {
+      defaultProps: {
+        radius: "lg",
+        shadow: "sm",
+        padding: "lg",
+      },
+      styles: {
+        root: {
+          transition: "box-shadow 150ms ease, transform 150ms ease",
+          "&:hover": {
+            boxShadow: "var(--mantine-shadow-md)",
+          },
+        },
+      },
+    },
+    Input: {
+      defaultProps: {
+        radius: "md",
+      },
+    },
+    Drawer: {
+      defaultProps: {
+        radius: 0,
+        padding: 0,
+      },
+    },
+    Badge: {
+      defaultProps: {
+        radius: "sm",
+        fontWeight: 500,
+      },
+    },
+    Divider: {
+      defaultProps: {
+        margin: "lg",
+      },
+    },
+  },
+});
+
+export default siteTheme;
+===END_FILE===
+
+===FILE:src/data/imageAssets.js===
+const imageAssets = {
+  placeholders: {
+    product1: "https://picsum.photos/seed/product1/400/400",
+    product2: "https://picsum.photos/seed/product2/400/400",
+    product3: "https://picsum.photos/seed/product3/400/400",
+    product4: "https://picsum.photos/seed/product4/400/400",
+    product5: "https://picsum.photos/seed/product5/400/400",
+    product6: "https://picsum.photos/seed/product6/400/400",
+    product7: "https://picsum.photos/seed/product7/400/400",
+    product8: "https://picsum.photos/seed/product8/400/400",
+    product9: "https://picsum.photos/seed/product9/400/400",
+    product10: "https://picsum.photos/seed/product10/400/400",
+    product11: "https://picsum.photos/seed/product11/400/400",
+    product12: "https://picsum.photos/seed/product12/400/400",
+    product13: "https://picsum.photos/seed/product13/400/400",
+    product14: "https://picsum.photos/seed/product14/400/400",
+    product15: "https://picsum.photos/seed/product15/400/400",
+    product16: "https://picsum.photos/seed/product16/400/400",
+    product17: "https://picsum.photos/seed/product17/400/400",
+    product18: "https://picsum.photos/seed/product18/400/400",
+    product19: "https://picsum.photos/seed/product19/400/400",
+    product20: "https://picsum.photos/seed/product20/400/400",
+    product21: "https://picsum.photos/seed/product21/400/400",
+    product22: "https://picsum.photos/seed/product22/400/400",
+    product23: "https://picsum.photos/seed/product23/400/400",
+    product24: "https://picsum.photos/seed/product24/400/400",
+    product25: "https://picsum.photos/seed/product25/400/400",
+    product26: "https://picsum.photos/seed/product26/400/400",
+    product27: "https://picsum.photos/seed/product27/400/400",
+    product28: "https://picsum.photos/seed/product28/400/400",
+    product29: "https://picsum.photos/seed/product29/400/400",
+    product30: "https://picsum.photos/seed/product30/400/400",
+  },
+  getPlaceholder: (id) => {
+    const num = (id % 30) + 1;
+    return `https://picsum.photos/seed/product${num}/400/400`;
+  },
+  getPlaceholderThumb: (id) => {
+    const num = (id % 30) + 1;
+    return `https://picsum.photos/seed/product${num}thumb/100/100`;
+  },
+};
+
+export default imageAssets;
+===END_FILE===
+
+===FILE:src/lib/formatPrice.js===
+const formatPrice = (price) => {
+  const numericPrice = typeof price === "number" ? price : parseFloat(price);
+  if (isNaN(numericPrice)) {
+    return "$0.00";
+  }
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(numericPrice);
+};
+
+export default formatPrice;
+===END_FILE===
+
+===FILE:src/data/products.js===
+import imageAssets from "./imageAssets";
+
+const products = [
+  {
+    id: 1,
+    name: "Wireless Bluetooth Headphones",
+    description:
+      "Premium wireless headphones with active noise cancellation, 30-hour battery life, and crystal-clear sound quality. Perfect for music lovers and professionals alike.",
+    price: 199.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product1,
+    rating: 4.5,
+    stock: 50,
+  },
+  {
+    id: 2,
+    name: "Smart Fitness Watch",
+    description:
+      "Track your health and fitness goals with this advanced smartwatch. Features heart rate monitoring, sleep tracking, and smartphone notifications.",
+    price: 149.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product2,
+    rating: 4.3,
+    stock: 75,
+  },
+  {
+    id: 3,
+    name: "Organic Cotton T-Shirt",
+    description:
+      "Soft, breathable organic cotton t-shirt available in multiple colors. Ethically sourced and sustainably made for everyday comfort.",
+    price: 29.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product3,
+    rating: 4.7,
+    stock: 100,
+  },
+  {
+    id: 4,
+    name: "Stainless Steel Water Bottle",
+    description:
+      "Keep your drinks cold for 24 hours or hot for 12 hours with this premium insulated water bottle. BPA-free and eco-friendly.",
+    price: 34.99,
+    category: "Home",
+    image: imageAssets.placeholders.product4,
+    rating: 4.6,
+    stock: 150,
+  },
+  {
+    id: 5,
+    name: "Running Sneakers",
+    description:
+      "Lightweight running shoes with responsive cushioning and breathable mesh upper. Designed for maximum comfort and performance.",
+    price: 89.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product5,
+    rating: 4.4,
+    stock: 80,
+  },
+  {
+    id: 6,
+    name: "Laptop Backpack",
+    description:
+      "Sleek, water-resistant backpack with padded laptop compartment, USB charging port, and multiple organizational pockets.",
+    price: 59.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product6,
+    rating: 4.2,
+    stock: 60,
+  },
+  {
+    id: 7,
+    name: "Ceramic Coffee Mug Set",
+    description:
+      "Set of 4 handcrafted ceramic mugs with modern minimalist design. Dishwasher and microwave safe.",
+    price: 39.99,
+    category: "Home",
+    image: imageAssets.placeholders.product7,
+    rating: 4.8,
+    stock: 120,
+  },
+  {
+    id: 8,
+    name: "Wireless Charging Pad",
+    description:
+      "Fast wireless charging pad compatible with all Qi-enabled devices. Sleek design with LED indicator and non-slip surface.",
+    price: 24.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product8,
+    rating: 4.1,
+    stock: 90,
+  },
+  {
+    id: 9,
+    name: "Denim Jacket",
+    description:
+      "Classic denim jacket with vintage wash and distressed details. Features button closure and multiple pockets.",
+    price: 79.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product9,
+    rating: 4.3,
+    stock: 45,
+  },
+  {
+    id: 10,
+    name: "Scented Candle Collection",
+    description:
+      "Set of 3 premium soy candles with long-lasting fragrances: Lavender, Vanilla, and Sandalwood.",
+    price: 29.99,
+    category: "Home",
+    image: imageAssets.placeholders.product10,
+    rating: 4.5,
+    stock: 85,
+  },
+  {
+    id: 11,
+    name: "Bluetooth Speaker",
+    description:
+      "Portable waterproof speaker with 12-hour playtime and rich bass. Perfect for indoor and outdoor use.",
+    price: 49.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product11,
+    rating: 4.4,
+    stock: 70,
+  },
+  {
+    id: 12,
+    name: "Yoga Leggings",
+    description:
+      "High-waisted yoga leggings with moisture-wicking fabric and four-way stretch for maximum flexibility.",
+    price: 45.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product12,
+    rating: 4.6,
+    stock: 110,
+  },
+  {
+    id: 13,
+    name: "Stainless Steel Cookware Set",
+    description:
+      "12-piece professional cookware set with aluminum core for even heating. Includes pans, pots, and lids.",
+    price: 199.99,
+    category: "Home",
+    image: imageAssets.placeholders.product13,
+    rating: 4.7,
+    stock: 30,
+  },
+  {
+    id: 14,
+    name: "Tablet Stand",
+    description:
+      "Adjustable aluminum tablet stand with multiple viewing angles. Compatible with tablets and smartphones.",
+    price: 29.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product14,
+    rating: 4.2,
+    stock: 95,
+  },
+  {
+    id: 15,
+    name: "Flannel Shirt",
+    description:
+      "Soft brushed flannel shirt with classic check pattern. Button-down collar and chest pocket.",
+    price: 54.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product15,
+    rating: 4.3,
+    stock: 65,
+  },
+  {
+    id: 16,
+    name: "Aromatherapy Diffuser",
+    description:
+      "Ultrasonic essential oil diffuser with 7 LED color options and automatic shut-off. Creates a relaxing atmosphere.",
+    price: 34.99,
+    category: "Home",
+    image: imageAssets.placeholders.product16,
+    rating: 4.5,
+    stock: 75,
+  },
+  {
+    id: 17,
+    name: "USB-C Hub",
+    description:
+      "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and Ethernet port. Compact aluminum design.",
+    price: 44.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product17,
+    rating: 4.1,
+    stock: 55,
+  },
+  {
+    id: 18,
+    name: "Running Shorts",
+    description:
+      "Lightweight running shorts with built-in compression liner and zip pocket for essentials.",
+    price: 39.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product18,
+    rating: 4.4,
+    stock: 85,
+  },
+  {
+    id: 19,
+    name: "Throw Pillow Set",
+    description:
+      "Set of 2 decorative throw pillows with linen blend cover and soft polyester fill.",
+    price: 32.99,
+    category: "Home",
+    image: imageAssets.placeholders.product19,
+    rating: 4.3,
+    stock: 100,
+  },
+  {
+    id: 20,
+    name: "Portable Power Bank",
+    description:
+      "10000mAh portable charger with fast charging and dual USB ports. Compact design with LED indicator.",
+    price: 27.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product20,
+    rating: 4.2,
+    stock: 120,
+  },
+  {
+    id: 21,
+    name: "Hooded Sweatshirt",
+    description:
+      "Cozy fleece hoodie with adjustable drawstring and front kangaroo pocket. Available in multiple colors.",
+    price: 49.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product21,
+    rating: 4.5,
+    stock: 90,
+  },
+  {
+    id: 22,
+    name: "Kitchen Storage Containers",
+    description:
+      "Set of 5 airtight food storage containers with bamboo lids. Perfect for meal prep and pantry organization.",
+    price: 36.99,
+    category: "Home",
+    image: imageAssets.placeholders.product22,
+    rating: 4.6,
+    stock: 65,
+  },
+  {
+    id: 23,
+    name: "Noise Cancelling Earbuds",
+    description:
+      "True wireless earbuds with active noise cancellation and 24-hour total battery life with case.",
+    price: 129.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product23,
+    rating: 4.4,
+    stock: 40,
+  },
+  {
+    id: 24,
+    name: "Summer Dress",
+    description:
+      "Flowy midi dress with floral print and adjustable tie waist. Lightweight fabric perfect for warm weather.",
+    price: 59.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product24,
+    rating: 4.7,
+    stock: 70,
+  },
+  {
+    id: 25,
+    name: "Desk Organizer",
+    description:
+      "Bamboo desk organizer with multiple compartments for stationery, phone, and accessories.",
+    price: 31.99,
+    category: "Home",
+    image: imageAssets.placeholders.product25,
+    rating: 4.3,
+    stock: 80,
+  },
+  {
+    id: 26,
+    name: "Smartphone Lens Kit",
+    description:
+      "Clip-on lens kit with wide-angle, macro, and fisheye lenses for mobile photography.",
+    price: 22.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product26,
+    rating: 4.0,
+    stock: 100,
+  },
+  {
+    id: 27,
+    name: "Crewneck Sweater",
+    description:
+      "Classic crewneck sweater in soft merino wool blend. Timeless style for any occasion.",
+    price: 69.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product27,
+    rating: 4.5,
+    stock: 55,
+  },
+  {
+    id: 28,
+    name: "Indoor Plant Pot Set",
+    description:
+      "Set of 3 ceramic plant pots with drainage holes and matching saucers. Modern geometric design.",
+    price: 26.99,
+    category: "Home",
+    image: imageAssets.placeholders.product28,
+    rating: 4.4,
+    stock: 95,
+  },
+  {
+    id: 29,
+    name: "Wireless Mouse",
+    description:
+      "Ergonomic wireless mouse with adjustable DPI and silent clicks. Compatible with all devices.",
+    price: 39.99,
+    category: "Electronics",
+    image: imageAssets.placeholders.product29,
+    rating: 4.2,
+    stock: 75,
+  },
+  {
+    id: 30,
+    name: "Chino Pants",
+    description:
+      "Slim-fit chino pants with stretch fabric and zip fly. Versatile style for work or weekend.",
+    price: 54.99,
+    category: "Clothing",
+    image: imageAssets.placeholders.product30,
+    rating: 4.3,
+    stock: 85,
+  },
+];
+
+const categories = ["All", "Electronics", "Clothing", "Home"];
+
+const getProductsByCategory = (category) => {
+  if (!category || category === "All") {
+    return products;
+  }
+  return products.filter((product) => product.category === category);
+};
+
+const getProductById = (id) => {
+  const numericId = typeof id === "string" ? parseInt(id, 10) : id;
+  return products.find((product) => product.id === numericId) || null;
+};
+
+export { products, categories, getProductsByCategory, getProductById };
+export default products;
+===END_FILE===
+
+===FILE:src/context/CartContext.jsx===
+import { createContext, useContext, useEffect, useState } from "react";
+import { products } from "../data/products";
+
+const CartContext = createContext();
+
+const CART_STORAGE_KEY = "shopeasy_cart";
+
+const getStoredCart = () => {
+  try {
+    const stored = sessionStorage.getItem(CART_STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch (error) {
+    return [];
+  }
+};
+
+const storeCart = (cartItems) => {
+  try {
+    sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+  } catch (error) {
+    // Silently fail if storage is not available
+  }
+};
+
+const CartProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    setCartItems(getStoredCart());
+  }, []);
+
+  useEffect(() => {
+    storeCart(cartItems);
+  }, [cartItems]);
+
+  const addToCart = (productId, quantity = 1) => {
+    const product = products.find((p) => p.id === productId);
+    if (!product) return;
+
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.productId === productId);
+      if (existingItem) {
+        const newQuantity = Math.min(
+          existingItem.quantity + quantity,
+          product.stock
+        );
+        return prevItems.map((item) =>
+          item.productId === productId
+            ? { ...item, quantity: newQuantity }
+            : item
+        );
+      }
+      return [...prevItems, { productId, quantity, priceAtAdd: product.price }];
+    });
+  };
+
+  const removeFromCart = (productId) => {
+    setCartItems((prevItems) =>
+      prevItems.filter((item) => item.productId !== productId)
+    );
+  };
+
+  const updateQuantity = (productId, quantity) => {
+    const product = products.find((p) => p.id === productId);
+    if (!product) return;
+
+    const validQuantity = Math.max(1, Math.min(quantity, product.stock));
+
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.productId === productId
+          ? { ...item, quantity: validQuantity }
+          : item
+      )
+    );
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  const getCartTotal = () => {
+    return cartItems.reduce((total, item) => {
+      return total + item.priceAtAdd * item.quantity;
+    }, 0);
+  };
+
+  const getCartItemCount = () => {
+    return cartItems.reduce((count, item) => count + item.quantity, 0);
+  };
+
+  const getItemByProductId = (productId) => {
+    return cartItems.find((item) => item.productId === productId);
+  };
+
+  const value = {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+    getCartTotal,
+    getCartItemCount,
+    getItemByProductId,
+  };
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+};
+
+const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
+  return context;
+};
+
+export { CartProvider, useCart };
+export default CartContext;
+===END_FILE===
+
+===FILE:src/components/common/SearchBar.jsx===
+import { TextInput, ActionIcon } from "@mantine/core";
+import { IconSearch, IconX } from "@tabler/icons-react";
+import { useInputState } from "@mantine/hooks";
+
+const SearchBar = ({ onSearch, initialValue = "" }) => {
+  const [value, setValue] = useInputState(initialValue);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (onSearch) {
+      onSearch(value);
+    }
+  };
+
+  const handleClear = () => {
+    setValue("");
+    if (onSearch) {
+      onSearch("");
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={{ width: "100%" }}>
+      <TextInput
+        placeholder="Search products..."
+        value={value}
+        onChange={setValue}
+        rightSection={
+          value ? (
+            <ActionIcon
+              variant="subtle"
+              color="gray"
+              size="sm"
+              onClick={handleClear}
+              aria-label="Clear search"
+              type="button"
+            >
+              <IconX size={16} />
+            </ActionIcon>
+          ) : (
+            <IconSearch size={18} style={{ color: "var(--mantine-color-gray-5)" }} />
+          )
+        }
+        styles={{
+          input: {
+            width: "100%",
+            fontSize: "var(--mantine-font-size-sm)",
+          },
+        }}
+      />
+    </form>
+  );
+};
+
+export default SearchBar;
+===END_FILE===
+
+===FILE:src/components/common/QuantitySelector.jsx===
+import { Group, ActionIcon, NumberInput, rem } from "@mantine/core";
+import { IconMinus, IconPlus } from "@tabler/icons-react";
+
+const QuantitySelector = ({ value, onChange, min = 1, max = 99, disabled = false }) => {
+  const handleIncrement = () => {
+    if (value < max && onChange) {
+      onChange(value + 1);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (value > min && onChange) {
+      onChange(value - 1);
+    }
+  };
+
+  return (
+    <Group spacing="xs" align="center">
+      <ActionIcon
+        variant="outline"
+        color="gray"
+        size="sm"
+        onClick={handleDecrement}
+        disabled={disabled || value <= min}
+        aria-label="Decrease quantity"
+      >
+        <IconMinus size={rem(14)} />
+      </ActionIcon>
+      <NumberInput
+        value={value}
+        onChange={(val) => {
+          const numValue = typeof val === "number" ? val : parseInt(val, 10) || min;
+          const clampedValue = Math.max(min, Math.min(numValue, max));
+          if (onChange) {
+            onChange(clampedValue);
+          }
+        }}
+        min={min}
+        max={max}
+        disabled={disabled}
+        hideControls
+        styles={{
+          input: {
+            width: rem(50),
+            textAlign: "center",
+            fontSize: "var(--mantine-font-size-sm)",
+          },
+        }}
+        aria-label="Quantity"
+      />
+      <ActionIcon
+        variant="outline"
+        color="gray"
+        size="sm"
+        onClick={handleIncrement}
+        disabled={disabled || value >= max}
+        aria-label="Increase quantity"
+      >
+        <IconPlus size={rem(14)} />
+      </ActionIcon>
+    </Group>
+  );
+};
+
+export default QuantitySelector;
+===END_FILE===
+
+===FILE:src/components/common/FilterPanel.jsx===
+import { Group, Chip, Slider, Text, Box, Button } from "@mantine/core";
+import { useState } from "react";
+
+const FilterPanel = ({ categories, selectedCategory, onCategoryChange, priceRange, onPriceChange, onClearFilters }) => {
+  const [priceRangeValue, setPriceRangeValue] = useState(priceRange || [0, 300]);
+
+  const handlePriceChange = (values) => {
+    setPriceRangeValue(values);
+    if (onPriceChange) {
+      onPriceChange(values);
+    }
+  };
+
+  const handleClear = () => {
+    setPriceRangeValue([0, 300]);
+    if (onClearFilters) {
+      onClearFilters();
+    }
+  };
+
+  const safeCategories = Array.isArray(categories) ? categories : [];
+
+  return (
+    <Box>
+      <Box mb="md">
+        <Text size="sm" weight={500} mb="xs" c="dimmed">
+          Categories
+        </Text>
+        <Chip.Group
+          value={selectedCategory}
+          onChange={onCategoryChange}
+          multiple={false}
+        >
+          <Group spacing="xs" position="apart">
+            {safeCategories.map((category) => (
+              <Chip
+                key={category}
+                value={category}
+                variant="filled"
+                size="sm"
+                radius="sm"
+              >
+                {category}
+              </Chip>
+            ))}
+          </Group>
+        </Chip.Group>
+      </Box>
+
+      <Box mb="md">
+        <Text size="sm" weight={500} mb="xs" c="dimmed">
+          Price Range
+        </Text>
+        <Slider
+          min={0}
+          max={300}
+          step={10}
+          value={priceRangeValue}
+          onChange={handlePriceChange}
+          label={(value) => `$${value}`}
+          styles={{
+            track: { marginTop: rem(10) },
+          }}
+        />
+        <Group position="apart" mt="xs">
+          <Text size="xs" c="dimmed">
+            ${priceRangeValue[0]}
+          </Text>
+          <Text size="xs" c="dimmed">
+            ${priceRangeValue[1]}
+          </Text>
+        </Group>
+      </Box>
+
+      <Button
+        variant="subtle"
+        color="gray"
+        size="sm"
+        onClick={handleClear}
+        fullWidth
+        mt="sm"
+      >
+        Clear Filters
+      </Button>
+    </Box>
+  );
+};
+
+export default FilterPanel;
+===END_FILE===
+
+===FILE:src/components/layout/Header.jsx===
+import { Group, ActionIcon, Text, Indicator, Box, Container } from "@mantine/core";
+import { IconShoppingCart, IconMenu2 } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import SearchBar from "../common/SearchBar";
+import { useDisclosure } from "@mantine/hooks";
+
+const Header = ({ onSearch, onCartClick }) => {
+  const { getCartItemCount } = useCart();
+  const itemCount = getCartItemCount();
+
+  return (
+    <Box
+      component="header"
+      style={{
+        borderBottom: "1px solid var(--mantine-color-gray-3)",
+        backgroundColor: "var(--mantine-color-white)",
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+      }}
+    >
+      <Container size="xl" h={60}>
+        <Group position="apart" h="100%">
+          <Group spacing="md">
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+              }}
+            >
+              <Text
+                size="xl"
+                weight={700}
+                c="brand"
+                style={{ cursor: "pointer" }}
+              >
+                ShopEasy
+              </Text>
+            </Link>
+          </Group>
+
+          <Box
+            style={{
+              flex: 1,
+              maxWidth: rem(500),
+              margin: "0 auto",
+            }}
+          >
+            <SearchBar onSearch={onSearch} />
+          </Box>
+
+          <Group spacing="sm">
+            <Indicator
+              inline
+              label={itemCount}
+              size={16}
+              disabled={itemCount === 0}
+              styles={{
+                indicator: {
+                  fontSize: "var(--mantine-font-size-xs)",
+                  fontWeight: 600,
+                },
+              }}
+            >
+              <ActionIcon
+                variant="subtle"
+                color="gray"
+                size="lg"
+                onClick={onCartClick}
+                aria-label="Open cart"
+              >
+                <IconShoppingCart size={22} />
+              </ActionIcon>
+            </Indicator>
+          </Group>
+        </Group>
+      </Container>
+    </Box>
+  );
+};
+
+export default Header;
+===END_FILE===
+
+===FILE:src/components/layout/StoreLayout.jsx===
+import { Outlet } from "react-router-dom";
+import { useDisclosure } from "@mantine/hooks";
+import Header from "./Header";
+import CartDrawer from "../cart/CartDrawer";
+
+const StoreLayout = () => {
+  const [cartOpened, { open: openCart, close: closeCart }] = useDisclosure(false);
+
+  const handleSearch = (query) => {
+    // Search is handled by the page components
+  };
+
+  return (
+    <>
+      <Header onSearch={handleSearch} onCartClick={openCart} />
+      <Outlet />
+      <CartDrawer opened={cartOpened} onClose={closeCart} />
+    </>
+  );
+};
+
+export default StoreLayout;
+===END_FILE===
+
+===FILE:src/components/common/ProductCard.jsx===
+import { Card, Image, Text, Group, Badge, Rating, Button, Box, Skeleton } from "@mantine/core";
+import { IconShoppingCart } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import formatPrice from "../../lib/formatPrice";
+
+const ProductCard = ({ product, loading = false }) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (product && addToCart) {
+      addToCart(product.id, 1);
+    }
+  };
+
+  if (loading) {
+    return (
+      <Card>
+        <Skeleton height={200} mb="sm" />
+        <Skeleton height={20} width="70%" mb="xs" />
+        <Skeleton height={16} width="50%" mb="md" />
+        <Group position="apart">
+          <Skeleton height={24} width={60} />
+          <Skeleton height={32} width={100} />
+        </Group>
+      </Card>
+    );
+  }
+
+  if (!product) {
+    return null;
+  }
+
+  const { id, name, price, category, image, rating } = product;
+
+  return (
+    <Card component={Link} to={`/product/${id}`} shadow="sm" padding="lg" radius="lg" style={{ textDecoration: "none" }}>
+      <Card.Section>
+        <Image
+          src={image}
+          alt={name}
+          height={200}
+          style={{ objectFit: "cover" }}
+        />
+      </Card.Section>
+
+      <Box mt="md">
+        <Group position="apart" mb="xs">
+          <Text weight={500} size="sm" lineClamp={2}>
+            {name}
+          </Text>
+          <Badge color="brand" variant="light" size="sm">
+            {category}
+          </Badge>
+        </Group>
+
+        <Group position="apart" mb="md">
+          <Text weight={700} size="lg" color="success.6">
+            {formatPrice(price)}
+          </Text>
+          <Rating value={rating} fractions={2} size="sm" readOnly />
+        </Group>
+
+        <Button
+          leftIcon={<IconShoppingCart size={16} />}
+          variant="light"
+          color="brand"
+          fullWidth
+          size="sm"
+          onClick={handleAddToCart}
+        >
+          Add to Cart
+        </Button>
+      </Box>
+    </Card>
+  );
+};
+
+export default ProductCard;
+===END_FILE===
+
+===FILE:src/components/sections/FilterBarSection.jsx===
+import { Group, Box, Button, Drawer, rem, useMantineTheme } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconFilter } from "@tabler/icons-react";
+import FilterPanel from "../common/FilterPanel";
+
+const FilterBarSection = ({
+  categories,
+  selectedCategory,
+  onCategoryChange,
+  priceRange,
+  onPriceChange,
+  onClearFilters,
+}) => {
+  const [opened, { open, close }] = useDisclosure(false);
+  const theme = useMantineTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+
+  const filterContent = (
+    <FilterPanel
+      categories={categories}
+      selectedCategory={selectedCategory}
+      onCategoryChange={onCategoryChange}
+      priceRange={priceRange}
+      onPriceChange={onPriceChange}
+      onClearFilters={onClearFilters}
+    />
+  );
+
+  if (isMobile) {
+    return (
+      <>
+        <Box
+          style={{
+            position: "sticky",
+            top: rem(60),
+            backgroundColor: "var(--mantine-color-body)",
+            zIndex: 10,
+            padding: `${rem(12)} ${rem(16)}`,
+            borderBottom: "1px solid var(--mantine-color-gray-3)",
+          }}
+        >
+          <Group position="apart">
+            <Button
+              leftIcon={<IconFilter size={16} />}
+              variant="light"
+              color="gray"
+              size="sm"
+              onClick={open}
+            >
+              Filters
+            </Button>
+            {selectedCategory && selectedCategory !== "All" && (
+              <Button
+                variant="subtle"
+                color="gray"
+                size="sm"
+                onClick={onClearFilters}
+              >
+                Clear
+              </Button>
+            )}
+          </Group>
+        </Box>
+
+        <Drawer
+          opened={opened}
+          onClose={close}
+          title="Filter Products"
+          padding="md"
+          size="sm"
+          position="right"
+        >
+          {filterContent}
+        </Drawer>
+      </>
+    );
+  }
+
+  return (
+    <Box
+      style={{
+        padding: `${rem(16)} 0`,
+        borderBottom: "1px solid var(--mantine-color-gray-3)",
+      }}
+    >
+      <Group position="left" spacing="lg" align="flex-end">
+        {filterContent}
+      </Group>
+    </Box>
+  );
+};
+
+export default FilterBarSection;
+===END_FILE===
+
+===FILE:src/components/sections/ProductGridSection.jsx===
+import { SimpleGrid, Text, Center, Box, Alert } from "@mantine/core";
+import { IconInfoCircle } from "@tabler/icons-react";
+import ProductCard from "../common/ProductCard";
+
+const ProductGridSection = ({ products, loading = false }) => {
+  const safeProducts = Array.isArray(products) ? products : [];
+
+  if (loading) {
+    return (
+      <SimpleGrid cols={4} spacing="lg" breakpoints={[
+        { minWidth: "sm", cols: 2 },
+        { minWidth: "md", cols: 3 },
+        { minWidth: "lg", cols: 4 },
+      ]}>
+        {Array.from({ length: 8 }).map((_, index) => (
+          <ProductCard key={index} loading={true} />
+        ))}
+      </SimpleGrid>
+    );
+  }
+
+  if (safeProducts.length === 0) {
+    return (
+      <Center style={{ minHeight: 300 }}>
+        <Alert
+          icon={<IconInfoCircle size={20} />}
+          title="No products found"
+          color="gray"
+          variant="light"
+        >
+          Try adjusting your search or filter criteria to find what you're looking for.
+        </Alert>
+      </Center>
+    );
+  }
+
+  return (
+    <Box pt="lg">
+      <SimpleGrid
+        cols={1}
+        spacing="lg"
+        breakpoints={[
+          { minWidth: "sm", cols: 2 },
+          { minWidth: "md", cols: 3 },
+          { minWidth: "lg", cols: 4 },
+        ]}
+      >
+        {safeProducts.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </SimpleGrid>
+    </Box>
+  );
+};
+
+export default ProductGridSection;
+===END_FILE===
+
+===FILE:src/components/product/ProductGallery.jsx===
+import { Image, Group, Box, rem } from "@mantine/core";
+import { useState } from "react";
+
+const ProductGallery = ({ product }) => {
+  const [selectedImage, setSelectedImage] = useState(0);
+
+  if (!product) {
+    return null;
+  }
+
+  const { name, image } = product;
+
+  // Generate additional thumbnail images based on the main image
+  const thumbnails = [
+    image,
+    image.replace("/400/400", "/401/401"),
+    image.replace("/400/400", "/402/402"),
+    image.replace("/400/400", "/403/403"),
+  ];
+
+  return (
+    <Box>
+      <Box
+        style={{
+          border: "1px solid var(--mantine-color-gray-3)",
+          borderRadius: rem(12),
+          overflow: "hidden",
+          marginBottom: rem(16),
+        }}
+      >
+        <Image
+          src={thumbnails[selectedImage]}
+          alt={`${name} - view ${selectedImage + 1}`}
+          height={400}
+          style={{ objectFit: "cover", width: "100%" }}
+        />
+      </Box>
+
+      <Group spacing="xs" position="center">
+        {thumbnails.map((thumb, index) => (
+          <Box
+            key={index}
+            onClick={() => setSelectedImage(index)}
+            style={{
+              cursor: "pointer",
+              border: index === selectedImage
+                ? "2px solid var(--mantine-color-brand-6)"
+                : "2px solid transparent",
+              borderRadius: rem(8),
+              overflow: "hidden",
+              transition: "border-color 150ms ease",
+            }}
+          >
+            <Image
+              src={thumb}
+              alt={`${name} - thumbnail ${index + 1}`}
+              width={80}
+              height={80}
+              style={{ objectFit: "cover" }}
+            />
+          </Box>
+        ))}
+      </Group>
+    </Box>
+  );
+};
+
+export default ProductGallery;
+===END_FILE===
+
+===FILE:src/components/product/ProductInfo.jsx===
+import { Title, Text, Group, Rating, Badge, Button, Box, Divider, Stack } from "@mantine/core";
+import { IconShoppingCart, IconPackage, IconTruck } from "@tabler/icons-react";
+import { useState } from "react";
+import { useCart } from "../../context/CartContext";
+import formatPrice from "../../lib/formatPrice";
+import QuantitySelector from "../common/QuantitySelector";
+
+const ProductInfo = ({ product }) => {
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
+
+  if (!product) {
+    return null;
+  }
+
+  const { name, description, price, category, rating, stock } = product;
+
+  const handleAddToCart = () => {
+    if (addToCart) {
+      addToCart(product.id, quantity);
+    }
+  };
+
+  return (
+    <Stack spacing="lg">
+      <Group position="apart" align="flex-start">
+        <Title order={2} size="h2" weight={600}>
+          {name}
+        </Title>
+        <Badge color="brand" variant="light" size="lg">
+          {category}
+        </Badge>
+      </Group>
+
+      <Group spacing="lg">
+        <Text weight={700} size="2xl" color="success.6">
+          {formatPrice(price)}
+        </Text>
+        <Rating value={rating} fractions={2} size="lg" readOnly />
+      </Group>
+
+      <Text size="md" color="dimmed" style={{ lineHeight: 1.6 }}>
+        {description}
+      </Text>
+
+      <Divider />
+
+      <Group spacing="md">
+        <Text size="sm" weight={500}>
+          Quantity:
+        </Text>
+        <QuantitySelector
+          value={quantity}
+          onChange={setQuantity}
+          min={1}
+          max={stock}
+        />
+      </Group>
+
+      <Group spacing="xs">
+        <IconPackage size={18} color="var(--mantine-color-gray-6)" />
+        <Text size="sm" color="dimmed">
+          {stock} items in stock
+        </Text>
+      </Group>
+
+      <Group spacing="xs">
+        <IconTruck size={18} color="var(--mantine-color-success-6)" />
+        <Text size="sm" color="success.6" weight={500}>
+          Free shipping on orders over $50
+        </Text>
+      </Group>
+
+      <Button
+        leftIcon={<IconShoppingCart size={18} />}
+        size="lg"
+        fullWidth
+        onClick={handleAddToCart}
+      >
+        Add to Cart
+      </Button>
+    </Stack>
+  );
+};
+
+export default ProductInfo;
+===END_FILE===
+
+===FILE:src/components/cart/CartItem.jsx===
+import { Group, Image, Text, ActionIcon, rem } from "@mantine/core";
+import { IconTrash } from "@tabler/icons-react";
+import { useCart } from "../../context/CartContext";
+import formatPrice from "../../lib/formatPrice";
+import QuantitySelector from "../common/QuantitySelector";
+
+const CartItem = ({ item }) => {
+  const { removeFromCart, updateQuantity } = useCart();
+
+  if (!item) {
+    return null;
+  }
+
+  const { productId, quantity, priceAtAdd } = item;
+
+  // Get product info from products data
+  const { products } = require("../../data/products");
+  const product = products.find((p) => p.id === productId) || null;
+
+  if (!product) {
+    return null;
+  }
+
+  const { name, image, stock } = product;
+
+  const handleQuantityChange = (newQuantity) => {
+    if (updateQuantity) {
+      updateQuantity(productId, newQuantity);
+    }
+  };
+
+  const handleRemove = () => {
+    if (removeFromCart) {
+      removeFromCart(productId);
+    }
+  };
+
+  return (
+    <Group position="apart" align="flex-start" spacing="md" mb="md">
+      <Group spacing="sm" align="flex-start" style={{ flex: 1 }}>
+        <Image
+          src={image}
+          alt={name}
+          width={rem(80)}
+          height={rem(80)}
+          style={{ objectFit: "cover", borderRadius: rem(8) }}
+        />
+        <div>
+          <Text weight={500} size="sm" lineClamp={2} mb={4}>
+            {name}
+          </Text>
+          <Text weight={700} size="sm" color="success.6">
+            {formatPrice(priceAtAdd)}
+          </Text>
+        </div>
+      </Group>
+
+      <Group spacing="sm" align="center">
+        <QuantitySelector
+          value={quantity}
+          onChange={handleQuantityChange}
+          min={1}
+          max={stock}
+        />
+        <ActionIcon
+          variant="subtle"
+          color="error"
+          size="sm"
+          onClick={handleRemove}
+          aria-label="Remove item"
+        >
+          <IconTrash size={rem(16)} />
+        </ActionIcon>
+      </Group>
+    </Group>
+  );
+};
+
+export default CartItem;
+===END_FILE===
+
+===FILE:src/components/cart/CartDrawer.jsx===
+import { Drawer, Group, Text, Button, Divider, Box, ScrollArea, rem, Center } from "@mantine/core";
+import { IconShoppingCart, IconX, IconArrowRight } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import formatPrice from "../../lib/formatPrice";
+import CartItem from "./CartItem";
+
+const CartDrawer = ({ opened, onClose }) => {
+  const navigate = useNavigate();
+  const { cartItems, getCartTotal, getCartItemCount, clearCart } = useCart();
+
+  const safeCartItems = Array.isArray(cartItems) ? cartItems : [];
+  const itemCount = getCartItemCount ? getCartItemCount() : 0;
+  const total = getCartTotal ? getCartTotal() : 0;
+
+  const handleCheckout = () => {
+    if (onClose) {
+      onClose();
+    }
+    navigate("/checkout");
+  };
+
+  const handleContinueShopping = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  return (
+    <Drawer
+      opened={opened}
+      onClose={onClose}
+      title={
+        <Group spacing="xs">
+          <IconShoppingCart size={rem(20)} />
+          <Text weight={600} size="lg">
+            Shopping Cart ({itemCount})
+          </Text>
+        </Group>
+      }
+      padding="md"
+      size="md"
+      position="right"
+      closeButtonProps={{
+        icon: <IconX size={rem(20)} />,
+        "aria-label": "Close cart",
+      }}
+    >
+      <Box style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+        {safeCartItems.length === 0 ? (
+          <Center style={{ flex: 1 }}>
+            <Text color="dimmed" align="center">
+              Your cart is empty. Add some products to get started!
+            </Text>
+          </Center>
+        ) : (
+          <>
+            <ScrollArea style={{ flex: 1 }} pr="xs">
+              {safeCartItems.map((item) => (
+                <CartItem key={item.productId} item={item} />
+              ))}
+            </ScrollArea>
+
+            <Box mt="md">
+              <Divider my="sm" />
+              <Group position="apart" mb="lg">
+                <Text weight={500} size="lg">
+                  Subtotal
+                </Text>
+                <Text weight={700} size="xl" color="success.6">
+                  {formatPrice(total)}
+                </Text>
+              </Group>
+
+              <Group spacing="sm">
+                <Button
+                  variant="light"
+                  color="gray"
+                  onClick={handleContinueShopping}
+                  fullWidth
+                >
+                  Continue Shopping
+                </Button>
+                <Button
+                  rightIcon={<IconArrowRight size={rem(16)} />}
+                  onClick={handleCheckout}
+                  fullWidth
+                >
+                  Checkout
+                </Button>
+              </Group>
+            </Box>
+          </>
+        )}
+      </Box>
+    </Drawer>
+  );
+};
+
+export default CartDrawer;
+===END_FILE===
+
+===FILE:src/components/cart/CheckoutForm.jsx===
+import { TextInput, Textarea, Select, Group, Text, Button, Card, rem, Box, Alert } from "@mantine/core";
+import { IconCreditCard, IconCash, IconCheck } from "@tabler/icons-react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
+import formatPrice from "../../lib/formatPrice";
+
+const CheckoutForm = () => {
+  const navigate = useNavigate();
+  const { cartItems, getCartTotal, clearCart } = useCart();
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const safeCartItems = Array.isArray(cartItems) ? cartItems : [];
+  const total = getCartTotal ? getCartTotal() : 0;
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    country: "US",
+    paymentMethod: "credit",
+    cardNumber: "",
+    cardExpiry: "",
+    cardCvv: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "First name is required";
+    }
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Last name is required";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+    if (!formData.address.trim()) {
+      newErrors.address = "Address is required";
+    }
+    if (!formData.city.trim()) {
+      newErrors.city = "City is required";
+    }
+    if (!formData.state.trim()) {
+      newErrors.state = "State is required";
+    }
+    if (!formData.zipCode.trim()) {
+      newErrors.zipCode = "ZIP code is required";
+    }
+
+    if (formData.paymentMethod === "credit") {
+      if (!formData.cardNumber.trim()) {
+        newErrors.cardNumber = "Card number is required";
+      } else if (!/^\d{16}$/.test(formData.cardNumber.replace(/\s/g, ""))) {
+        newErrors.cardNumber = "Invalid card number";
+      }
+      if (!formData.cardExpiry.trim()) {
+        newErrors.cardExpiry = "Expiry date is required";
+      }
+      if (!formData.cardCvv.trim()) {
+        newErrors.cardCvv = "CVV is required";
+      } else if (!/^\d{3,4}$/.test(formData.cardCvv)) {
+        newErrors.cardCvv = "Invalid CVV";
+      }
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      setSubmitting(true);
+      // Simulate processing
+      setTimeout(() => {
+        setSubmitting(false);
+        setSubmitted(true);
+        if (clearCart) {
+          clearCart();
+        }
+        navigate("/order-confirmation");
+      }, 1000);
+    }
+  };
+
+  const handleChange = (field) => (value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <Group spacing="xl" align="flex-start">
+        <Box style={{ flex: 2 }}>
+          <Card shadow="sm" padding="lg" radius="lg" mb="lg">
+            <Text weight={600} size="lg" mb="md">
+              Shipping Information
+            </Text>
+
+            <Group spacing="md" grow>
+              <TextInput
+                label="First Name"
+                placeholder="John"
+                value={formData.firstName}
+                onChange={(e) => handleChange("firstName")(e.target.value)}
+                error={errors.firstName}
+                required
+              />
+              <TextInput
+                label="Last Name"
+                placeholder="Doe"
+                value={formData.lastName}
+                onChange={(e) => handleChange("lastName")(e.target.value)}
+                error={errors.lastName}
+                required
+              />
+            </Group>
+
+            <TextInput
+              label="Email"
+              placeholder="john@example.com"
+              value={formData.email}
+              onChange={(e) => handleChange("email")(e.target.value)}
+              error={errors.email}
+              mt="md"
+              required
+            />
+
+            <TextInput
+              label="Phone"
+              placeholder="+1 (555) 123-4567"
+              value={formData.phone}
+              onChange={(e) => handleChange("phone")(e.target.value)}
+              mt="md"
+            />
+
+            <Textarea
+              label="Address"
+              placeholder="123 Main Street"
+              value={formData.address}
+              onChange={(e) => handleChange("address")(e.target.value)}
+              error={errors.address}
+              mt="md"
+              required
+            />
+
+            <Group spacing="md" grow mt="md">
+              <TextInput
+                label="City"
+                placeholder="New York"
+                value={formData.city}
+                onChange={(e) => handleChange("city")(e.target.value)}
+                error={errors.city}
+                required
+              />
+              <TextInput
+                label="State"
+                placeholder="NY"
+                value={formData.state}
+                onChange={(e) => handleChange("state")(e.target.value)}
+                error={errors.state}
+                required
+              />
+            </Group>
+
+            <Group spacing="md" grow mt="md">
+              <TextInput
+                label="ZIP Code"
+                placeholder="10001"
+                value={formData.zipCode}
+                onChange={(e) => handleChange("zipCode")(e.target.value)}
+                error={errors.zipCode}
+                required
+              />
+              <Select
+                label="Country"
+                data={[
+                  { value: "US", label: "United States" },
+                  { value: "CA", label: "Canada" },
+                  { value: "UK", label: "United Kingdom" },
+                ]}
+                value={formData.country}
+                onChange={handleChange("country")}
+              />
+            </Group>
+          </Card>
+
+          <Card shadow="sm" padding="lg" radius="lg">
+            <Text weight={600} size="lg" mb="md">
+              Payment Method
+            </Text>
+
+            <Group spacing="md" mb="md">
+              <Button
+                variant={formData.paymentMethod === "credit" ? "filled" : "outline"}
+                color="brand"
+                leftIcon={<IconCreditCard size={rem(18)} />}
+                onClick={() => handleChange("paymentMethod")("credit")}
+              >
+                Credit Card
+              </Button>
+              <Button
+                variant={formData.paymentMethod === "cash" ? "filled" : "outline"}
+                color="brand"
+                leftIcon={<IconCash size={rem(18)} />}
+                onClick={() => handleChange("paymentMethod")("cash")}
+              >
+                Cash on Delivery
+              </Button>
+            </Group>
+
+            {formData.paymentMethod === "credit" && (
+              <>
+                <TextInput
+                  label="Card Number"
+                  placeholder="1234 5678 9012 3456"
+                  value={formData.cardNumber}
+                  onChange={(e) => handleChange("cardNumber")(e.target.value)}
+                  error={errors.cardNumber}
+                  required
+                />
+
+                <Group spacing="md" grow mt="md">
+                  <TextInput
+                    label="Expiry Date"
+                    placeholder="MM/YY"
+                    value={formData.cardExpiry}
+                    onChange={(e) => handleChange("cardExpiry")(e.target.value)}
+                    error={errors.cardExpiry}
+                    required
+                  />
+                  <TextInput
+                    label="CVV"
+                    placeholder="123"
+                    value={formData.cardCvv}
+                    onChange={(e) => handleChange("cardCvv")(e.target.value)}
+                    error={errors.cardCvv}
+                    required
+                  />
+                </Group>
+              </>
+            )}
+          </Card>
+        </Box>
+
+        <Box style={{ flex: 1 }}>
+          <Card shadow="sm" padding="lg" radius="lg" sticky>
+            <Text weight={600} size="lg" mb="md">
+              Order Summary
+            </Text>
+
+            {safeCartItems.length === 0 ? (
+              <Text color="dimmed">No items in cart</Text>
+            ) : (
+              <>
+                {safeCartItems.map((item) => {
+                  const { products } = require("../../data/products");
+                  const product = products.find((p) => p.id === item.productId) || null;
+                  if (!product) return null;
+                  return (
+                    <Group key={item.productId} position="apart" mb="xs">
+                      <Text size="sm" lineClamp={1}>
+                        {product.name} × {item.quantity}
+                      </Text>
+                      <Text size="sm" weight={500}>
+                        {formatPrice(item.priceAtAdd * item.quantity)}
+                      </Text>
+                    </Group>
+                  );
+                })}
+
+                <Divider my="sm" />
+
+                <Group position="apart" mb="sm">
+                  <Text>Subtotal</Text>
+                  <Text weight={500}>{formatPrice(total)}</Text>
+                </Group>
+
+                <Group position="apart" mb="sm">
+                  <Text>Shipping</Text>
+                  <Text weight={500} color="success.6">
+                    {total >= 50 ? "Free" : formatPrice(9.99)}
+                  </Text>
+                </Group>
+
+                <Divider my="sm" />
+
+                <Group position="apart" mb="lg">
+                  <Text weight={600} size="lg">
+                    Total
+                  </Text>
+                  <Text weight={700} size="xl" color="success.6">
+                    {formatPrice(total + (total >= 50 ? 0 : 9.99))}
+                  </Text>
+                </Group>
+              </>
+            )}
+
+            <Button
+              type="submit"
+              rightIcon={<IconCheck size={rem(18)} />}
+              fullWidth
+              size="lg"
+              loading={submitting}
+              disabled={safeCartItems.length === 0}
+            >
+              Place Order
+            </Button>
+          </Card>
+        </Box>
+      </Group>
+    </form>
+  );
+};
+
+export default CheckoutForm;
+===END_FILE===
+
+===FILE:src/pages/HomePage.jsx===
+import { Container, Box, rem } from "@mantine/core";
+import { useState, useMemo } from "react";
+import { useSearchParams, useNavigate } from "react-router-dom";
+import StoreLayout from "../components/layout/StoreLayout";
+import FilterBarSection from "../components/sections/FilterBarSection";
+import ProductGridSection from "../components/sections/ProductGridSection";
+import { products, categories } from "../data/products";
+
+const HomePage = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  const [selectedCategory, setSelectedCategory] = useState(
+    searchParams.get("category") || "All"
+  );
+  const [priceRange, setPriceRange] = useState([0, 300]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredProducts = useMemo(() => {
+    let result = [...products];
+
+    // Apply category filter
+    if (selectedCategory && selectedCategory !== "All") {
+      result = result.filter((product) => product.category === selectedCategory);
+    }
+
+    // Apply price filter
+    result = result.filter(
+      (product) => product.price >= priceRange[0] && product.price <= priceRange[1]
+    );
+
+    // Apply search filter
+    if (searchQuery && searchQuery.trim() !== "") {
+      const query = searchQuery.toLowerCase().trim();
+      result = result.filter(
+        (product) =>
+          product.name.toLowerCase().includes(query) ||
+          product.description.toLowerCase().includes(query)
+      );
+    }
+
+    return result;
+  }, [selectedCategory, priceRange, searchQuery]);
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setSearchParams((prev) => {
+      if (category && category !== "All") {
+        prev.set("category", category);
+      } else {
+        prev.delete("category");
+      }
+      return prev;
+    });
+  };
+
+  const handlePriceChange = (range) => {
+    setPriceRange(range);
+  };
+
+  const handleClearFilters = () => {
+    setSelectedCategory("All");
+    setPriceRange([0, 300]);
+    setSearchQuery("");
+    setSearchParams({});
+  };
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
+  return (
+    <Container size="xl" px="md">
+      <Box pt="lg" pb="xl">
+        <FilterBarSection
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={handleCategoryChange}
+          priceRange={priceRange}
+          onPriceChange={handlePriceChange}
+          onClearFilters={handleClearFilters}
+        />
+        <ProductGridSection products={filteredProducts} />
+      </Box>
+    </Container>
+  );
+};
+
+export default HomePage;
+===END_FILE===
+
+===FILE:src/pages/ProductDetailsPage.jsx===
+import { Container, Grid, GridCol, Box, rem, Alert, Center } from "@mantine/core";
+import { IconAlertCircle } from "@tabler/icons-react";
+import { useParams } from "react-router-dom";
+import StoreLayout from "../components/layout/StoreLayout";
+import ProductGallery from "../components/product/ProductGallery";
+import ProductInfo from "../components/product/ProductInfo";
+import { getProductById } from "../data/products";
+
+const ProductDetailsPage = () => {
+  const { id } = useParams();
+  const product = getProductById(id);
+
+  if (!product) {
+    return (
+      <Container size="xl" px="md" py="xl">
+        <Center>
+          <Alert
+            icon={<IconAlertCircle size={rem(20)} />}
+            title="Product Not Found"
+            color="error"
+            variant="light"
+          >
+            The product you're looking for doesn't exist or has been removed.
+          </Alert>
+        </Center>
+      </Container>
+    );
+  }
+
+  return (
+    <Container size="xl" px="md" py="xl">
+      <Grid gutter="xl">
+        <GridCol span={12} md={6}>
+          <ProductGallery product={product} />
+        </GridCol>
+        <GridCol span={12} md={6}>
+          <ProductInfo product={product} />
+        </GridCol>
+      </Grid>
+    </Container>
+  );
+};
+
+export default ProductDetailsPage;
+===END_FILE===
+
+===FILE:src/pages/CheckoutPage.jsx===
+import { Container, Title, Text, Button, Group, Card, rem, Box } from "@mantine/core";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import StoreLayout from "../components/layout/StoreLayout";
+import CheckoutForm from "../components/cart/CheckoutForm";
+
+const CheckoutPage = () => {
+  return (
+    <Container size="xl" px="md" py="xl">
+      <Box mb="lg">
+        <Group spacing="sm">
+          <Button
+            component={Link}
+            to="/"
+            variant="subtle"
+            color="gray"
+            leftIcon={<IconArrowLeft size={rem(16)} />}
+            size="sm"
+          >
+            Back to Shop
+          </Button>
+        </Group>
+      </Box>
+
+      <Title order={1} mb="lg">
+        Checkout
+      </Title>
+
+      <CheckoutForm />
+    </Container>
+  );
+};
+
+export default CheckoutPage;
+===END_FILE===
+
+===FILE:src/pages/OrderConfirmationPage.jsx===
+import { Container, Title, Text, Button, Group, Card, rem, Box, Center, ThemeIcon } from "@mantine/core";
+import { IconCheck, IconShoppingBag, IconHome } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import StoreLayout from "../components/layout/StoreLayout";
+
+const OrderConfirmationPage = () => {
+  return (
+    <Container size="md" px="md" py="xl">
+      <Card shadow="sm" padding="xl" radius="lg" ta="center">
+        <Center mb="lg">
+          <ThemeIcon size={80} radius={100} color="success">
+            <IconCheck size={rem(40)} stroke={2} />
+          </ThemeIcon>
+        </Center>
+
+        <Title order={1} mb="md" c="success.7">
+          Order Placed Successfully!
+        </Title>
+
+        <Text size="lg" c="dimmed" mb="lg">
+          Thank you for your purchase. Your order has been received and is being processed.
+          You will receive a confirmation email shortly with your order details.
+        </Text>
+
+        <Text size="md" mb="xl">
+          Order Number: <Text span weight={600}>#{Math.floor(100000 + Math.random() * 900000)}</Text>
+        </Text>
+
+        <Group spacing="md" justify="center">
+          <Button
+            component={Link}
+            to="/"
+            leftIcon={<IconHome size={rem(18)} />}
+            variant="light"
+            color="brand"
+            size="md"
+          >
+            Continue Shopping
+          </Button>
+          <Button
+            component={Link}
+            to="/"
+            leftIcon={<IconShoppingBag size={rem(18)} />}
+            variant="outline"
+            color="gray"
+            size="md"
+          >
+            View Products
+          </Button>
+        </Group>
+      </Card>
+    </Container>
+  );
+};
+
+export default OrderConfirmationPage;
+===END_FILE===
+
+===FILE:src/pages/NotFoundPage.jsx===
+import { Container, Title, Text, Button, Group, Card, rem, Box, Center, ThemeIcon } from "@mantine/core";
+import { IconAlertCircle, IconHome, IconSearch } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import StoreLayout from "../components/layout/StoreLayout";
+
+const NotFoundPage = () => {
+  return (
+    <Container size="md" px="md" py="xl">
+      <Card shadow="sm" padding="xl" radius="lg" ta="center">
+        <Center mb="lg">
+          <ThemeIcon size={80} radius={100} color="error">
+            <IconAlertCircle size={rem(40)} stroke={2} />
+          </ThemeIcon>
+        </Center>
+
+        <Title order={1} mb="md">
+          Page Not Found
+        </Title>
+
+        <Text size="lg" c="dimmed" mb="xl">
+          The page you're looking for doesn't exist or may have been moved.
+          Please check the URL or navigate back to our shop.
+        </Text>
+
+        <Group spacing="md" justify="center">
+          <Button
+            component={Link}
+            to="/"
+            leftIcon={<IconHome size={rem(18)} />}
+            variant="filled"
+            color="brand"
+            size="md"
+          >
+            Go to Home
+          </Button>
+          <Button
+            component={Link}
+            to="/"
+            leftIcon={<IconSearch size={rem(18)} />}
+            variant="outline"
+            color="gray"
+            size="md"
+          >
+            Browse Products
+          </Button>
+        </Group>
+      </Card>
+    </Container>
+  );
+};
+
+export default NotFoundPage;
+===END_FILE===
+
+===FILE:src/routes/AppRouter.jsx===
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
+import CheckoutPage from "../pages/CheckoutPage";
+import OrderConfirmationPage from "../pages/OrderConfirmationPage";
+import NotFoundPage from "../pages/NotFoundPage";
+import StoreLayout from "../components/layout/StoreLayout";
+
+const AppRouter = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StoreLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="product/:id" element={<ProductDetailsPage />} />
+          <Route path="checkout" element={<CheckoutPage />} />
+          <Route path="order-confirmation" element={<OrderConfirmationPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default AppRouter;
+===END_FILE===
+
+===FILE:src/App.jsx===
+import { CartProvider } from "./context/CartContext";
+import AppRouter from "./routes/AppRouter";
+
+const App = () => {
+  return (
+    <CartProvider>
+      <AppRouter />
+    </CartProvider>
+  );
+};
+
+export default App;
+===END_FILE===

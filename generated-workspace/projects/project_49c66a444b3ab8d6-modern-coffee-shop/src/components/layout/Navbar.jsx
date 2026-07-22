@@ -1,0 +1,115 @@
+import { Box, Group, Text, Burger, Drawer, Stack, Anchor } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+
+const Navbar = () => {
+  const [opened, { toggle, close }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    if (opened) {
+      close();
+    }
+  };
+
+  const navLinks = [
+    { label: "Home", id: "hero" },
+    { label: "Menu", id: "menu" },
+    { label: "Contact", id: "contact" }
+  ];
+
+  const NavItems = () => (
+    <>
+      {navLinks.map((link) => (
+        <Anchor
+          key={link.id}
+          href={`#${link.id}`}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(link.id);
+          }}
+          style={{
+            color: "#3E2723",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "1rem",
+            cursor: "pointer"
+          }}
+        >
+          {link.label}
+        </Anchor>
+      ))}
+    </>
+  );
+
+  return (
+    <Box
+      component="nav"
+      style={{
+        position: "sticky",
+        top: 0,
+        backgroundColor: "#FFFDD0",
+        borderBottom: "1px solid #E0D5C5",
+        zIndex: 100
+      }}
+      p="md"
+    >
+      <Group justify="space-between" align="center">
+        <Text
+          size="xl"
+          fw={700}
+          style={{ color: "#3E2723", cursor: "pointer" }}
+          onClick={() => scrollToSection("hero")}
+        >
+          Brew & Bean Café
+        </Text>
+
+        {isMobile ? (
+          <>
+            <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" color="#654321" />
+            <Drawer
+              opened={opened}
+              onClose={close}
+              position="right"
+              title="Menu"
+              closeButtonProps={{ icon: <IconX size={24} /> }}
+              styles={{
+                header: { backgroundColor: "#FFFDD0" },
+                body: { backgroundColor: "#FFFDD0" }
+              }}
+            >
+              <Stack gap="lg" pt="lg">
+                {navLinks.map((link) => (
+                  <Text
+                    key={link.id}
+                    component="a"
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.id);
+                    }}
+                    size="lg"
+                    fw={500}
+                    style={{ color: "#3E2723", cursor: "pointer", textDecoration: "none" }}
+                  >
+                    {link.label}
+                  </Text>
+                ))}
+              </Stack>
+            </Drawer>
+          </>
+        ) : (
+          <Group gap="xl">
+            <NavItems />
+          </Group>
+        )}
+      </Group>
+    </Box>
+  );
+};
+
+export default Navbar;

@@ -1,0 +1,234 @@
+
+Looking at the error, the issue is that the navigation uses `href` attributes pointing to routes, but there's no routing system. Since React Router is not allowed in this preview environment, I'll fix this by making the navigation items non-navigating (removing the href) and using them as section indicators instead.
+===FILE:src/components/layout/SidebarNav.jsx===
+import { NavLink, Group, ActionIcon, ScrollArea, Drawer, Burger } from "@mantine/core";
+import { IconDashboard, IconUsers, IconPackage, IconShoppingCart, IconChartBar, IconSettings, IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import navigationItems from "../../data/navigationItems";
+
+const navIconMap = {
+  dashboard: IconDashboard,
+  users: IconUsers,
+  package: IconPackage,
+  "shopping-cart": IconShoppingCart,
+  "chart-bar": IconChartBar,
+  settings: IconSettings,
+};
+
+function SidebarNav() {
+  const [collapsed, { toggle: toggleCollapsed }] = useDisclosure(false);
+  const [mobileOpened, { toggle: toggleMobile, close: closeMobile }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const safeNavItems = Array.isArray(navigationItems) ? navigationItems : [];
+
+  const navLinks = safeNavItems.map((item) => {
+    const Icon = navIconMap[item.icon] ?? IconDashboard;
+    const isActive = item.id === "dashboard";
+    
+    return (
+      <NavLink
+        key={item.id}
+        label={collapsed && !isMobile ? undefined : item.label ?? "Item"}
+        leftSection={<Icon size={18} stroke={1.5} />}
+        active={isActive}
+        variant={isActive ? "filled" : "light"}
+        color={isActive ? "primary" : "gray"}
+        onClick={isMobile ? closeMobile : undefined}
+        style={{ cursor: "default" }}
+      />
+    );
+  });
+
+  if (isMobile) {
+    return (
+      <>
+        <Burger
+          opened={mobileOpened}
+          onClick={toggleMobile}
+          aria-label="Toggle navigation"
+          size="sm"
+        />
+        <Drawer
+          opened={mobileOpened}
+          onClose={closeMobile}
+          title="Navigation"
+          padding="xs"
+          size="sm"
+        >
+          <ScrollArea>
+            {navLinks}
+          </ScrollArea>
+        </Drawer>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Group justify="flex-end" mb="xs">
+        <ActionIcon
+          variant="subtle"
+          color="gray"
+          onClick={toggleCollapsed}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {collapsed ? <IconChevronRight size={16} /> : <IconChevronLeft size={16} />}
+        </ActionIcon>
+      </Group>
+      <ScrollArea>
+        {navLinks}
+      </ScrollArea>
+    </>
+  );
+}
+
+export default SidebarNav;
+===END_FILE===
+
+Looking at the error, the issue is that the navigation links point to routes like `/users`, `/products`, etc., but there's no routing system. Since I cannot use react-router-dom per the constraints, I'll implement a single-page experience with anchor-based navigation.
+
+Let me fix both files:
+===FILE:src/data/navigationItems.js===
+const navigationItems = [
+  {
+    id: "dashboard",
+    label: "Dashboard",
+    icon: "dashboard",
+    route: "#dashboard",
+  },
+  {
+    id: "users",
+    label: "Users",
+    icon: "users",
+    route: "#users",
+  },
+  {
+    id: "products",
+    label: "Products",
+    icon: "package",
+    route: "#products",
+  },
+  {
+    id: "orders",
+    label: "Orders",
+    icon: "shopping-cart",
+    route: "#orders",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    icon: "chart-bar",
+    route: "#analytics",
+  },
+  {
+    id: "settings",
+    label: "Settings",
+    icon: "settings",
+    route: "#settings",
+  },
+];
+
+export default navigationItems;
+===END_FILE===
+===FILE:src/App.jsx===
+import { AppShell, Group, Text, SimpleGrid, Card, Title, Box, rem } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import DashboardHeader from "./components/layout/DashboardHeader";
+import SidebarNav from "./components/layout/SidebarNav";
+import StatsOverview from "./components/sections/StatsOverview";
+import ChartsSection from "./components/sections/ChartsSection";
+import ActivityTable from "./components/sections/ActivityTable";
+
+function UsersSection() {
+  return (
+    <Box id="users" pt="xl">
+      <Title order={2} mb="md">Users Management</Title>
+      <Card withBorder>
+        <Text p="xl">Users page content - manage user accounts, permissions, and profiles.</Text>
+      </Card>
+    </Box>
+  );
+}
+
+function ProductsSection() {
+  return (
+    <Box id="products" pt="xl">
+      <Title order={2} mb="md">Products Management</Title>
+      <Card withBorder>
+        <Text p="xl">Products page content - manage product catalog, inventory, and pricing.</Text>
+      </Card>
+    </Box>
+  );
+}
+
+function OrdersSection() {
+  return (
+    <Box id="orders" pt="xl">
+      <Title order={2} mb="md">Orders Management</Title>
+      <Card withBorder>
+        <Text p="xl">Orders page content - view and manage customer orders and transactions.</Text>
+      </Card>
+    </Box>
+  );
+}
+
+function AnalyticsSection() {
+  return (
+    <Box id="analytics" pt="xl">
+      <Title order={2} mb="md">Analytics</Title>
+      <Card withBorder>
+        <Text p="xl">Analytics page content - detailed reports and data insights.</Text>
+      </Card>
+    </Box>
+  );
+}
+
+function SettingsSection() {
+  return (
+    <Box id="settings" pt="xl">
+      <Title order={2} mb="md">Settings</Title>
+      <Card withBorder>
+        <Text p="xl">Settings page content - configure application preferences and system settings.</Text>
+      </Card>
+    </Box>
+  );
+}
+
+function App() {
+  const [mobileOpened, { toggle: toggleMobile }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  return (
+    <AppShell
+      header={{ height: 60 }}
+      navbar={{ width: { base: 260 }, breakpoint: "sm", collapsed: { mobile: true } }}
+      padding="md"
+    >
+      <AppShell.Header>
+        <DashboardHeader onMobileToggle={toggleMobile} />
+      </AppShell.Header>
+
+      <AppShell.Navbar p="xs">
+        <SidebarNav />
+      </AppShell.Navbar>
+
+      <AppShell.Main>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+          <div id="dashboard">
+            <StatsOverview />
+            <ChartsSection />
+            <ActivityTable />
+          </div>
+          <UsersSection />
+          <ProductsSection />
+          <OrdersSection />
+          <AnalyticsSection />
+          <SettingsSection />
+        </div>
+      </AppShell.Main>
+    </AppShell>
+  );
+}
+
+export default App;
+===END_FILE===

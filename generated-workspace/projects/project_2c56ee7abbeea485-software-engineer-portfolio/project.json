@@ -1,0 +1,17 @@
+{
+  "id": "project_2c56ee7abbeea485",
+  "name": "Software Engineer Portfolio",
+  "slug": "software-engineer-portfolio",
+  "type": "portfolio",
+  "description": "A professional portfolio website for a software engineer to showcase technical expertise, projects, skills, and professional experience to potential employers and clients",
+  "status": "active",
+  "createdAt": "2026-07-16T10:44:42.861Z",
+  "updatedAt": "2026-07-16T11:17:25.914Z",
+  "activeSessionId": null,
+  "entryFile": "src/App.jsx",
+  "previewStatus": "ready",
+  "lastWorkingVersionId": "version_mrnezx8y_5438048a",
+  "deploymentUrl": null,
+  "deployedAt": null,
+  "deployedVersionId": null
+}

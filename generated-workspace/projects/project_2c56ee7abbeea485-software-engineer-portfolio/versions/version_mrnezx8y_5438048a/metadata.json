@@ -1,0 +1,9 @@
+{
+  "id": "version_mrnezx8y_5438048a",
+  "prompt": "fix this issue Cannot read properties of undefined (reading 'map') in which file the issue is comming find and fix that",
+  "createdAt": "2026-07-16T11:17:25.912Z",
+  "changedFiles": [
+    "src/components/sections/ProjectsSection.jsx"
+  ],
+  "status": "working"
+}

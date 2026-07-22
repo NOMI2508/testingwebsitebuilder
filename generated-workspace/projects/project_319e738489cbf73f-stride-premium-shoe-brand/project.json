@@ -1,0 +1,17 @@
+{
+  "id": "project_319e738489cbf73f",
+  "name": "Stride - Premium Shoe Brand",
+  "slug": "stride-premium-shoe-brand",
+  "type": "ecommerce",
+  "description": "A modern frontend e-commerce website for a premium shoe brand featuring interactive product browsing, filtering, and cart functionality using mock data with localStorage persistence",
+  "status": "active",
+  "createdAt": "2026-07-16T11:57:02.062Z",
+  "updatedAt": "2026-07-16T12:39:26.560Z",
+  "activeSessionId": null,
+  "entryFile": "src/App.jsx",
+  "previewStatus": "ready",
+  "lastWorkingVersionId": "version_mrngun19_71679d2b",
+  "deploymentUrl": "/api/projects/project_319e738489cbf73f/deploy",
+  "deployedAt": "2026-07-16T12:39:26.560Z",
+  "deployedVersionId": null
+}

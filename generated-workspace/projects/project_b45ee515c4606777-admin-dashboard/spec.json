@@ -1,0 +1,717 @@
+{
+  "schemaVersion": "2.0",
+  "status": "ready",
+  "request": {
+    "mode": "create",
+    "executionStrategy": "plan-and-build",
+    "scope": "project",
+    "summary": "Build a responsive admin dashboard with Next.js and Mantine featuring sidebar, header, stats cards, mock charts, recent activity table, dark mode, and mobile navigation using mock data.",
+    "confidence": 0.95,
+    "constraints": [
+      "Frontend only - no backend required",
+      "Use Next.js and Mantine components",
+      "Mock data for all content",
+      "Must be fully responsive"
+    ],
+    "preserve": [],
+    "nonGoals": [
+      "User authentication",
+      "Persistent data storage",
+      "Real API integrations",
+      "Complex form handling"
+    ]
+  },
+  "project": {
+    "name": "Admin Dashboard",
+    "type": "dashboard",
+    "summary": "A modern, responsive admin dashboard built with Next.js and Mantine UI components. Features include a collapsible sidebar navigation, header with user profile and dark mode toggle, statistics overview cards, mock data visualizations with charts, and a recent activity table. All data is mocked for frontend-only demonstration.",
+    "purpose": "Provide administrators with a clean, intuitive interface to monitor key metrics, view recent activity, and navigate administrative functions.",
+    "targetAudience": [
+      "System administrators",
+      "Content managers",
+      "Business analysts",
+      "Platform moderators"
+    ],
+    "primaryGoal": "Enable quick overview of system metrics and navigation to administrative sections"
+  },
+  "assumptions": [
+    "Using Mantine's built-in chart components or a lightweight charting library compatible with Mantine",
+    "Sidebar will be collapsible on desktop and hidden on mobile with hamburger menu toggle",
+    "Dark mode will use Mantine's built-in color scheme functionality",
+    "Stats cards will show common admin metrics like users, revenue, orders, and performance",
+    "Recent activity table will display mock user actions, timestamps, and status indicators",
+    "Mobile navigation will use a drawer component for the sidebar"
+  ],
+  "changeImpact": {
+    "create": [
+      "Dashboard layout structure",
+      "Sidebar navigation component",
+      "Header component with dark mode toggle",
+      "Stats cards grid",
+      "Mock chart components",
+      "Recent activity table",
+      "Mobile-responsive navigation drawer"
+    ],
+    "modify": [],
+    "preserve": [],
+    "remove": [],
+    "riskLevel": "low",
+    "risks": [
+      "Chart library compatibility with Mantine - will use Recharts or Mantine Charts if available"
+    ]
+  },
+  "pages": [
+    {
+      "name": "Dashboard Home",
+      "route": "/",
+      "purpose": "Main dashboard overview page displaying key metrics and recent activity",
+      "primaryAction": "Navigate to specific admin sections via sidebar or view detailed reports",
+      "sections": [
+        {
+          "name": "Header",
+          "purpose": "Top navigation bar with branding, user menu, notifications, and dark mode toggle",
+          "contentRequirements": [
+            "App logo/name",
+            "User avatar with dropdown menu",
+            "Notification bell icon",
+            "Dark mode toggle switch"
+          ],
+          "interactions": [
+            "Click user avatar to open profile menu",
+            "Click notification icon to view alerts",
+            "Toggle dark mode switch"
+          ],
+          "states": [
+            "Default",
+            "Dark mode active",
+            "User menu open",
+            "Notifications panel open"
+          ],
+          "responsiveBehavior": "Logo centered on mobile, user menu collapses to icon-only, dark mode toggle remains visible"
+        },
+        {
+          "name": "Sidebar",
+          "purpose": "Primary navigation for admin sections with collapsible functionality",
+          "contentRequirements": [
+            "Navigation links with icons",
+            "Section groupings",
+            "Collapse/expand toggle",
+            "Active state indicator"
+          ],
+          "interactions": [
+            "Click nav items to navigate",
+            "Click collapse toggle to minimize sidebar",
+            "Hover for tooltips in collapsed state"
+          ],
+          "states": [
+            "Expanded",
+            "Collapsed",
+            "Mobile hidden",
+            "Mobile drawer open"
+          ],
+          "responsiveBehavior": "Hidden on mobile, accessible via hamburger menu; collapsible on desktop"
+        },
+        {
+          "name": "Stats Overview",
+          "purpose": "Display key performance metrics in card format",
+          "contentRequirements": [
+            "4 stat cards with icons",
+            "Trend indicators (up/down arrows)",
+            "Numerical values",
+            "Comparison percentages"
+          ],
+          "interactions": [
+            "Hover for subtle elevation",
+            "Click cards for detailed views (optional)"
+          ],
+          "states": [
+            "Default",
+            "Loading skeleton",
+            "Hover state"
+          ],
+          "responsiveBehavior": "Single column on mobile, two columns on tablet, four columns on desktop"
+        },
+        {
+          "name": "Charts Section",
+          "purpose": "Visualize data trends with mock charts",
+          "contentRequirements": [
+            "Line chart for revenue trends",
+            "Bar chart for user activity",
+            "Pie chart for distribution data",
+            "Chart titles and legends"
+          ],
+          "interactions": [
+            "Hover for data points",
+            "Responsive resize on container change"
+          ],
+          "states": [
+            "Default",
+            "Loading state",
+            "Empty state if no data"
+          ],
+          "responsiveBehavior": "Stacked vertically on mobile, two-column grid on tablet and desktop"
+        },
+        {
+          "name": "Recent Activity",
+          "purpose": "Table showing latest user actions and system events",
+          "contentRequirements": [
+            "User avatar/name",
+            "Action description",
+            "Timestamp",
+            "Status badge",
+            "Pagination controls"
+          ],
+          "interactions": [
+            "Sort by columns",
+            "Pagination navigation",
+            "Hover row highlight"
+          ],
+          "states": [
+            "Default",
+            "Loading skeleton rows",
+            "Empty state"
+          ],
+          "responsiveBehavior": "Horizontal scroll on mobile, full table on larger screens"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "name": "SidebarNav",
+      "purpose": "Collapsible navigation sidebar with admin section links",
+      "reuse": "shared",
+      "states": [
+        "expanded",
+        "collapsed",
+        "mobile-hidden",
+        "drawer-open"
+      ],
+      "accessibility": [
+        "Keyboard navigation with arrow keys",
+        "ARIA labels for collapse state",
+        "Focus visible on interactive elements",
+        "Skip link for main content"
+      ]
+    },
+    {
+      "name": "DashboardHeader",
+      "purpose": "Top header with branding, user controls, and theme toggle",
+      "reuse": "shared",
+      "states": [
+        "default",
+        "dark-mode",
+        "user-menu-open",
+        "notifications-open"
+      ],
+      "accessibility": [
+        "Proper heading hierarchy",
+        "ARIA-expanded for dropdowns",
+        "Color contrast maintained in both themes",
+        "Screen reader labels for icons"
+      ]
+    },
+    {
+      "name": "StatsCard",
+      "purpose": "Individual metric card displaying a key statistic with trend",
+      "reuse": "shared",
+      "states": [
+        "default",
+        "loading",
+        "hover"
+      ],
+      "accessibility": [
+        "Semantic structure with proper headings",
+        "ARIA labels for trend indicators",
+        "Color contrast for all text",
+        "Focus indicator for interactive cards"
+      ]
+    },
+    {
+      "name": "MockChart",
+      "purpose": "Wrapper for chart visualizations using mock data",
+      "reuse": "shared",
+      "states": [
+        "default",
+        "loading",
+        "error"
+      ],
+      "accessibility": [
+        "Alternative text description of chart data",
+        "Keyboard navigable chart controls",
+        "Colorblind-friendly palette",
+        "Reduced motion support"
+      ]
+    },
+    {
+      "name": "ActivityTable",
+      "purpose": "Table component displaying recent user activity with pagination",
+      "reuse": "shared",
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error"
+      ],
+      "accessibility": [
+        "Proper table semantics",
+        "Sortable column headers",
+        "Keyboard navigation",
+        "Screen reader announcements for pagination"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "name": "Dark Mode Toggle",
+      "description": "Switch between light and dark color schemes with persistent preference",
+      "priority": "required",
+      "implementationLevel": "interactive",
+      "dependencies": [
+        "Mantine ColorSchemeProvider"
+      ],
+      "dataSource": "local-storage",
+      "edgeCases": [
+        "System preference detection on first visit",
+        "Smooth transition between themes"
+      ]
+    },
+    {
+      "name": "Responsive Sidebar",
+      "description": "Collapsible sidebar on desktop, drawer-based navigation on mobile",
+      "priority": "required",
+      "implementationLevel": "interactive",
+      "dependencies": [
+        "Mantine AppShell",
+        "useMediaQuery hook"
+      ],
+      "dataSource": "static",
+      "edgeCases": [
+        "State persistence during resize",
+        "Focus trap in mobile drawer"
+      ]
+    },
+    {
+      "name": "Stats Cards Grid",
+      "description": "Responsive grid of metric cards with mock data",
+      "priority": "required",
+      "implementationLevel": "visual",
+      "dependencies": [
+        "Mantine Grid",
+        "StatsCard component"
+      ],
+      "dataSource": "mock",
+      "edgeCases": [
+        "Loading skeleton states",
+        "Responsive column count"
+      ]
+    },
+    {
+      "name": "Mock Charts",
+      "description": "Data visualization components with static mock data",
+      "priority": "required",
+      "implementationLevel": "visual",
+      "dependencies": [
+        "Charting library (Recharts or Mantine Charts)"
+      ],
+      "dataSource": "mock",
+      "edgeCases": [
+        "Responsive chart sizing",
+        "Empty data handling"
+      ]
+    },
+    {
+      "name": "Recent Activity Table",
+      "description": "Paginated table showing recent user actions with status indicators",
+      "priority": "required",
+      "implementationLevel": "interactive",
+      "dependencies": [
+        "Mantine Table",
+        "Pagination component"
+      ],
+      "dataSource": "mock",
+      "edgeCases": [
+        "Long content truncation",
+        "Empty state messaging",
+        "Pagination boundary states"
+      ]
+    }
+  ],
+  "userFlows": [
+    {
+      "name": "View Dashboard Overview",
+      "actor": "Admin user",
+      "entryPoint": "Navigate to / route",
+      "steps": [
+        "Page loads with header and sidebar",
+        "Stats cards display key metrics",
+        "Charts render with mock data",
+        "Activity table shows recent events",
+        "User can toggle dark mode",
+        "On mobile, user opens sidebar via hamburger"
+      ],
+      "successOutcome": "All dashboard components visible and responsive to viewport changes",
+      "failureStates": [
+        "Loading skeletons shown during data fetch",
+        "Error messages if components fail to render"
+      ]
+    },
+    {
+      "name": "Navigate Admin Sections",
+      "actor": "Admin user",
+      "entryPoint": "Click sidebar navigation items",
+      "steps": [
+        "User clicks nav item in sidebar",
+        "Active state updates",
+        "Page would navigate (mocked)"
+      ],
+      "successOutcome": "Navigation interaction provides visual feedback and would route to correct section",
+      "failureStates": [
+        "Disabled state for non-implemented routes"
+      ]
+    }
+  ],
+  "dataModel": {
+    "strategy": "mock",
+    "entities": [
+      {
+        "name": "StatMetric",
+        "purpose": "Key performance indicator data for stats cards",
+        "fields": [
+          "title: metric name",
+          "value: current value",
+          "change: percentage change",
+          "trend: up or down direction",
+          "icon: display icon"
+        ],
+        "relationships": [],
+        "ownership": "public - static mock data"
+      },
+      {
+        "name": "ChartData",
+        "purpose": "Mock data for chart visualizations",
+        "fields": [
+          "labels: time periods or categories",
+          "values: numerical data points",
+          "type: chart type identifier"
+        ],
+        "relationships": [],
+        "ownership": "public - static mock data"
+      },
+      {
+        "name": "ActivityRecord",
+        "purpose": "Recent user action or system event",
+        "fields": [
+          "id: unique identifier",
+          "user: user name or email",
+          "action: description of activity",
+          "timestamp: when it occurred",
+          "status: success/warning/error"
+        ],
+        "relationships": [],
+        "ownership": "public - static mock data"
+      }
+    ]
+  },
+  "integrations": [
+    {
+      "name": "Mantine UI Library",
+      "purpose": "Component library for consistent design system and built-in dark mode support",
+      "required": true,
+      "credentialsRequired": [],
+      "failureFallback": "Use native HTML elements with basic styling"
+    },
+    {
+      "name": "Charting Library",
+      "purpose": "Render data visualizations for dashboard metrics",
+      "required": true,
+      "credentialsRequired": [],
+      "failureFallback": "Display data in table format as alternative"
+    }
+  ],
+  "designSystem": {
+    "styleKeywords": [
+      "modern",
+      "clean",
+      "professional",
+      "minimal",
+      "data-focused"
+    ],
+    "artDirection": "Professional admin interface with a data-first aesthetic. Clean typography with clear hierarchy, subtle shadows for depth, and a restrained color palette that emphasizes data visualization. Cards have soft borders and gentle elevation, charts use a cohesive color scheme, and the overall layout prioritizes scannability and quick comprehension.",
+    "colorDirection": {
+      "primary": "Indigo (#4F46E5) for primary actions and highlights",
+      "secondary": "Emerald (#10B981) for success states and positive trends",
+      "background": "Light: #F9FAFB, Dark: #111827",
+      "surface": "Light: #FFFFFF, Dark: #1F2937",
+      "text": "Light: #111827, Dark: #F9FAFB",
+      "mutedText": "Light: #6B7280, Dark: #9CA3AF",
+      "accent": "Amber (#F59E0B) for warnings and attention items",
+      "success": "#10B981 for positive indicators",
+      "warning": "#F59E0B for caution states",
+      "error": "#EF4444 for error/danger states"
+    },
+    "typographyDirection": "Inter or system font stack for clean readability. Bold weights for headings and metrics, regular for body text. Monospace for timestamps and numerical data. Clear hierarchy with large metric values, medium section titles, and smaller descriptive text.",
+    "spacing": "comfortable",
+    "borderRadius": "medium",
+    "layoutComposition": "AppShell-based layout with fixed header and sidebar. Main content area uses a 24px grid with 16px gutters. Stats cards in a responsive grid, charts in a masonry-like arrangement on larger screens.",
+    "surfaceTreatment": "Subtle elevation with soft shadows (0 1px 3px rgba(0,0,0,0.1)). Cards have 1px borders in light mode, subtle dividers in dark mode. Charts have transparent backgrounds to blend with surface.",
+    "visualHierarchy": [
+      "Header (fixed, highest)",
+      "Sidebar (persistent navigation)",
+      "Stats cards (prominent metrics)",
+      "Charts (data visualization)",
+      "Activity table (detailed data)"
+    ],
+    "motionAndInteraction": [
+      "Subtle fade transitions for theme changes",
+      "Slide-in for mobile sidebar drawer",
+      "Hover elevation for interactive cards",
+      "Loading skeletons for data states"
+    ],
+    "componentStyling": [
+      "Mantine AppShell for layout structure",
+      "Cards with shadow-sm and padding-md",
+      "Buttons with medium border radius",
+      "Tables with striped rows and hover states",
+      "Badges with pill shape for status"
+    ],
+    "imagery": "No decorative imagery. User avatars as initials or icon placeholders. Icons from Tabler Icons set for consistency. Charts use solid fills with opacity variations for data series.",
+    "responsiveApproach": "Mobile-first with breakpoints at 768px (tablet) and 1024px (desktop). Sidebar becomes overlay drawer on mobile. Grid columns collapse to single column under 768px. Charts stack vertically on small screens."
+  },
+  "content": {
+    "tone": "Professional, concise, and action-oriented. Metrics use clear numerical presentation. Status messages are direct and informative.",
+    "messageHierarchy": [
+      "Key metrics and trends",
+      "Data visualizations",
+      "Detailed activity records"
+    ],
+    "headlineIdeas": [
+      "Dashboard Overview",
+      "System Performance",
+      "Recent Activity"
+    ],
+    "ctaIdeas": [
+      "View Detailed Reports",
+      "Export Data",
+      "Manage Settings"
+    ],
+    "requiredContent": [
+      "Navigation labels for admin sections",
+      "Stat card titles and values",
+      "Chart data labels",
+      "Table column headers",
+      "User profile information"
+    ],
+    "seo": {
+      "titleDirection": "Admin Dashboard - Analytics Overview",
+      "descriptionDirection": "Administrative dashboard for monitoring system metrics, user activity, and performance data.",
+      "keywords": [
+        "admin",
+        "dashboard",
+        "analytics",
+        "metrics",
+        "monitoring"
+      ]
+    }
+  },
+  "technicalRequirements": {
+    "previewTarget": "react-mantine",
+    "language": "JavaScript",
+    "responsive": true,
+    "accessibility": true,
+    "backendRequired": false,
+    "databaseRequired": false,
+    "authenticationRequired": false,
+    "paymentsRequired": false,
+    "fileUploadsRequired": false,
+    "realtimeRequired": false,
+    "analyticsRequired": false,
+    "preferredExistingPatterns": [
+      "Mantine AppShell layout pattern",
+      "Mantine Grid for responsive layouts",
+      "Mantine color scheme hook"
+    ],
+    "avoid": [
+      "Custom CSS where Mantine provides solutions",
+      "Heavy animation libraries",
+      "External font loading for performance"
+    ]
+  },
+  "implementationPlan": [
+    {
+      "id": "step-1",
+      "title": "Setup Next.js project with Mantine",
+      "objective": "Create Next.js app with Mantine provider and basic layout structure",
+      "dependsOn": [],
+      "affectedAreas": [
+        "Project structure",
+        "Mantine provider setup",
+        "AppShell layout"
+      ],
+      "implementationLevel": "visual",
+      "verification": [
+        "App loads without errors",
+        "Mantine styles applied correctly",
+        "Dark mode toggle functions"
+      ]
+    },
+    {
+      "id": "step-2",
+      "title": "Build Header and Sidebar components",
+      "objective": "Create responsive header with dark mode toggle and collapsible sidebar navigation",
+      "dependsOn": [
+        "step-1"
+      ],
+      "affectedAreas": [
+        "Header component",
+        "SidebarNav component",
+        "Mobile drawer"
+      ],
+      "implementationLevel": "interactive",
+      "verification": [
+        "Sidebar collapses/expands on toggle",
+        "Mobile drawer opens/closes",
+        "Dark mode persists on refresh"
+      ]
+    },
+    {
+      "id": "step-3",
+      "title": "Create Stats Cards with mock data",
+      "purpose": "Build responsive grid of metric cards displaying key statistics",
+      "dependsOn": [
+        "step-1"
+      ],
+      "affectedAreas": [
+        "StatsCard component",
+        "Dashboard stats grid"
+      ],
+      "implementationLevel": "visual",
+      "verification": [
+        "Cards display in responsive grid",
+        "Loading states show correctly",
+        "Trend indicators visible"
+      ]
+    },
+    {
+      "id": "step-4",
+      "title": "Add mock charts section",
+      "objective": "Integrate chart library and create mock data visualizations",
+      "dependsOn": [
+        "step-1"
+      ],
+      "affectedAreas": [
+        "MockChart component",
+        "Charts grid section"
+      ],
+      "implementationLevel": "visual",
+      "verification": [
+        "Charts render with mock data",
+        "Responsive sizing works",
+        "Loading skeletons display"
+      ]
+    },
+    {
+      "id": "step-5",
+      "title": "Build Recent Activity table",
+      "objective": "Create paginated table with mock activity data and status indicators",
+      "dependsOn": [
+        "step-1"
+      ],
+      "affectedAreas": [
+        "ActivityTable component",
+        "Pagination controls"
+      ],
+      "implementationLevel": "interactive",
+      "verification": [
+        "Table displays mock data",
+        "Pagination functions",
+        "Status badges show correctly"
+      ]
+    },
+    {
+      "id": "step-6",
+      "title": "Integrate all components and test responsiveness",
+      "objective": "Assemble complete dashboard and verify responsive behavior across devices",
+      "dependsOn": [
+        "step-2",
+        "step-3",
+        "step-4",
+        "step-5"
+      ],
+      "affectedAreas": [
+        "Dashboard page layout",
+        "All components integration"
+      ],
+      "implementationLevel": "visual",
+      "verification": [
+        "Dashboard renders correctly on all breakpoints",
+        "Mobile navigation works",
+        "Dark mode applies to all components"
+      ]
+    }
+  ],
+  "qualityPlan": {
+    "responsive": [
+      "Test at 320px, 768px, and 1440px viewport widths",
+      "Verify sidebar drawer on mobile",
+      "Check chart stacking behavior"
+    ],
+    "accessibility": [
+      "Verify keyboard navigation through all interactive elements",
+      "Check color contrast in both themes",
+      "Ensure ARIA labels on icon buttons",
+      "Test with screen reader announcements"
+    ],
+    "functional": [
+      "Dark mode toggle persists across page reloads",
+      "Sidebar collapse state maintained",
+      "Table pagination works correctly",
+      "All navigation links have proper href attributes"
+    ],
+    "visual": [
+      "Consistent spacing and typography",
+      "Proper alignment of grid items",
+      "Charts are legible and styled",
+      "Loading states match design"
+    ],
+    "performance": [
+      "No layout shift on initial load",
+      "Lazy load charts if needed",
+      "Minimize bundle size"
+    ],
+    "security": [
+      "No sensitive data in mock content",
+      "Sanitize any user-displayed strings"
+    ],
+    "seo": [
+      "Proper document title",
+      "Meta description in head",
+      "Semantic HTML structure"
+    ]
+  },
+  "acceptanceCriteria": [
+    "Dashboard loads at / route with header, sidebar, and main content area",
+    "Sidebar collapses on desktop and opens via hamburger on mobile",
+    "Dark mode toggle switches themes and persists preference",
+    "Stats cards display 4 metrics in responsive grid",
+    "Charts render with mock data and resize appropriately",
+    "Recent activity table shows 10 rows with pagination",
+    "All interactive elements have visible focus states",
+    "Color contrast meets WCAG AA standards in both themes",
+    "Layout adapts correctly at mobile, tablet, and desktop widths"
+  ],
+  "builderHandoff": {
+    "firstBuildSlice": "Create Next.js project with Mantine provider, AppShell layout, and basic header/sidebar structure",
+    "recommendedBuildOrder": [
+      "step-1",
+      "step-2",
+      "step-3",
+      "step-4",
+      "step-5",
+      "step-6"
+    ],
+    "routeTo": "builder",
+    "completionDefinition": "All dashboard components render correctly with mock data, responsive behavior works across breakpoints, and dark mode functions properly"
+  },
+  "clarifyingQuestions": []
+}

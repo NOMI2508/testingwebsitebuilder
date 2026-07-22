@@ -1,0 +1,303 @@
+{
+  "entryFile": "src/App.jsx",
+  "architectureSummary": "React + Mantine e-commerce architecture for Stride premium shoe brand. Uses Mantine's component system with centralized theme configuration. Implements client-side cart persistence via CartContext with localStorage. Product data stored in mockProducts.js, reusable content in siteContent.js. Page components in src/pages/ compose section components for modular development. Common components handle shared UI patterns (ProductCard, RatingStars). Product-specific components manage gallery, variants, and selection controls. Cart components handle item management and order summary. All components follow PascalCase naming with mobile-first responsive design.",
+  "files": [
+    {
+      "path": "src/data/siteContent.js",
+      "category": "data",
+      "responsibility": "Centralized content including brand story, navigation items, newsletter copy, and static page content",
+      "dependsOn": []
+    },
+    {
+      "path": "src/data/mockProducts.js",
+      "category": "data",
+      "responsibility": "Mock product data with images, prices, categories, sizes, colors, ratings, and descriptions for all shoe products",
+      "dependsOn": []
+    },
+    {
+      "path": "src/theme/theme.js",
+      "category": "theme",
+      "responsibility": "Mantine design tokens including slate gray primary palette, muted gold accents, typography scale, border radius, and component defaults for premium aesthetic",
+      "dependsOn": []
+    },
+    {
+      "path": "src/context/CartContext.jsx",
+      "category": "context",
+      "responsibility": "React context managing cart state with addItem, removeItem, updateQuantity actions and localStorage persistence",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/formatPrice.js",
+      "category": "utility",
+      "responsibility": "Utility function to format prices with currency symbol and proper decimal places",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/localStorage.js",
+      "category": "utility",
+      "responsibility": "Helper functions for localStorage get/set operations with JSON serialization and error handling",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/ProductCard.jsx",
+      "category": "common",
+      "responsibility": "Reusable product card component displaying image, name, price, rating, category badge with quick view and add to cart actions",
+      "dependsOn": [
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/common/RatingStars.jsx",
+      "category": "common",
+      "responsibility": "Display star rating component accepting rating value and optional review count",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/LoadingSkeleton.jsx",
+      "category": "common",
+      "responsibility": "Skeleton loading component for product grid and image placeholders during filtering",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/EmptyState.jsx",
+      "category": "common",
+      "responsibility": "Empty state component for no search results or empty cart scenarios",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "category": "layout",
+      "responsibility": "Responsive navigation with logo, nav links, cart icon with item count, and mobile hamburger menu",
+      "dependsOn": [
+        "src/context/CartContext.jsx"
+      ]
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "category": "layout",
+      "responsibility": "Site footer with brand info, quick links, social icons, and newsletter signup",
+      "dependsOn": [
+        "src/data/siteContent.js"
+      ]
+    },
+    {
+      "path": "src/components/product/ProductGallery.jsx",
+      "category": "product",
+      "responsibility": "Product image gallery with main image display, thumbnail navigation, and hover zoom functionality",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/product/ProductInfo.jsx",
+      "category": "product",
+      "responsibility": "Product detail display with name, price, rating, description, and integrated selection controls",
+      "dependsOn": [
+        "src/components/product/SizeSelector.jsx",
+        "src/components/product/ColorSelector.jsx",
+        "src/components/product/QuantityControl.jsx"
+      ]
+    },
+    {
+      "path": "src/components/product/SizeSelector.jsx",
+      "category": "product",
+      "responsibility": "Size selection component with available sizes displayed as clickable buttons or chips",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/product/ColorSelector.jsx",
+      "category": "product",
+      "responsibility": "Color variant selector displaying color options as swatches with active state indication",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/product/QuantityControl.jsx",
+      "category": "product",
+      "responsibility": "Increment/decrement quantity buttons with min/max validation and immediate total updates",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/cart/CartItem.jsx",
+      "category": "cart",
+      "responsibility": "Individual cart item display with product image, details, quantity controls, and remove button",
+      "dependsOn": [
+        "src/components/product/QuantityControl.jsx",
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/cart/CartSummary.jsx",
+      "category": "cart",
+      "responsibility": "Order summary component showing subtotal, shipping estimate, tax, and total with checkout button",
+      "dependsOn": [
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/HeroSection.jsx",
+      "category": "section",
+      "responsibility": "Hero banner with compelling headline, subheadline, dual CTAs, and featured shoe background image with smooth scroll",
+      "dependsOn": [
+        "src/data/siteContent.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/FeaturedCategories.jsx",
+      "category": "section",
+      "responsibility": "Category navigation cards for Sneakers, Boots, Athletic, Casual with images and product counts",
+      "dependsOn": [
+        "src/data/mockProducts.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/BestSellers.jsx",
+      "category": "section",
+      "responsibility": "Featured best-selling products carousel/grid with quick view modal integration",
+      "dependsOn": [
+        "src/components/common/ProductCard.jsx",
+        "src/data/mockProducts.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/BrandStory.jsx",
+      "category": "section",
+      "responsibility": "Brand narrative section with craftsmanship highlights and founder/brand values content",
+      "dependsOn": [
+        "src/data/siteContent.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/NewsletterSignup.jsx",
+      "category": "section",
+      "responsibility": "Email capture form with input field, signup button, privacy assurance, and success message handling",
+      "dependsOn": [
+        "src/data/siteContent.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/ProductFilters.jsx",
+      "category": "section",
+      "responsibility": "Filter controls including search input, category tabs, price range slider, and sort dropdown",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/sections/ProductGrid.jsx",
+      "category": "section",
+      "responsibility": "Product listing grid displaying filtered products with loading and empty states",
+      "dependsOn": [
+        "src/components/common/ProductCard.jsx",
+        "src/components/common/LoadingSkeleton.jsx",
+        "src/components/common/EmptyState.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/Home.jsx",
+      "category": "entry",
+      "responsibility": "Home page composing HeroSection, FeaturedCategories, BestSellers, BrandStory, and NewsletterSignup sections",
+      "dependsOn": [
+        "src/components/sections/HeroSection.jsx",
+        "src/components/sections/FeaturedCategories.jsx",
+        "src/components/sections/BestSellers.jsx",
+        "src/components/sections/BrandStory.jsx",
+        "src/components/sections/NewsletterSignup.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/Products.jsx",
+      "category": "entry",
+      "responsibility": "Products listing page with ProductFilters and ProductGrid sections for browsing all shoes",
+      "dependsOn": [
+        "src/components/sections/ProductFilters.jsx",
+        "src/components/sections/ProductGrid.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/ProductDetail.jsx",
+      "category": "entry",
+      "responsibility": "Individual product detail page with ProductGallery and ProductInfo sections for full product view",
+      "dependsOn": [
+        "src/components/product/ProductGallery.jsx",
+        "src/components/product/ProductInfo.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/Cart.jsx",
+      "category": "entry",
+      "responsibility": "Shopping cart page displaying cart items and summary with checkout call to action",
+      "dependsOn": [
+        "src/components/cart/CartItem.jsx",
+        "src/components/cart/CartSummary.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/Checkout.jsx",
+      "category": "entry",
+      "responsibility": "Checkout form page collecting shipping address, payment method, and displaying order summary",
+      "dependsOn": [
+        "src/components/cart/CartSummary.jsx"
+      ]
+    },
+    {
+      "path": "src/App.jsx",
+      "category": "entry",
+      "responsibility": "Main application entry composing page components within Mantine provider with CartContext wrapper",
+      "dependsOn": [
+        "src/theme/theme.js",
+        "src/context/CartContext.jsx",
+        "src/pages/Home.jsx",
+        "src/pages/Products.jsx",
+        "src/pages/ProductDetail.jsx",
+        "src/pages/Cart.jsx",
+        "src/pages/Checkout.jsx"
+      ]
+    }
+  ],
+  "batches": [
+    [
+      "src/data/siteContent.js",
+      "src/data/mockProducts.js",
+      "src/theme/theme.js",
+      "src/context/CartContext.jsx",
+      "src/lib/formatPrice.js"
+    ],
+    [
+      "src/lib/localStorage.js",
+      "src/components/common/ProductCard.jsx",
+      "src/components/common/RatingStars.jsx",
+      "src/components/common/LoadingSkeleton.jsx",
+      "src/components/common/EmptyState.jsx"
+    ],
+    [
+      "src/components/layout/Navbar.jsx",
+      "src/components/layout/Footer.jsx",
+      "src/components/product/ProductGallery.jsx",
+      "src/components/product/SizeSelector.jsx",
+      "src/components/product/ColorSelector.jsx"
+    ],
+    [
+      "src/components/product/QuantityControl.jsx",
+      "src/components/product/ProductInfo.jsx",
+      "src/components/cart/CartItem.jsx",
+      "src/components/cart/CartSummary.jsx",
+      "src/components/sections/HeroSection.jsx"
+    ],
+    [
+      "src/components/sections/FeaturedCategories.jsx",
+      "src/components/sections/BestSellers.jsx",
+      "src/components/sections/BrandStory.jsx",
+      "src/components/sections/NewsletterSignup.jsx",
+      "src/components/sections/ProductFilters.jsx"
+    ],
+    [
+      "src/components/sections/ProductGrid.jsx",
+      "src/pages/Home.jsx",
+      "src/pages/Products.jsx",
+      "src/pages/ProductDetail.jsx",
+      "src/pages/Cart.jsx"
+    ],
+    [
+      "src/pages/Checkout.jsx"
+    ],
+    [
+      "src/App.jsx"
+    ]
+  ]
+}

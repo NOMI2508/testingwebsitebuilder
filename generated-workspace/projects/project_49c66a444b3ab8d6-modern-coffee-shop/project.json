@@ -1,0 +1,17 @@
+{
+  "id": "project_49c66a444b3ab8d6",
+  "name": "Modern Coffee Shop",
+  "slug": "modern-coffee-shop",
+  "type": "business",
+  "description": "A modern, inviting coffee shop website featuring a hero section with brand messaging, a visual menu showcasing coffee offerings, and a contact form for customer inquiries. The design emphasizes warm brown and cream tones to create a cozy café atmosphere.",
+  "status": "active",
+  "createdAt": "2026-07-16T10:09:32.462Z",
+  "updatedAt": "2026-07-16T10:14:11.311Z",
+  "activeSessionId": "gen-mrncqemi-4wc3dg9t",
+  "entryFile": "src/App.jsx",
+  "previewStatus": "generating",
+  "lastWorkingVersionId": "version_mrncokk9_633e0540",
+  "deploymentUrl": null,
+  "deployedAt": null,
+  "deployedVersionId": null
+}

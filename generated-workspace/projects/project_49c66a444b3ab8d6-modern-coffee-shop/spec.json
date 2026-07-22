@@ -1,0 +1,207 @@
+{
+  "status": "ready",
+  "project": {
+    "name": "Modern Coffee Shop",
+    "type": "business",
+    "summary": "A modern, inviting coffee shop website featuring a hero section with brand messaging, a visual menu showcasing coffee offerings, and a contact form for customer inquiries. The design emphasizes warm brown and cream tones to create a cozy café atmosphere.",
+    "purpose": "To establish an online presence for a coffee shop, showcase their menu offerings, and provide customers with an easy way to get in touch or find location information.",
+    "targetAudience": [
+      "Coffee enthusiasts",
+      "Local community members",
+      "Remote workers",
+      "Café visitors"
+    ],
+    "primaryGoal": "Encourage visitors to visit the physical café or contact for inquiries"
+  },
+  "assumptions": [
+    "Menu is a visual-only product listing (no online ordering/cart functionality)",
+    "Contact form will use client-side validation only (no backend integration for form submissions)",
+    "No authentication system required",
+    "No database integration needed",
+    "Mobile-first responsive design approach",
+    "Hero section includes call-to-action to view menu or find location",
+    "Menu displays coffee categories (espresso, brewed, specialty drinks)",
+    "Contact form includes basic fields: name, email, message, and possibly reservation preferences"
+  ],
+  "pages": [
+    {
+      "name": "Home",
+      "route": "/",
+      "purpose": "Main landing page introducing the coffee shop and providing navigation to key sections",
+      "sections": [
+        {
+          "name": "Hero",
+          "purpose": "Create immediate brand impression with inviting coffee imagery and clear value proposition",
+          "contentRequirements": [
+            "Compelling headline about coffee quality",
+            "Subheadline about café atmosphere",
+            "Primary call-to-action button",
+            "Background coffee shop imagery"
+          ],
+          "interactions": [
+            "Smooth scroll to menu section",
+            "Smooth scroll to contact section",
+            "Button hover states"
+          ]
+        },
+        {
+          "name": "Menu",
+          "purpose": "Showcase coffee offerings in an organized, visually appealing format",
+          "contentRequirements": [
+            "Coffee categories (espresso, brewed, specialty)",
+            "Individual coffee items with descriptions and prices",
+            "High-quality coffee imagery",
+            "Seasonal/special offerings highlight"
+          ],
+          "interactions": [
+            "Category filtering or tabs",
+            "Item hover effects",
+            "Image lightbox on click"
+          ]
+        },
+        {
+          "name": "Contact",
+          "purpose": "Enable customer communication and provide essential business information",
+          "contentRequirements": [
+            "Contact form with name, email, message fields",
+            "Business address",
+            "Phone number",
+            "Email address",
+            "Opening hours",
+            "Social media links"
+          ],
+          "interactions": [
+            "Form validation",
+            "Form submission feedback",
+            "Map integration (optional)"
+          ]
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "name": "Responsive Navigation",
+      "description": "Mobile-friendly navigation that adapts to all screen sizes",
+      "priority": "required",
+      "implementationLevel": "interactive"
+    },
+    {
+      "name": "Menu Filtering",
+      "description": "Ability to filter or navigate between coffee categories",
+      "priority": "recommended",
+      "implementationLevel": "interactive"
+    },
+    {
+      "name": "Contact Form Validation",
+      "description": "Client-side form validation with user feedback",
+      "priority": "required",
+      "implementationLevel": "interactive"
+    },
+    {
+      "name": "Smooth Scrolling",
+      "description": "Smooth scroll behavior when navigating between sections",
+      "priority": "recommended",
+      "implementationLevel": "interactive"
+    },
+    {
+      "name": "Image Gallery",
+      "description": "Lightbox or modal view for coffee images",
+      "priority": "optional",
+      "implementationLevel": "interactive"
+    }
+  ],
+  "userFlows": [
+    {
+      "name": "Browse Menu Flow",
+      "steps": [
+        "Land on homepage",
+        "Scroll to or click menu link",
+        "View coffee categories",
+        "Browse individual items",
+        "Read descriptions and prices"
+      ]
+    },
+    {
+      "name": "Contact Inquiry Flow",
+      "steps": [
+        "Navigate to contact section",
+        "Fill out contact form",
+        "Submit form with validation",
+        "Receive confirmation feedback"
+      ]
+    },
+    {
+      "name": "Information Discovery Flow",
+      "steps": [
+        "View hero section",
+        "Learn about café from hero content",
+        "Find location/hours in contact section",
+        "Get in touch via form if needed"
+      ]
+    }
+  ],
+  "designSystem": {
+    "styleKeywords": [
+      "modern",
+      "warm",
+      "inviting",
+      "minimal",
+      "artisanal"
+    ],
+    "colorDirection": {
+      "primary": "Rich brown (#654321 or similar coffee brown)",
+      "secondary": "Cream (#FFFDD0 or similar warm cream)",
+      "background": "Cream (#FFFDD0)",
+      "text": "Dark brown (#3E2723)",
+      "accent": "Terracotta (#CC7351) or warm gold (#D4AF37)"
+    },
+    "typographyDirection": "Clean, readable sans-serif fonts with handcrafted or script accent font for headings",
+    "spacing": "comfortable",
+    "borderRadius": "rounded",
+    "imagery": "High-quality coffee photography, warm lighting, rustic textures, latte art close-ups",
+    "responsiveApproach": "mobile-first"
+  },
+  "content": {
+    "tone": "Warm, welcoming, and artisanal - emphasizing quality, craftsmanship, and community",
+    "headlineIdeas": [
+      "Crafted with Care, Served with Love",
+      "Your Daily Ritual Starts Here",
+      "Where Every Cup Tells a Story",
+      "Fresh Roasted, Perfectly Brewed"
+    ],
+    "ctaIdeas": [
+      "View Our Menu",
+      "Find Us",
+      "Get in Touch",
+      "Join Our Coffee Community"
+    ],
+    "requiredContent": [
+      "Coffee shop name/logo",
+      "Menu item names, descriptions, and prices",
+      "Business contact information",
+      "Opening hours",
+      "Location details",
+      "Social media handles"
+    ]
+  },
+  "technicalRequirements": {
+    "previewTarget": "react-mantine",
+    "language": "JavaScript",
+    "responsive": true,
+    "accessibility": true,
+    "backendRequired": false,
+    "databaseRequired": false,
+    "authenticationRequired": false
+  },
+  "acceptanceCriteria": [
+    "Hero section displays compelling headline and call-to-action on all devices",
+    "Menu displays at least 3 coffee categories with individual items",
+    "Contact form validates required fields before submission",
+    "Site maintains brown and cream color scheme throughout",
+    "All sections are accessible via navigation on mobile and desktop",
+    "Images load properly and have appropriate alt text",
+    "Site is fully responsive from mobile (320px) to desktop (1440px+)"
+  ],
+  "clarifyingQuestions": []
+}

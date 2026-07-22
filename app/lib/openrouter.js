@@ -50,9 +50,14 @@ export async function getCompletionText(apiKey, body) {
 // STREAMING: model se tokens aate hi aate rehte hain. Isse (1) timeout nahi hota
 // kyunki connection par lagatar data aata rehta hai, aur (2) UI par "build hote"
 // hue dikha sakte hain. Ye Node core `https` (family: 4) use karta hai.
-export function openStream(apiKey, body) {
+export function openStream(apiKey, body, options = {}) {
+  const { signal } = options;
   const payload = JSON.stringify({ ...body, stream: true });
   return new Promise((resolve, reject) => {
+    if (signal && signal.aborted) {
+      reject(new Error("Request aborted before start."));
+      return;
+    }
     const req = https.request(
       {
         method: "POST",
@@ -70,6 +75,13 @@ export function openStream(apiKey, body) {
       (res) => resolve(res) // res = streaming response (SSE)
     );
     req.on("error", reject);
+    // When the client disconnects, tear down the upstream request so we stop
+    // consuming the free-tier quota. The consumer then sees an aborted stream.
+    if (signal) {
+      const onAbort = () => req.destroy(new Error("Client disconnected."));
+      signal.addEventListener("abort", onAbort, { once: true });
+      req.on("close", () => signal.removeEventListener("abort", onAbort));
+    }
     // Idle timeout: OpenRouter beech mein ": OPENROUTER PROCESSING" keep-alive
     // bhejta hai, is liye ye sirf tab fire hoga jab bilkul kuch na aaye.
     req.setTimeout(180000, () => req.destroy(new Error("Request timed out")));

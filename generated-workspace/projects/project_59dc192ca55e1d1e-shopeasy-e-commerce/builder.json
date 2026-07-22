@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "sections": [
+        {
+          "id": "sec_c54ca90a1c",
+          "type": "features",
+          "order": 1,
+          "content": {
+            "heading": "Everything you need",
+            "subheading": "Powerful features that help you launch faster and grow with confidence.",
+            "items": [
+              {
+                "id": "item_2a3d08c741",
+                "icon": "⚡",
+                "title": "Lightning Fast",
+                "description": "Optimized for speed so your visitors never wait."
+              },
+              {
+                "id": "item_69ccc2ab78",
+                "icon": "🛡️",
+                "title": "Secure by Default",
+                "description": "Best-practice security baked into every page."
+              },
+              {
+                "id": "item_c60259cd4c",
+                "icon": "📈",
+                "title": "Built to Convert",
+                "description": "Layouts designed to turn visitors into customers."
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#ffffff",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "features"
+          }
+        },
+        {
+          "id": "sec_1b453fee70",
+          "type": "navbar",
+          "order": 2,
+          "content": {
+            "logoText": "Acme Studio",
+            "links": [
+              {
+                "id": "item_22c612b30f",
+                "label": "Home",
+                "href": "#hero"
+              },
+              {
+                "id": "item_beb78bb5f6",
+                "label": "Features",
+                "href": "#features"
+              },
+              {
+                "id": "item_1d876957a7",
+                "label": "Products",
+                "href": "#products"
+              },
+              {
+                "id": "item_11f101bead",
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "ctaText": "Get Started",
+            "ctaHref": "#contact"
+          },
+          "styles": {
+            "backgroundColor": "#ffffff",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "left",
+            "paddingY": 18
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "navbar"
+          }
+        },
+        {
+          "id": "sec_38cf738094",
+          "type": "hero",
+          "order": 3,
+          "content": {
+            "heading": "Build something people love",
+            "subheading": "Launch a beautiful, professional website in minutes. Show off your products, tell your story and turn visitors into customers.",
+            "primaryCtaText": "Get Started",
+            "primaryCtaHref": "#contact",
+            "secondaryCtaText": "Learn More",
+            "secondaryCtaHref": "#features",
+            "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+          },
+          "styles": {
+            "backgroundColor": "#0f172a",
+            "textColor": "#f8fafc",
+            "accentColor": "#2563eb",
+            "align": "left",
+            "paddingY": 96
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "hero"
+          }
+        },
+        {
+          "id": "sec_45494d5960",
+          "type": "products",
+          "order": 4,
+          "content": {
+            "heading": "Our Products",
+            "subheading": "Hand-picked quality, honest prices.",
+            "currency": "$",
+            "products": [
+              {
+                "id": "item_782f15ef01",
+                "name": "Aurora Smartwatch",
+                "description": "A precision-crafted smartwatch with a 10-day battery, AMOLED display and health tracking.",
+                "price": 249,
+                "discountPrice": 199,
+                "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+                "ctaText": "Buy Now",
+                "ctaHref": "#contact"
+              },
+              {
+                "id": "prod_7fd6d262eb",
+                "name": "Nebula Headphones",
+                "description": "Describe what makes this product great.",
+                "price": 99,
+                "discountPrice": "",
+                "imageUrl": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80",
+                "ctaText": "Buy Now",
+                "ctaHref": "#contact"
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#ffffff",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "products"
+          }
+        },
+        {
+          "id": "sec_f8115f7576",
+          "type": "footer",
+          "order": 5,
+          "content": {
+            "logoText": "Acme Studio",
+            "tagline": "Beautiful websites, built with care.",
+            "links": [
+              {
+                "id": "item_3ecbb7baa1",
+                "label": "Privacy",
+                "href": "#"
+              },
+              {
+                "id": "item_72137f6d7a",
+                "label": "Terms",
+                "href": "#"
+              },
+              {
+                "id": "item_50fea00ed0",
+                "label": "Contact",
+                "href": "#contact"
+              }
+            ],
+            "copyright": "© 2026 Acme Studio. All rights reserved."
+          },
+          "styles": {
+            "backgroundColor": "#0f172a",
+            "textColor": "#cbd5e1",
+            "accentColor": "#38bdf8",
+            "align": "left",
+            "paddingY": 48
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "footer"
+          }
+        },
+        {
+          "id": "sec_66f56c07c2",
+          "type": "testimonials",
+          "order": 6,
+          "content": {
+            "heading": "Loved by our customers",
+            "items": [
+              {
+                "id": "item_d10b4ec6e4",
+                "quote": "The quality exceeded every expectation. Ordering was easy and support answered within minutes.",
+                "name": "Sarah Mitchell",
+                "role": "Founder, Bloom & Co",
+                "avatarUrl": "https://i.pravatar.cc/100?img=47"
+              },
+              {
+                "id": "item_b6561b59eb",
+                "quote": "We switched from a competitor and never looked back. It simply works, every single day.",
+                "name": "David Chen",
+                "role": "CTO, Northwind",
+                "avatarUrl": "https://i.pravatar.cc/100?img=13"
+              },
+              {
+                "id": "item_5a329eb6e7",
+                "quote": "This product completely changed how we work. Highly recommended!",
+                "name": "New Customer",
+                "role": "Customer",
+                "avatarUrl": "https://i.pravatar.cc/100?img=12"
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#0f172a",
+            "textColor": "#f8fafc",
+            "accentColor": "#38bdf8",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "testimonials"
+          }
+        },
+        {
+          "id": "sec_ae3bf39b93",
+          "type": "testimonials",
+          "order": 7,
+          "content": {
+            "heading": "Loved by our customers",
+            "items": [
+              {
+                "id": "item_1d08cc84e2",
+                "quote": "The quality exceeded every expectation. Ordering was easy and support answered within minutes.",
+                "name": "Sarah Mitchell",
+                "role": "Founder, Bloom & Co",
+                "avatarUrl": "https://i.pravatar.cc/100?img=47"
+              },
+              {
+                "id": "item_bbe441f53e",
+                "quote": "We switched from a competitor and never looked back. It simply works, every single day.",
+                "name": "David Chen",
+                "role": "CTO, Northwind",
+                "avatarUrl": "https://i.pravatar.cc/100?img=13"
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#0f172a",
+            "textColor": "#f8fafc",
+            "accentColor": "#38bdf8",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "testimonials"
+          }
+        },
+        {
+          "id": "sec_8665b6d187",
+          "type": "contact",
+          "order": 8,
+          "content": {
+            "heading": "Get in touch",
+            "subheading": "Questions, feedback or a project in mind? We usually reply within one business day.",
+            "email": "hello@acmestudio.com",
+            "phone": "+1 (555) 123-4567",
+            "address": "100 Market Street, San Francisco, CA",
+            "buttonText": "Send Message"
+          },
+          "styles": {
+            "backgroundColor": "#f8fafc",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "left",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "contact"
+          }
+        },
+        {
+          "id": "sec_b1efdb5c7c",
+          "type": "products",
+          "order": 9,
+          "content": {
+            "heading": "Our Products",
+            "subheading": "Hand-picked quality, honest prices.",
+            "currency": "$",
+            "products": [
+              {
+                "id": "item_0d0fde5452",
+                "name": "Aurora Smartwatch",
+                "description": "A precision-crafted smartwatch with a 10-day battery, AMOLED display and health tracking.",
+                "price": 249,
+                "discountPrice": 199,
+                "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+                "ctaText": "Buy Now",
+                "ctaHref": "#contact"
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#ffffff",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "products"
+          }
+        },
+        {
+          "id": "sec_56499e0b3d",
+          "type": "products",
+          "order": 10,
+          "content": {
+            "heading": "Our Products",
+            "subheading": "Hand-picked quality, honest prices.",
+            "currency": "$",
+            "products": [
+              {
+                "id": "item_66c71cc3b3",
+                "name": "Aurora Smartwatch",
+                "description": "A precision-crafted smartwatch with a 10-day battery, AMOLED display and health tracking.",
+                "price": 249,
+                "discountPrice": 199,
+                "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+                "ctaText": "Buy Now",
+                "ctaHref": "#contact"
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#ffffff",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "products"
+          }
+        },
+        {
+          "id": "sec_41fc9aae4c",
+          "type": "features",
+          "order": 11,
+          "content": {
+            "heading": "Everything you need",
+            "subheading": "Powerful features that help you launch faster and grow with confidence.",
+            "items": [
+              {
+                "id": "item_f3f5375187",
+                "icon": "⚡",
+                "title": "Lightning Fast",
+                "description": "Optimized for speed so your visitors never wait."
+              },
+              {
+                "id": "item_43e3f72125",
+                "icon": "🛡️",
+                "title": "Secure by Default",
+                "description": "Best-practice security baked into every page."
+              },
+              {
+                "id": "item_1da107be4d",
+                "icon": "📈",
+                "title": "Built to Convert",
+                "description": "Layouts designed to turn visitors into customers."
+              }
+            ]
+          },
+          "styles": {
+            "backgroundColor": "#ffffff",
+            "textColor": "#0f172a",
+            "accentColor": "#2563eb",
+            "align": "center",
+            "paddingY": 80
+          },
+          "settings": {
+            "visible": true,
+            "anchor": "features"
+          }
+        }
+      ]
+    }
+  ]
+}

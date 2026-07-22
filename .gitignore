@@ -2,3 +2,8 @@ node_modules
 .next
 .env.local
 .DS_Store
+
+# Session checkpoints for generation resume (transient). The generated project
+# itself (generated-workspace/current) is intentionally NOT ignored so it shows
+# up in the VS Code Explorer.
+generated-workspace/.sessions

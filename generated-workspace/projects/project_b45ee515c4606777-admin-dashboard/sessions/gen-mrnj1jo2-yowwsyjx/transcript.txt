@@ -1,0 +1,133 @@
+
+The error indicates that `iconMap` is declared in both StatsCard.jsx and SidebarNav.jsx, causing a naming conflict when bundled. I'll fix this by renaming the variables to be unique to each file.
+===FILE:src/components/common/StatsCard.jsx===
+import { Card, Group, Text, ThemeIcon, Box } from "@mantine/core";
+import { IconArrowUp, IconArrowDown, IconUsers, IconCreditCard, IconShoppingCart, IconChartLine } from "@tabler/icons-react";
+
+const statIconMap = {
+  users: IconUsers,
+  "credit-card": IconCreditCard,
+  "shopping-cart": IconShoppingCart,
+  "chart-line": IconChartLine,
+};
+
+function StatsCard({ stat }) {
+  const safeStat = stat ?? {};
+  const Icon = statIconMap[safeStat.icon] ?? IconUsers;
+  const TrendIcon = safeStat.trend === "up" ? IconArrowUp : IconArrowDown;
+  const trendColor = safeStat.trend === "up" ? "secondary" : "red";
+
+  return (
+    <Card>
+      <Group justify="space-between" align="flex-start">
+        <Box>
+          <Text size="xs" c="dimmed" tt="uppercase" fw={600} mb={4}>
+            {safeStat.title ?? "Metric"}
+          </Text>
+          <Text size="2rem" fw={700} lh={1.2}>
+            {safeStat.value ?? "0"}
+          </Text>
+          <Group gap={4} mt={8}>
+            <ThemeIcon color={trendColor} size="sm" variant="light">
+              <TrendIcon size={12} />
+            </ThemeIcon>
+            <Text size="xs" c={trendColor} fw={500}>
+              {safeStat.change ?? "0%"}
+            </Text>
+            <Text size="xs" c="dimmed">
+              from last month
+            </Text>
+          </Group>
+        </Box>
+        <ThemeIcon size="xl" variant="light" color="primary">
+          <Icon size={24} />
+        </ThemeIcon>
+      </Group>
+    </Card>
+  );
+}
+
+export default StatsCard;
+===END_FILE===
+===FILE:src/components/layout/SidebarNav.jsx===
+import { AppShell, NavLink, Group, ActionIcon, ScrollArea, Drawer, Burger } from "@mantine/core";
+import { IconDashboard, IconUsers, IconPackage, IconShoppingCart, IconChartBar, IconSettings, IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import navigationItems from "../../data/navigationItems";
+
+const navIconMap = {
+  dashboard: IconDashboard,
+  users: IconUsers,
+  package: IconPackage,
+  "shopping-cart": IconShoppingCart,
+  "chart-bar": IconChartBar,
+  settings: IconSettings,
+};
+
+function SidebarNav() {
+  const [collapsed, { toggle: toggleCollapsed }] = useDisclosure(false);
+  const [mobileOpened, { toggle: toggleMobile, close: closeMobile }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const safeNavItems = Array.isArray(navigationItems) ? navigationItems : [];
+
+  const navLinks = safeNavItems.map((item) => {
+    const Icon = navIconMap[item.icon] ?? IconDashboard;
+    return (
+      <NavLink
+        key={item.id}
+        href={item.route ?? "#"}
+        label={collapsed && !isMobile ? undefined : item.label ?? "Item"}
+        leftSection={<Icon size={18} stroke={1.5} />}
+        active={item.id === "dashboard"}
+        variant="filled"
+        color="primary"
+        onClick={isMobile ? closeMobile : undefined}
+      />
+    );
+  });
+
+  if (isMobile) {
+    return (
+      <>
+        <Burger
+          opened={mobileOpened}
+          onClick={toggleMobile}
+          aria-label="Toggle navigation"
+          size="sm"
+        />
+        <Drawer
+          opened={mobileOpened}
+          onClose={closeMobile}
+          title="Navigation"
+          padding="xs"
+          size="sm"
+        >
+          <ScrollArea>
+            {navLinks}
+          </ScrollArea>
+        </Drawer>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Group justify="flex-end" mb="xs">
+        <ActionIcon
+          variant="subtle"
+          color="gray"
+          onClick={toggleCollapsed}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {collapsed ? <IconChevronRight size={16} /> : <IconChevronLeft size={16} />}
+        </ActionIcon>
+      </Group>
+      <ScrollArea>
+        {navLinks}
+      </ScrollArea>
+    </>
+  );
+}
+
+export default SidebarNav;
+===END_FILE===

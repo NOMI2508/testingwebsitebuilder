@@ -1,0 +1,250 @@
+{
+  "entryFile": "src/App.jsx",
+  "architectureSummary": "The architecture centers on a shared StoreLayout providing consistent header and cart access. HomePage presents the product discovery experience with filtering. ProductDetailsPage shows individual product information. CheckoutPage handles the purchase flow. CartContext manages cart state with session storage persistence. All product data is centralized in mock data files with image references through the asset plan.",
+  "files": [
+    {
+      "path": "src/theme/theme.js",
+      "category": "theme",
+      "responsibility": "Define Mantine theme extensions with semantic color roles, typography scales, spacing rhythm, and component defaults that support the minimal product-focus design direction",
+      "dependsOn": []
+    },
+    {
+      "path": "src/data/imageAssets.js",
+      "category": "data",
+      "responsibility": "Centralize all image asset references with Unsplash URLs, alt text, and metadata for consistent product imagery across the application",
+      "dependsOn": []
+    },
+    {
+      "path": "src/data/products.js",
+      "category": "data",
+      "responsibility": "Define mock product data with realistic names, descriptions, pricing, categories, and image references for the entire product catalog",
+      "dependsOn": [
+        "src/data/imageAssets.js"
+      ]
+    },
+    {
+      "path": "src/context/CartContext.jsx",
+      "category": "context",
+      "responsibility": "Provide cart state management with add, remove, update quantity operations and session storage persistence across page navigation",
+      "dependsOn": [
+        "src/data/products.js"
+      ]
+    },
+    {
+      "path": "src/lib/formatPrice.js",
+      "category": "utility",
+      "responsibility": "Format numeric prices as currency strings with consistent decimal and thousand separators",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/layout/StoreLayout.jsx",
+      "category": "layout",
+      "responsibility": "Provide consistent page wrapper with Header component and Outlet for page content, ensuring cart drawer is accessible on all pages",
+      "dependsOn": [
+        "src/components/layout/Header.jsx",
+        "src/components/cart/CartDrawer.jsx"
+      ]
+    },
+    {
+      "path": "src/components/layout/Header.jsx",
+      "category": "layout",
+      "responsibility": "Render top navigation bar with brand logo, search functionality, and cart access button with item count indicator",
+      "dependsOn": [
+        "src/components/common/SearchBar.jsx"
+      ]
+    },
+    {
+      "path": "src/components/common/SearchBar.jsx",
+      "category": "common",
+      "responsibility": "Provide accessible search input with clear button and submit handling for product filtering",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/ProductCard.jsx",
+      "category": "common",
+      "responsibility": "Display product summary with image, name, price, rating, and quick add-to-cart action in a consistent card format",
+      "dependsOn": [
+        "src/context/CartContext.jsx",
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/common/QuantitySelector.jsx",
+      "category": "common",
+      "responsibility": "Provide numeric input with increment/decrement buttons for selecting product quantities with validation against stock limits",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/FilterPanel.jsx",
+      "category": "common",
+      "responsibility": "Display category filter chips and price range slider for narrowing product results with clear and apply controls",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/sections/FilterBarSection.jsx",
+      "category": "section",
+      "responsibility": "Present filter controls in a horizontal bar below the header with category chips and price range slider for product filtering",
+      "dependsOn": [
+        "src/components/common/FilterPanel.jsx"
+      ]
+    },
+    {
+      "path": "src/components/sections/ProductGridSection.jsx",
+      "category": "section",
+      "responsibility": "Render responsive grid of ProductCard components with empty state handling when no products match filters",
+      "dependsOn": [
+        "src/components/common/ProductCard.jsx"
+      ]
+    },
+    {
+      "path": "src/components/product/ProductGallery.jsx",
+      "category": "feature",
+      "responsibility": "Display main product image with thumbnail navigation for viewing multiple product views on detail page",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/product/ProductInfo.jsx",
+      "category": "feature",
+      "responsibility": "Display product details including name, price, description, rating, and add-to-cart controls with quantity selector",
+      "dependsOn": [
+        "src/components/common/QuantitySelector.jsx",
+        "src/context/CartContext.jsx",
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/cart/CartDrawer.jsx",
+      "category": "feature",
+      "responsibility": "Render slide-in cart panel showing cart items with images, quantities, prices, subtotal, and checkout action",
+      "dependsOn": [
+        "src/context/CartContext.jsx",
+        "src/components/common/QuantitySelector.jsx",
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/cart/CartItem.jsx",
+      "category": "feature",
+      "responsibility": "Render individual cart item with product image, name, price, quantity selector, and remove action",
+      "dependsOn": [
+        "src/context/CartContext.jsx",
+        "src/components/common/QuantitySelector.jsx",
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/cart/CheckoutForm.jsx",
+      "category": "feature",
+      "responsibility": "Collect shipping address and payment information with form validation and order summary display",
+      "dependsOn": [
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/pages/HomePage.jsx",
+      "category": "page",
+      "responsibility": "Compose the home page experience with Header, FilterBarSection, and ProductGridSection for product browsing",
+      "dependsOn": [
+        "src/components/layout/StoreLayout.jsx",
+        "src/components/sections/FilterBarSection.jsx",
+        "src/components/sections/ProductGridSection.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/ProductDetailsPage.jsx",
+      "category": "page",
+      "responsibility": "Render product detail view with ProductGallery and ProductInfo components for individual product examination",
+      "dependsOn": [
+        "src/components/layout/StoreLayout.jsx",
+        "src/components/product/ProductGallery.jsx",
+        "src/components/product/ProductInfo.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/CheckoutPage.jsx",
+      "category": "page",
+      "responsibility": "Present checkout form with shipping and payment fields alongside order summary for completing purchase",
+      "dependsOn": [
+        "src/components/layout/StoreLayout.jsx",
+        "src/components/cart/CheckoutForm.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/OrderConfirmationPage.jsx",
+      "category": "page",
+      "responsibility": "Display order success message with order summary and continue shopping action after checkout completion",
+      "dependsOn": [
+        "src/components/layout/StoreLayout.jsx"
+      ]
+    },
+    {
+      "path": "src/pages/NotFoundPage.jsx",
+      "category": "page",
+      "responsibility": "Handle invalid routes with helpful 404 message and navigation back to home or products",
+      "dependsOn": [
+        "src/components/layout/StoreLayout.jsx"
+      ]
+    },
+    {
+      "path": "src/routes/AppRouter.jsx",
+      "category": "utility",
+      "responsibility": "Configure React Router with all routes including dynamic product detail route and wildcard for 404 handling",
+      "dependsOn": [
+        "src/pages/HomePage.jsx",
+        "src/pages/ProductDetailsPage.jsx",
+        "src/pages/CheckoutPage.jsx",
+        "src/pages/OrderConfirmationPage.jsx",
+        "src/pages/NotFoundPage.jsx"
+      ]
+    },
+    {
+      "path": "src/App.jsx",
+      "category": "entry",
+      "responsibility": "Compose MantineProvider with custom theme and AppRouter as the single entry point for the entire application",
+      "dependsOn": [
+        "src/theme/theme.js",
+        "src/routes/AppRouter.jsx",
+        "src/context/CartContext.jsx"
+      ]
+    }
+  ],
+  "batches": [
+    [
+      "src/theme/theme.js",
+      "src/data/imageAssets.js",
+      "src/lib/formatPrice.js",
+      "src/data/products.js",
+      "src/context/CartContext.jsx"
+    ],
+    [
+      "src/components/common/SearchBar.jsx",
+      "src/components/common/QuantitySelector.jsx",
+      "src/components/common/FilterPanel.jsx",
+      "src/components/layout/Header.jsx",
+      "src/components/layout/StoreLayout.jsx"
+    ],
+    [
+      "src/components/common/ProductCard.jsx",
+      "src/components/sections/FilterBarSection.jsx",
+      "src/components/sections/ProductGridSection.jsx",
+      "src/components/product/ProductGallery.jsx",
+      "src/components/product/ProductInfo.jsx"
+    ],
+    [
+      "src/components/cart/CartItem.jsx",
+      "src/components/cart/CartDrawer.jsx",
+      "src/components/cart/CheckoutForm.jsx",
+      "src/pages/HomePage.jsx",
+      "src/pages/ProductDetailsPage.jsx"
+    ],
+    [
+      "src/pages/CheckoutPage.jsx",
+      "src/pages/OrderConfirmationPage.jsx",
+      "src/pages/NotFoundPage.jsx",
+      "src/routes/AppRouter.jsx"
+    ],
+    [
+      "src/App.jsx"
+    ]
+  ]
+}

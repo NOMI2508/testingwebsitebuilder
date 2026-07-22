@@ -1,0 +1,12 @@
+{
+  "id": "version_mrngun19_71679d2b",
+  "prompt": "Create a frontend e-commerce website for a shoe brand. Add product cards, search, category filter, product details, cart, quantity controls, and checkout form using mock data. Use React, Tailwind CSS, and localStorage.",
+  "createdAt": "2026-07-16T12:09:18.631Z",
+  "changedFiles": [
+    "src/components/product/ProductInfo.jsx",
+    "src/components/sections/BestSellers.jsx",
+    "src/components/sections/ProductFilters.jsx",
+    "src/pages/ProductDetail.jsx"
+  ],
+  "status": "working"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "version_mrnj33fk_6143239b",
+  "prompt": "Build a responsive admin dashboard using Next.js and Mantine. Add a sidebar, header, stats cards, mock charts, recent activity table, dark mode, and mobile navigation. Frontend only with mock data.",
+  "createdAt": "2026-07-16T13:11:52.356Z",
+  "changedFiles": [
+    "src/components/layout/DashboardHeader.jsx"
+  ],
+  "status": "working"
+}

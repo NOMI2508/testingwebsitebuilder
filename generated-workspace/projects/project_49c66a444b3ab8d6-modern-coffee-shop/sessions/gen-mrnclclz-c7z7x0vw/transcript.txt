@@ -1,0 +1,975 @@
+
+===FILE:src/data/siteContent.js===
+const siteContent = {
+  shopName: "Brew & Bean Café",
+  logo: "☕",
+  hero: {
+    headline: "Crafted with Care, Served with Love",
+    subheadline: "Discover the perfect cup at our cozy corner café. Every bean is thoughtfully sourced and expertly roasted.",
+    ctaPrimary: "View Our Menu",
+    ctaSecondary: "Find Us"
+  },
+  menu: {
+    categories: [
+      { id: "espresso", label: "Espresso" },
+      { id: "brewed", label: "Brewed Coffee" },
+      { id: "specialty", label: "Specialty Drinks" }
+    ],
+    items: [
+      {
+        id: 1,
+        name: "Classic Espresso",
+        description: "Rich, bold shot of our signature blend with notes of chocolate and caramel",
+        price: 3.50,
+        category: "espresso",
+        image: "https://images.unsplash.com/photo-1511920170033-f83969272f99?w=400&q=80"
+      },
+      {
+        id: 2,
+        name: "Double Espresso",
+        description: "Two shots of our premium espresso blend for that extra kick",
+        price: 4.25,
+        category: "espresso",
+        image: "https://images.unsplash.com/photo-1511920170033-f83969272f99?w=400&q=80"
+      },
+      {
+        id: 3,
+        name: "Cappuccino",
+        description: "Espresso with velvety steamed milk and a light foam topping",
+        price: 4.75,
+        category: "espresso",
+        image: "https://images.unsplash.com/photo-1572441710266-80f80a3a3b99?w=400&q=80"
+      },
+      {
+        id: 4,
+        name: "Latte",
+        description: "Smooth espresso with steamed milk and a thin layer of foam",
+        price: 5.25,
+        category: "espresso",
+        image: "https://images.unsplash.com/photo-1561083268-8a3daa8e2a26?w=400&q=80"
+      },
+      {
+        id: 5,
+        name: "House Blend Drip",
+        description: "Our signature medium roast, brewed fresh every hour",
+        price: 2.75,
+        category: "brewed",
+        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80"
+      },
+      {
+        id: 6,
+        name: "Pour Over",
+        description: "Single-origin beans brewed to order with precision and care",
+        price: 4.50,
+        category: "brewed",
+        image: "https://images.unsplash.com/photo-1511920170033-f83969272f99?w=400&q=80"
+      },
+      {
+        id: 7,
+        name: "Cold Brew",
+        description: "Smooth, low-acidity coffee steeped for 18 hours, served over ice",
+        price: 4.75,
+        category: "brewed",
+        image: "https://images.unsplash.com/photo-1511920170033-f83969272f99?w=400&q=80"
+      },
+      {
+        id: 8,
+        name: "Nitro Cold Brew",
+        description: "Cold brew infused with nitrogen for a creamy, stout-like texture",
+        price: 5.50,
+        category: "brewed",
+        image: "https://images.unsplash.com/photo-1561083268-8a3daa8e2a26?w=400&q=80"
+      },
+      {
+        id: 9,
+        name: "Caramel Macchiato",
+        description: "Vanilla syrup, steamed milk, espresso, and caramel drizzle",
+        price: 5.75,
+        category: "specialty",
+        image: "https://images.unsplash.com/photo-1572441710266-80f80a3a3b99?w=400&q=80"
+      },
+      {
+        id: 10,
+        name: "Hazelnut Mocha",
+        description: "Rich chocolate, hazelnut syrup, espresso, and steamed milk",
+        price: 5.95,
+        category: "specialty",
+        image: "https://images.unsplash.com/photo-1561083268-8a3daa8e2a26?w=400&q=80"
+      },
+      {
+        id: 11,
+        name: "Seasonal Pumpkin Spice",
+        description: "Our fall favorite with pumpkin spice, steamed milk, and espresso",
+        price: 5.50,
+        category: "specialty",
+        image: "https://images.unsplash.com/photo-1572441710266-80f80a3a3b99?w=400&q=80"
+      },
+      {
+        id: 12,
+        name: "Vanilla Bean Latte",
+        description: "House-made vanilla syrup with our smooth espresso and milk",
+        price: 5.25,
+        category: "specialty",
+        image: "https://images.unsplash.com/photo-1561083268-8a3daa8e2a26?w=400&q=80"
+      }
+    ]
+  },
+  contact: {
+    address: "123 Coffee Street, Downtown District, City 12345",
+    phone: "(555) 123-4567",
+    email: "hello@brewandbeancafe.com",
+    hours: [
+      { day: "Monday - Friday", time: "7:00 AM - 7:00 PM" },
+      { day: "Saturday", time: "8:00 AM - 8:00 PM" },
+      { day: "Sunday", time: "8:00 AM - 6:00 PM" }
+    ],
+    socialMedia: {
+      instagram: "@brewandbeancafe",
+      facebook: "BrewAndBeanCafe",
+      twitter: "@brewandbean"
+    }
+  }
+};
+
+export default siteContent;
+===END_FILE===
+
+===FILE:src/theme/theme.js===
+const theme = {
+  primaryColor: "coffeeBrown",
+  colors: {
+    coffeeBrown: [
+      "#FFF8F0",
+      "#FFE8D9",
+      "#FFD0B5",
+      "#FFB085",
+      "#CC7351",
+      "#994D35",
+      "#654321",
+      "#4A3219",
+      "#30210F",
+      "#1A1208"
+    ],
+    cream: [
+      "#FFFFFF",
+      "#FFFBEF",
+      "#FFFDD0",
+      "#FFF9B5",
+      "#FFF595",
+      "#FFF175",
+      "#FFED55",
+      "#FFE935",
+      "#FFE515",
+      "#FFE100"
+    ],
+    terracotta: [
+      "#FFF8F5",
+      "#FFE8E0",
+      "#FFD0C5",
+      "#FFB0A0",
+      "#CC7351",
+      "#994D35",
+      "#654321",
+      "#4A3219",
+      "#30210F",
+      "#1A1208"
+    ]
+  },
+  headings: {
+    fontFamily: "Georgia, serif",
+    fontWeight: 700
+  },
+  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  components: {
+    Button: {
+      defaultProps: {
+        color: "coffeeBrown",
+        radius: "md"
+      }
+    },
+    Card: {
+      defaultProps: {
+        radius: "lg",
+        shadow: "sm"
+      }
+    },
+    TextInput: {
+      defaultProps: {
+        radius: "md"
+      }
+    },
+    Textarea: {
+      defaultProps: {
+        radius: "md"
+      }
+    }
+  }
+};
+
+export default theme;
+===END_FILE===
+
+===FILE:src/lib/formatPrice.js===
+const formatPrice = (price) => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(price);
+};
+
+export default formatPrice;
+===END_FILE===
+
+===FILE:src/lib/validateContactForm.js===
+const validateContactForm = (values) => {
+  const errors = {};
+
+  if (!values.name || values.name.trim() === "") {
+    errors.name = "Name is required";
+  }
+
+  if (!values.email || values.email.trim() === "") {
+    errors.email = "Email is required";
+  } else {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(values.email)) {
+      errors.email = "Please enter a valid email address";
+    }
+  }
+
+  if (!values.message || values.message.trim() === "") {
+    errors.message = "Message is required";
+  }
+
+  return errors;
+};
+
+export default validateContactForm;
+===END_FILE===
+
+===FILE:src/components/layout/Navbar.jsx===
+import { Box, Group, Text, Burger, Drawer, Stack, Anchor } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+
+const Navbar = () => {
+  const [opened, { toggle, close }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    if (opened) {
+      close();
+    }
+  };
+
+  const navLinks = [
+    { label: "Home", id: "hero" },
+    { label: "Menu", id: "menu" },
+    { label: "Contact", id: "contact" }
+  ];
+
+  const NavItems = () => (
+    <>
+      {navLinks.map((link) => (
+        <Anchor
+          key={link.id}
+          href={`#${link.id}`}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(link.id);
+          }}
+          style={{
+            color: "#3E2723",
+            textDecoration: "none",
+            fontWeight: 500,
+            fontSize: "1rem",
+            cursor: "pointer"
+          }}
+          c="coffeeBrown.7"}
+        >
+          {link.label}
+        </Anchor>
+      ))}
+    </>
+  );
+
+  return (
+    <Box
+      component="nav"
+      style={{
+        position: "sticky",
+        top: 0,
+        backgroundColor: "#FFFDD0",
+        borderBottom: "1px solid #E0D5C5",
+        zIndex: 100
+      }}
+      p="md"
+    >
+      <Group justify="space-between" align="center">
+        <Text
+          size="xl"
+          fw={700}
+          c="coffeeBrown.7"
+          style={{ cursor: "pointer" }}
+          onClick={() => scrollToSection("hero")}
+        >
+          Brew & Bean Café
+        </Text>
+
+        {isMobile ? (
+          <>
+            <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" color="#654321" />
+            <Drawer
+              opened={opened}
+              onClose={close}
+              position="right"
+              title="Menu"
+              closeButtonProps={{ icon: <IconX size={24} /> }}
+              styles={{
+                header: { backgroundColor: "#FFFDD0" },
+                body: { backgroundColor: "#FFFDD0" }
+              }}
+            >
+              <Stack gap="lg" pt="lg">
+                {navLinks.map((link) => (
+                  <Text
+                    key={link.id}
+                    component="a"
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.id);
+                    }}
+                    size="lg"
+                    fw={500}
+                    c="coffeeBrown.7"
+                    style={{ cursor: "pointer", textDecoration: "none" }}
+                  >
+                    {link.label}
+                  </Text>
+                ))}
+              </Stack>
+            </Drawer>
+          </>
+        ) : (
+          <Group gap="xl">
+            <NavItems />
+          </Group>
+        )}
+      </Group>
+    </Box>
+  );
+};
+
+export default Navbar;
+===END_FILE===
+
+===FILE:src/components/layout/Footer.jsx===
+import { Box, Text, Group, Anchor, Stack } from "@mantine/core";
+import siteContent from "../../data/siteContent";
+
+const Footer = () => {
+  const { contact } = siteContent;
+
+  return (
+    <Box
+      component="footer"
+      style={{
+        backgroundColor: "var(--mantine-color-coffeeBrown-7)",
+        color: "var(--mantine-color-cream-2)",
+        padding: "var(--mantine-spacing-xl) var(--mantine-spacing-md)"
+      }}
+    >
+      <Stack spacing="md">
+        <Text size="lg" weight={600} color="cream.2">
+          Brew & Bean Café
+        </Text>
+        
+        <Text size="sm" color="cream.3">
+          {contact.address}
+        </Text>
+        
+        <Group spacing="lg">
+          <Anchor href={`tel:${contact.phone}`} color="cream.3" size="sm">
+            {contact.phone}
+          </Anchor>
+          <Anchor href={`mailto:${contact.email}`} color="cream.3" size="sm">
+            {contact.email}
+          </Anchor>
+        </Group>
+        
+        <Box>
+          <Text size="sm" weight={500} color="cream.2" mb={4}>
+            Hours
+          </Text>
+          {contact.hours.map((hour) => (
+            <Text key={hour.day} size="xs" color="cream.4">
+              {hour.day}: {hour.time}
+            </Text>
+          ))}
+        </Box>
+        
+        <Group spacing="sm" mt="sm">
+          <Anchor
+            href={`https://instagram.com/${contact.socialMedia.instagram.replace("@", "")}`}
+            color="cream.3"
+            size="sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </Anchor>
+          <Anchor
+            href={`https://facebook.com/${contact.socialMedia.facebook}`}
+            color="cream.3"
+            size="sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </Anchor>
+          <Anchor
+            href={`https://twitter.com/${contact.socialMedia.twitter.replace("@", "")}`}
+            color="cream.3"
+            size="sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </Anchor>
+        </Group>
+        
+        <Text size="xs" color="cream.5" mt="md">
+          © {new Date().getFullYear()} Brew & Bean Café. All rights reserved.
+        </Text>
+      </Stack>
+    </Box>
+  );
+};
+
+export default Footer;
+===END_FILE===
+
+===FILE:src/components/common/CoffeeCard.jsx===
+import { Card, Text, Image, Group, Badge } from "@mantine/core";
+import formatPrice from "../../lib/formatPrice";
+
+const CoffeeCard = ({ coffee, onClick }) => {
+  return (
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="lg"
+      style={{
+        backgroundColor: "var(--mantine-color-cream-0)",
+        cursor: "pointer",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-4px)";
+        e.currentTarget.style.boxShadow = "var(--mantine-shadow-md)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "var(--mantine-shadow-sm)";
+      }}
+      onClick={() => onClick && onClick(coffee)}
+    >
+      <Card.Section>
+        <Image
+          src={coffee.image}
+          alt={coffee.name}
+          height={200}
+          style={{ objectFit: "cover" }}
+        />
+      </Card.Section>
+      
+      <Group position="apart" mt="md" mb="xs">
+        <Text weight={600} size="lg" color="coffeeBrown.7">
+          {coffee.name}
+        </Text>
+        <Badge color="coffeeBrown" variant="light" size="lg">
+          {formatPrice(coffee.price)}
+        </Badge>
+      </Group>
+      
+      <Text size="sm" color="coffeeBrown.6" lineClamp={3}>
+        {coffee.description}
+      </Text>
+    </Card>
+  );
+};
+
+export default CoffeeCard;
+===END_FILE===
+
+===FILE:src/components/common/CategoryTabs.jsx===
+import { Tabs } from "@mantine/core";
+
+const CategoryTabs = ({ categories, activeCategory, onChange }) => {
+  return (
+    <Tabs
+      value={activeCategory}
+      onChange={onChange}
+      variant="default"
+      color="coffeeBrown"
+      style={{ width: "100%" }}
+    >
+      <Tabs.List grow>
+        {categories.map((category) => (
+          <Tabs.Tab
+            key={category.id}
+            value={category.id}
+            style={{
+              fontWeight: 500,
+              color: "var(--mantine-color-coffeeBrown-7)"
+            }}
+          >
+            {category.label}
+          </Tabs.Tab>
+        ))}
+      </Tabs.List>
+    </Tabs>
+  );
+};
+
+export default CategoryTabs;
+===END_FILE===
+
+===FILE:src/components/common/Lightbox.jsx===
+import { Modal, Image, Text, Group, Badge } from "@mantine/core";
+import formatPrice from "../../lib/formatPrice";
+
+const Lightbox = ({ coffee, opened, onClose }) => {
+  if (!coffee) return null;
+
+  return (
+    <Modal
+      opened={opened}
+      onClose={onClose}
+      title={coffee.name}
+      centered
+      size="md"
+      styles={{
+        title: {
+          color: "var(--mantine-color-coffeeBrown-7)",
+          fontWeight: 600
+        }
+      }}
+    >
+      <Image
+        src={coffee.image}
+        alt={coffee.name}
+        style={{ objectFit: "cover", width: "100%", borderRadius: "var(--mantine-radius-md)" }}
+        mb="md"
+      />
+      <Group position="apart" mb="sm">
+        <Text weight={600} color="coffeeBrown.7">
+          {coffee.name}
+        </Text>
+        <Badge color="coffeeBrown" size="lg">
+          {formatPrice(coffee.price)}
+        </Badge>
+      </Group>
+      <Text color="coffeeBrown.6" mb="md">
+        {coffee.description}
+      </Text>
+    </Modal>
+  );
+};
+
+export default Lightbox;
+===END_FILE===
+
+===FILE:src/components/sections/HeroSection.jsx===
+import { Box, Title, Text, Button, Group, Container } from "@mantine/core";
+import siteContent from "../../data/siteContent";
+
+const HeroSection = () => {
+  const { hero } = siteContent;
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <Box
+      component="section"
+      id="hero"
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundImage: "url('https://images.unsplash.com/photo-1504754524783-8d2a6c2b61b9?w=1200&q=80')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        position: "relative"
+      }}
+    >
+      <Box
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(101, 67, 33, 0.7)"
+        }}
+      />
+      
+      <Container
+        size="lg"
+        style={{
+          position: "relative",
+          zIndex: 1,
+          textAlign: "center"
+        }}
+      >
+        <Title
+          order={1}
+          size={48}
+          weight={700}
+          color="cream.0"
+          style={{
+            marginBottom: "var(--mantine-spacing-md)",
+            fontFamily: "Georgia, serif"
+          }}
+        >
+          {hero.headline}
+        </Title>
+        
+        <Text
+          size="xl"
+          color="cream.2"
+          style={{
+            marginBottom: "var(--mantine-spacing-xl)",
+            maxWidth: "600px",
+            marginLeft: "auto",
+            marginRight: "auto"
+          }}
+        >
+          {hero.subheadline}
+        </Text>
+        
+        <Group position="center" spacing="lg">
+          <Button
+            size="lg"
+            variant="filled"
+            onClick={() => scrollToSection("menu")}
+          >
+            {hero.ctaPrimary}
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            color="cream"
+            onClick={() => scrollToSection("contact")}
+          >
+            {hero.ctaSecondary}
+          </Button>
+        </Group>
+      </Container>
+    </Box>
+  );
+};
+
+export default HeroSection;
+===END_FILE===
+
+===FILE:src/components/sections/MenuSection.jsx===
+import { Container, Title, SimpleGrid, Box } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import siteContent from "../../data/siteContent";
+import CategoryTabs from "../common/CategoryTabs";
+import CoffeeCard from "../common/CoffeeCard";
+import Lightbox from "../common/Lightbox";
+
+const MenuSection = () => {
+  const [activeCategory, setActiveCategory] = useDisclosure(siteContent.menu.categories[0].id);
+  const [lightboxCoffee, setLightboxCoffee] = useDisclosure(null);
+  const [lightboxOpened, lightboxHandlers] = useDisclosure(false);
+
+  const filteredItems = siteContent.menu.items.filter(
+    (item) => item.category === activeCategory
+  );
+
+  const handleCoffeeClick = (coffee) => {
+    setLightboxCoffee(coffee);
+    lightboxHandlers.open();
+  };
+
+  return (
+    <Box
+      id="menu"
+      style={{
+        backgroundColor: "var(--mantine-color-cream-1)",
+        padding: "4rem 0"
+      }}
+    >
+      <Container size="lg">
+        <Title
+          order={2}
+          align="center"
+          mb="xl"
+          color="coffeeBrown.7"
+          style={{ fontFamily: "Georgia, serif" }}
+        >
+          Our Coffee Menu
+        </Title>
+
+        <Box mb="xl">
+          <CategoryTabs
+            categories={siteContent.menu.categories}
+            activeCategory={activeCategory}
+            onChange={setActiveCategory}
+          />
+        </Box>
+
+        <SimpleGrid
+          cols={3}
+          spacing="lg"
+          breakpoints={[
+            { maxWidth: "62rem", cols: 2 },
+            { maxWidth: "48rem", cols: 1 }
+          ]}
+        >
+          {filteredItems.map((coffee) => (
+            <CoffeeCard
+              key={coffee.id}
+              coffee={coffee}
+              onClick={handleCoffeeClick}
+            />
+          ))}
+        </SimpleGrid>
+      </Container>
+
+      <Lightbox
+        coffee={lightboxCoffee}
+        opened={lightboxOpened}
+        onClose={lightboxHandlers.close}
+      />
+    </Box>
+  );
+};
+
+export default MenuSection;
+===END_FILE===
+
+===FILE:src/components/sections/ContactSection.jsx===
+import { Container, Title, Text, Grid, TextInput, Textarea, Button, Group, Box, Alert } from "@mantine/core";
+import { useDisclosure, useInputState } from "@mantine/hooks";
+import { IconCheck, IconX } from "@tabler/icons-react";
+import siteContent from "../../data/siteContent";
+import validateContactForm from "../../lib/validateContactForm";
+
+const ContactSection = () => {
+  const [name, setName] = useInputState("");
+  const [email, setEmail] = useInputState("");
+  const [message, setMessage] = useInputState("");
+  const [errors, setErrors] = useDisclosure({});
+  const [submitted, setSubmitted] = useDisclosure(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateContactForm({ name, email, message });
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      setSubmitted(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  };
+
+  return (
+    <Box
+      id="contact"
+      style={{
+        backgroundColor: "var(--mantine-color-cream-0)",
+        padding: "4rem 0"
+      }}
+    >
+      <Container size="lg">
+        <Title
+          order={2}
+          align="center"
+          mb="xl"
+          color="coffeeBrown.7"
+          style={{ fontFamily: "Georgia, serif" }}
+        >
+          Get in Touch
+        </Title>
+
+        <Grid gutter="xl">
+          <Grid.Col span={6} breakpoints={[{ maxWidth: "48rem", span: 12 }]}>
+            <Box component="form" onSubmit={handleSubmit}>
+              {submitted && (
+                <Alert
+                  icon={<IconCheck size={16} />}
+                  title="Thank you!"
+                  color="green"
+                  mb="md"
+                >
+                  Your message has been sent. We'll get back to you soon!
+                </Alert>
+              )}
+
+              <TextInput
+                label="Name"
+                placeholder="Your name"
+                value={name}
+                onChange={setName}
+                error={errors.name}
+                required
+                mb="md"
+                styles={{
+                  label: { color: "var(--mantine-color-coffeeBrown-7)" },
+                  input: {
+                    borderColor: "var(--mantine-color-coffeeBrown-4)",
+                    "&:focus": {
+                      borderColor: "var(--mantine-color-coffeeBrown-6)"
+                    }
+                  }
+                }}
+              />
+
+              <TextInput
+                label="Email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={setEmail}
+                error={errors.email}
+                required
+                mb="md"
+                styles={{
+                  label: { color: "var(--mantine-color-coffeeBrown-7)" },
+                  input: {
+                    borderColor: "var(--mantine-color-coffeeBrown-4)",
+                    "&:focus": {
+                      borderColor: "var(--mantine-color-coffeeBrown-6)"
+                    }
+                  }
+                }}
+              />
+
+              <Textarea
+                label="Message"
+                placeholder="How can we help you?"
+                value={message}
+                onChange={setMessage}
+                error={errors.message}
+                required
+                minRows={4}
+                mb="md"
+                styles={{
+                  label: { color: "var(--mantine-color-coffeeBrown-7)" },
+                  input: {
+                    borderColor: "var(--mantine-color-coffeeBrown-4)",
+                    "&:focus": {
+                      borderColor: "var(--mantine-color-coffeeBrown-6)"
+                    }
+                  }
+                }}
+              />
+
+              <Button type="submit" fullWidth>
+                Send Message
+              </Button>
+            </Box>
+          </Grid.Col>
+
+          <Grid.Col span={6} breakpoints={[{ maxWidth: "48rem", span: 12 }]}>
+            <Box>
+              <Title order={3} mb="lg" color="coffeeBrown.7">
+                Visit Us
+              </Title>
+
+              <Text color="coffeeBrown.6" mb="md">
+                <strong>Address:</strong>
+                <br />
+                {siteContent.contact.address}
+              </Text>
+
+              <Text color="coffeeBrown.6" mb="md">
+                <strong>Phone:</strong>
+                <br />
+                {siteContent.contact.phone}
+              </Text>
+
+              <Text color="coffeeBrown.6" mb="md">
+                <strong>Email:</strong>
+                <br />
+                {siteContent.contact.email}
+              </Text>
+
+              <Title order={4} mt="lg" mb="sm" color="coffeeBrown.7">
+                Hours
+              </Title>
+
+              {siteContent.contact.hours.map((hour, index) => (
+                <Group key={index} position="apart" mb="xs">
+                  <Text color="coffeeBrown.6">{hour.day}</Text>
+                  <Text color="coffeeBrown.6">{hour.time}</Text>
+                </Group>
+              ))}
+
+              <Title order={4} mt="lg" mb="sm" color="coffeeBrown.7">
+                Follow Us
+              </Title>
+
+              <Group spacing="xs">
+                <Text color="coffeeBrown.6">Instagram:</Text>
+                <Text color="coffeeBrown.7">{siteContent.contact.socialMedia.instagram}</Text>
+              </Group>
+              <Group spacing="xs">
+                <Text color="coffeeBrown.6">Facebook:</Text>
+                <Text color="coffeeBrown.7">{siteContent.contact.socialMedia.facebook}</Text>
+              </Group>
+              <Group spacing="xs">
+                <Text color="coffeeBrown.6">Twitter:</Text>
+                <Text color="coffeeBrown.7">{siteContent.contact.socialMedia.twitter}</Text>
+              </Group>
+            </Box>
+          </Grid.Col>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default ContactSection;
+===END_FILE===
+
+===FILE:src/App.jsx===
+import { Box } from "@mantine/core";
+import Navbar from "./components/layout/Navbar";
+import HeroSection from "./components/sections/HeroSection";
+import MenuSection from "./components/sections/MenuSection";
+import ContactSection from "./components/sections/ContactSection";
+import Footer from "./components/layout/Footer";
+
+const App = () => {
+  return (
+    <Box style={{ minHeight: "100vh", backgroundColor: "var(--mantine-color-cream-0)" }}>
+      <Navbar />
+      <HeroSection />
+      <MenuSection />
+      <ContactSection />
+      <Footer />
+    </Box>
+  );
+};
+
+export default App;
+===END_FILE===

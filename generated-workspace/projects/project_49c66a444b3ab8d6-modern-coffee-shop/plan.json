@@ -1,0 +1,130 @@
+{
+  "entryFile": "src/App.jsx",
+  "architectureSummary": "A single-page React + Mantine coffee shop website with three main sections (Hero, Menu, Contact) composed by App.jsx. Uses Mantine's theme system for warm brown/cream styling, with reusable components for navigation, coffee items, and form validation. Menu data is stored in a content file, with category tabs for filtering and lightbox for image viewing.",
+  "files": [
+    {
+      "path": "src/data/siteContent.js",
+      "category": "data",
+      "responsibility": "Contains coffee shop content including menu items with categories (espresso, brewed, specialty), business contact information, opening hours, and social media handles",
+      "dependsOn": []
+    },
+    {
+      "path": "src/theme/theme.js",
+      "category": "theme",
+      "responsibility": "Mantine theme configuration with custom brown and cream color palette, typography settings, and component default styles",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/formatPrice.js",
+      "category": "utility",
+      "responsibility": "Formats coffee prices for display with currency symbol and proper decimal places",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/validateContactForm.js",
+      "category": "utility",
+      "responsibility": "Validates contact form fields (name, email, message) and returns validation errors for display",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "category": "layout",
+      "responsibility": "Responsive navigation bar with smooth scroll links to Hero, Menu, and Contact sections, collapses to hamburger menu on mobile",
+      "dependsOn": [
+        "src/theme/theme.js"
+      ]
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "category": "layout",
+      "responsibility": "Footer component displaying business hours, address, and social media links",
+      "dependsOn": [
+        "src/data/siteContent.js"
+      ]
+    },
+    {
+      "path": "src/components/common/CoffeeCard.jsx",
+      "category": "common",
+      "responsibility": "Displays individual coffee item with image, name, description, price, and click handler for lightbox preview",
+      "dependsOn": [
+        "src/lib/formatPrice.js"
+      ]
+    },
+    {
+      "path": "src/components/common/CategoryTabs.jsx",
+      "category": "common",
+      "responsibility": "Tab component for filtering menu items by coffee category (espresso, brewed, specialty)",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/Lightbox.jsx",
+      "category": "common",
+      "responsibility": "Modal component for displaying enlarged coffee images with close functionality",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/sections/HeroSection.jsx",
+      "category": "section",
+      "responsibility": "Hero banner with headline, subheadline, call-to-action buttons, and background coffee imagery with smooth scroll functionality",
+      "dependsOn": [
+        "src/data/siteContent.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/MenuSection.jsx",
+      "category": "section",
+      "responsibility": "Menu section container with category tabs and grid of CoffeeCard components, manages active category state",
+      "dependsOn": [
+        "src/data/siteContent.js",
+        "src/components/common/CategoryTabs.jsx",
+        "src/components/common/CoffeeCard.jsx",
+        "src/components/common/Lightbox.jsx"
+      ]
+    },
+    {
+      "path": "src/components/sections/ContactSection.jsx",
+      "category": "section",
+      "responsibility": "Contact form with name, email, message fields, business information display, and client-side validation feedback",
+      "dependsOn": [
+        "src/data/siteContent.js",
+        "src/lib/validateContactForm.js"
+      ]
+    },
+    {
+      "path": "src/App.jsx",
+      "category": "entry",
+      "responsibility": "Root component that composes Navbar, HeroSection, MenuSection, ContactSection, and Footer into a single-page layout",
+      "dependsOn": [
+        "src/components/layout/Navbar.jsx",
+        "src/components/sections/HeroSection.jsx",
+        "src/components/sections/MenuSection.jsx",
+        "src/components/sections/ContactSection.jsx",
+        "src/components/layout/Footer.jsx",
+        "src/theme/theme.js"
+      ]
+    }
+  ],
+  "batches": [
+    [
+      "src/data/siteContent.js",
+      "src/theme/theme.js",
+      "src/lib/formatPrice.js",
+      "src/lib/validateContactForm.js",
+      "src/components/layout/Navbar.jsx"
+    ],
+    [
+      "src/components/layout/Footer.jsx",
+      "src/components/common/CoffeeCard.jsx",
+      "src/components/common/CategoryTabs.jsx",
+      "src/components/common/Lightbox.jsx",
+      "src/components/sections/HeroSection.jsx"
+    ],
+    [
+      "src/components/sections/MenuSection.jsx",
+      "src/components/sections/ContactSection.jsx"
+    ],
+    [
+      "src/App.jsx"
+    ]
+  ]
+}

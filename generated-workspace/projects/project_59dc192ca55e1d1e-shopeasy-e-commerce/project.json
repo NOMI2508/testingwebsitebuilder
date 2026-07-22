@@ -1,0 +1,17 @@
+{
+  "id": "project_59dc192ca55e1d1e",
+  "name": "ShopEasy E-commerce",
+  "slug": "shopeasy-e-commerce",
+  "type": "ecommerce",
+  "description": "A modern frontend e-commerce website showcasing products with search and filtering capabilities, a slide-in cart drawer for managing selections, and a checkout form for completing purchases. All product and cart data is managed client-side using mock data.",
+  "status": "active",
+  "createdAt": "2026-07-16T15:04:34.664Z",
+  "updatedAt": "2026-07-22T13:50:26.961Z",
+  "activeSessionId": null,
+  "entryFile": "src/App.jsx",
+  "previewStatus": "ready",
+  "lastWorkingVersionId": "version_mrnnm5wl_3390c274",
+  "deploymentUrl": null,
+  "deployedAt": null,
+  "deployedVersionId": null
+}

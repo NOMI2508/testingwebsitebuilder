@@ -1,0 +1,1724 @@
+
+===FILE:src/data/siteContent.js===
+import { IconBrandReact, IconBrandJavascript, IconBrandTypescript, IconBrandNodejs, IconBrandPython, IconBrandDocker, IconBrandAws, IconBrandGit, IconBrandMongodb, IconBrandMysql, IconBrandFigma, IconCode, IconServer, IconCloud, IconTools, IconMail, IconMapPin, IconPhone, IconBrandLinkedin, IconBrandGithub, IconBrandTwitter, IconBrandYoutube } from "@tabler/icons-react";
+
+export const siteContent = {
+  personal: {
+    name: "Alex Chen",
+    title: "Senior Software Engineer",
+    tagline: "Building scalable web applications with modern technologies. Passionate about clean code, user experience, and solving complex problems.",
+    email: "alex.chen@example.com",
+    location: "San Francisco, CA",
+    phone: "+1 (555) 123-4567",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1df3dca362?w=400&h=400&fit=crop&crop=face",
+    resumeUrl: "/resume-alex-chen.pdf"
+  },
+  navigation: [
+    { id: "hero", label: "Home", href: "#hero" },
+    { id: "about", label: "About", href: "#about" },
+    { id: "skills", label: "Skills", href: "#skills" },
+    { id: "experience", label: "Experience", href: "#experience" },
+    { id: "projects", label: "Projects", href: "#projects" },
+    { id: "contact", label: "Contact", href: "#contact" }
+  ],
+  socialLinks: [
+    { name: "LinkedIn", url: "https://linkedin.com/in/alexchen", icon: IconBrandLinkedin },
+    { name: "GitHub", url: "https://github.com/alexchen", icon: IconBrandGithub },
+    { name: "Twitter", url: "https://twitter.com/alexchen", icon: IconBrandTwitter }
+  ],
+  about: {
+    bio: [
+      "I'm a full-stack software engineer with over 8 years of experience building web applications that scale. My journey started with frontend development, crafting intuitive user interfaces, and evolved into architecting robust backend systems and cloud infrastructure.",
+      "I specialize in JavaScript ecosystems, particularly React and Node.js, but I'm always exploring new technologies. When I'm not coding, you'll find me contributing to open-source projects, writing technical articles, or mentoring junior developers.",
+      "My approach combines technical excellence with business understanding. I believe great software solves real problems elegantly, and I'm passionate about creating solutions that make a meaningful impact."
+    ],
+    highlights: [
+      "8+ years of professional development experience",
+      "Led teams of 5-10 engineers on major projects",
+      "Contributed to 15+ open-source repositories",
+      "Built applications serving 1M+ users monthly",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  skills: {
+    categories: {
+      frontend: {
+        label: "Frontend",
+        icon: IconCode,
+        skills: [
+          { name: "React", proficiency: 95, years: 6 },
+          { name: "JavaScript", proficiency: 98, years: 8 },
+          { name: "TypeScript", proficiency: 90, years: 4 },
+          { name: "HTML/CSS", proficiency: 95, years: 8 },
+          { name: "Next.js", proficiency: 85, years: 3 },
+          { name: "Vue.js", proficiency: 75, years: 2 }
+        ]
+      },
+      backend: {
+        label: "Backend",
+        icon: IconServer,
+        skills: [
+          { name: "Node.js", proficiency: 92, years: 6 },
+          { name: "Python", proficiency: 88, years: 5 },
+          { name: "Express", proficiency: 90, years: 5 },
+          { name: "GraphQL", proficiency: 82, years: 3 },
+          { name: "REST APIs", proficiency: 95, years: 7 }
+        ]
+      },
+      devops: {
+        label: "DevOps",
+        icon: IconCloud,
+        skills: [
+          { name: "AWS", proficiency: 88, years: 4 },
+          { name: "Docker", proficiency: 90, years: 5 },
+          { name: "CI/CD", proficiency: 85, years: 4 },
+          { name: "Kubernetes", proficiency: 75, years: 2 },
+          { name: "Terraform", proficiency: 70, years: 2 }
+        ]
+      },
+      tools: {
+        label: "Tools",
+        icon: IconTools,
+        skills: [
+          { name: "Git", proficiency: 95, years: 8 },
+          { name: "Figma", proficiency: 80, years: 3 },
+          { name: "Jest", proficiency: 85, years: 4 },
+          { name: "Webpack", proficiency: 82, years: 4 },
+          { name: "MongoDB", proficiency: 88, years: 5 },
+          { name: "MySQL", proficiency: 90, years: 6 }
+        ]
+      }
+    }
+  },
+  experience: [
+    {
+      id: 1,
+      company: "TechCorp Solutions",
+      companyLogo: "https://images.unsplash.com/photo-1560185127-6ebb3a87138b?w=100&h=100&fit=crop",
+      title: "Senior Software Engineer",
+      startDate: "2021-03",
+      endDate: null,
+      location: "San Francisco, CA",
+      responsibilities: [
+        "Lead development of customer-facing web applications serving 500K+ monthly users",
+        "Architect and implement microservices infrastructure on AWS",
+        "Mentor junior developers and conduct code reviews",
+        "Collaborate with product and design teams to define technical requirements"
+      ],
+      achievements: [
+        "Reduced application load time by 40% through performance optimizations",
+        "Led migration from monolith to microservices, improving scalability",
+        "Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes"
+      ],
+      technologies: ["React", "Node.js", "AWS", "Docker", "GraphQL", "TypeScript"]
+    },
+    {
+      id: 2,
+      company: "InnovateSoft Inc",
+      companyLogo: "https://images.unsplash.com/photo-1559136658-1726b71a8b81?w=100&h=100&fit=crop",
+      title: "Full Stack Developer",
+      startDate: "2018-06",
+      endDate: "2021-02",
+      location: "Seattle, WA",
+      responsibilities: [
+        "Developed and maintained e-commerce platform with 100K+ products",
+        "Built responsive frontend components using React and Redux",
+        "Created RESTful APIs and integrated third-party payment systems",
+        "Worked closely with UX designers to implement pixel-perfect interfaces"
+      ],
+      achievements: [
+        "Increased conversion rate by 25% through A/B testing and optimization",
+        "Reduced server costs by 30% through database query optimization",
+        "Implemented automated testing suite achieving 85% code coverage"
+      ],
+      technologies: ["React", "Redux", "Node.js", "MongoDB", "Express", "AWS Lambda"]
+    },
+    {
+      id: 3,
+      company: "StartupLaunch",
+      companyLogo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
+      title: "Frontend Developer",
+      startDate: "2016-01",
+      endDate: "2018-05",
+      location: "Remote",
+      responsibilities: [
+        "Built responsive web applications for early-stage startups",
+        "Collaborated with designers to create engaging user experiences",
+        "Implemented modern CSS frameworks and build tools",
+        "Maintained code quality through testing and documentation"
+      ],
+      achievements: [
+        "Delivered 12+ MVP products for startup clients",
+        "Created reusable component library adopted across projects",
+        "Reduced development time by 40% through tooling improvements"
+      ],
+      technologies: ["JavaScript", "HTML/CSS", "Vue.js", "Webpack", "Sass"]
+    }
+  ],
+  projects: [
+    {
+      id: 1,
+      title: "E-Commerce Analytics Dashboard",
+      description: "A comprehensive analytics platform for e-commerce businesses with real-time data visualization, inventory management, and sales forecasting capabilities.",
+      image: "https://images.unsplash.com/photo-1551288043-7a1d9e0b8c4c?w=600&h=400&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "D3.js", "AWS"],
+      liveUrl: "https://demo-ecommerce-dashboard.com",
+      githubUrl: "https://github.com/alexchen/ecommerce-dashboard",
+      category: "fullstack",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Task Management Mobile App",
+      description: "Cross-platform mobile application for team collaboration with real-time updates, offline support, and intuitive drag-and-drop interface.",
+      image: "https://images.unsplash.com/photo-1512941937669-aa5f6cf2f999?w=600&h=400&fit=crop",
+      technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
+      liveUrl: "https://taskapp-demo.com",
+      githubUrl: "https://github.com/alexchen/task-management-app",
+      category: "mobile",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "API Gateway Service",
+      description: "Microservices gateway with rate limiting, authentication, and request routing. Built for high-throughput applications with comprehensive logging and monitoring.",
+      image: "https://images.unsplash.com/photo-1558494977-07e0b9b7b7b7?w=600&h=400&fit=crop",
+      technologies: ["Node.js", "Express", "Docker", "Redis", "Kubernetes"],
+      liveUrl: null,
+      githubUrl: "https://github.com/alexchen/api-gateway",
+      category: "backend",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Design System Component Library",
+      description: "Open-source React component library with 50+ accessible components, comprehensive documentation, and Storybook integration.",
+      image: "https://images.unsplash.com/photo-1507238697404-9c6b6c1c7b7b?w=600&h=400&fit=crop",
+      technologies: ["React", "TypeScript", "Storybook", "Jest", "Rollup"],
+      liveUrl: "https://design-system-demo.com",
+      githubUrl: "https://github.com/alexchen/react-design-system",
+      category: "frontend",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Real-time Chat Application",
+      description: "WebSocket-based chat application with end-to-end encryption, file sharing, and group chat functionality. Supports 10K+ concurrent users.",
+      image: "https://images.unsplash.com/photo-1577565703870-4a5a3a3a3a3a?w=600&h=400&fit=crop",
+      technologies: ["React", "Socket.io", "Node.js", "MongoDB", "Docker"],
+      liveUrl: "https://chat-demo.com",
+      githubUrl: "https://github.com/alexchen/realtime-chat",
+      category: "fullstack",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "DevOps Automation Toolkit",
+      description: "CLI tool for automating cloud infrastructure deployment with Terraform, including pre-built templates for common architectures.",
+      image: "https://images.unsplash.com/photo-1607748882511-8a7c5e5e5e5e?w=600&h=400&fit=crop",
+      technologies: ["Go", "Terraform", "AWS", "Docker", "CLI"],
+      liveUrl: null,
+      githubUrl: "https://github.com/alexchen/devops-toolkit",
+      category: "devops",
+      featured: false
+    }
+  ],
+  contact: {
+    availability: "Available for new opportunities",
+    responseTime: "Typically responds within 24 hours"
+  }
+};
+===END_FILE===
+===FILE:src/theme/theme.js===
+import { createTheme } from "@mantine/core";
+
+export const siteTheme = createTheme({
+  primaryColor: "blue",
+  colors: {
+    blue: [
+      "#EFF6FF",
+      "#DBEAFE",
+      "#BFDBFE",
+      "#93C5FD",
+      "#60A5FA",
+      "#3B82F6",
+      "#2563EB",
+      "#1D4ED8",
+      "#1E40AF",
+      "#1E3A8A"
+    ],
+    purple: [
+      "#F5F3FF",
+      "#EDE9FE",
+      "#DDD6FE",
+      "#C4B5FD",
+      "#A78BFA",
+      "#8B5CF6",
+      "#7C3AED",
+      "#6D28D9",
+      "#5B21B6",
+      "#4C1D95"
+    ],
+    green: [
+      "#ECFDF5",
+      "#D1FAE5",
+      "#A7F3D0",
+      "#71FBBD",
+      "#34D399",
+      "#10B981",
+      "#059669",
+      "#047857",
+      "#065F46",
+      "#064E3B"
+    ]
+  },
+  primaryShade: 6,
+  defaultColorScheme: "light",
+  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  fontFamilyMonospace: "Fira Code, 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace",
+  headings: {
+    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    fontWeight: "700",
+    sizes: {
+      h1: { fontSize: "3.5rem", lineHeight: "1.2", fontWeight: "800" },
+      h2: { fontSize: "2.5rem", lineHeight: "1.3", fontWeight: "700" },
+      h3: { fontSize: "2rem", lineHeight: "1.4", fontWeight: "600" },
+      h4: { fontSize: "1.5rem", lineHeight: "1.4", fontWeight: "600" },
+      h5: { fontSize: "1.25rem", lineHeight: "1.5", fontWeight: "500" },
+      h6: { fontSize: "1rem", lineHeight: "1.5", fontWeight: "500" }
+    }
+  },
+  radius: {
+    xs: "4px",
+    sm: "6px",
+    md: "8px",
+    lg: "12px",
+    xl: "16px"
+  },
+  shadows: {
+    xs: "0 1px 2px rgba(0, 0, 0, 0.05)",
+    sm: "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08)",
+    md: "0 4px 6px rgba(0, 0, 0, 0.13), 0 1px 3px rgba(0, 0, 0, 0.1)",
+    lg: "0 10px 15px rgba(0, 0, 0, 0.13), 0 4px 6px rgba(0, 0, 0, 0.1)",
+    xl: "0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.08)"
+  },
+  spacing: {
+    xs: "0.5rem",
+    sm: "0.75rem",
+    md: "1rem",
+    lg: "1.5rem",
+    xl: "2rem",
+    xxl: "3rem"
+  },
+  components: {
+    Button: {
+      defaultProps: {
+        radius: "md",
+        variant: "filled"
+      },
+      styles: {
+        root: {
+          transition: "all 0.2s ease",
+          fontWeight: 500
+        }
+      }
+    },
+    Card: {
+      defaultProps: {
+        radius: "lg",
+        shadow: "sm"
+      },
+      styles: {
+        root: {
+          transition: "transform 0.2s ease, box-shadow 0.2s ease"
+        }
+      }
+    },
+    Progress: {
+      defaultProps: {
+        size: "lg",
+        radius: "xl"
+      }
+    },
+    Timeline: {
+      defaultProps: {
+        bulletSize: 20,
+        lineWidth: 2,
+        styles: {
+          item: {
+            transition: "transform 0.2s ease"
+          }
+        }
+      }
+    },
+    Container: {
+      defaultProps: {
+        sizes: {
+          xs: 540,
+          sm: 720,
+          md: 960,
+          lg: 1140,
+          xl: 1320
+        }
+      }
+    }
+  }
+});
+
+export default siteTheme;
+===END_FILE===
+===FILE:src/context/ThemeContext.jsx===
+import { createContext, useContext, useEffect, useState } from "react";
+import { useLocalStorage, useMediaQuery } from "@mantine/hooks";
+
+const ThemeContext = createContext({
+  colorScheme: "light",
+  toggleColorScheme: () => {}
+});
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within ThemeProvider");
+  }
+  return context;
+};
+
+export const ThemeProvider = ({ children }) => {
+  const systemPrefersDark = useMediaQuery("(prefers-color-scheme: dark)");
+  const [storedColorScheme, setStoredColorScheme] = useLocalStorage({
+    key: "mantine-color-scheme",
+    defaultValue: "light",
+    getInitialValueInEffect: false
+  });
+
+  const [colorScheme, setColorScheme] = useState(storedColorScheme || (systemPrefersDark ? "dark" : "light"));
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const body = document.body;
+
+    if (colorScheme === "dark") {
+      root.setAttribute("data-mantine-color-scheme", "dark");
+      body.style.backgroundColor = "#111827";
+      body.style.color = "#F9FAFB";
+    } else {
+      root.setAttribute("data-mantine-color-scheme", "light");
+      body.style.backgroundColor = "#FFFFFF";
+      body.style.color = "#1F2937";
+    }
+  }, [colorScheme]);
+
+  const toggleColorScheme = () => {
+    const newColorScheme = colorScheme === "dark" ? "light" : "dark";
+    setColorScheme(newColorScheme);
+    setStoredColorScheme(newColorScheme);
+  };
+
+  return (
+    <ThemeContext.Provider value={{ colorScheme, toggleColorScheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export default ThemeProvider;
+===END_FILE===
+===FILE:src/lib/smoothScroll.js===
+export const smoothScrollTo = (elementId, offset = 80) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+};
+
+export const scrollToSection = (href) => {
+  const elementId = href.replace("#", "");
+  smoothScrollTo(elementId);
+};
+
+export const getActiveSection = () => {
+  const sections = ["hero", "about", "skills", "experience", "projects", "contact"];
+  let activeSection = "hero";
+
+  for (const section of sections) {
+    const element = document.getElementById(section);
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= 100 && rect.bottom >= 100) {
+        activeSection = section;
+        break;
+      }
+    }
+  }
+
+  return activeSection;
+};
+
+export default smoothScrollTo;
+===END_FILE===
+===FILE:src/lib/formatDate.js===
+export const formatDate = (dateString) => {
+  if (!dateString) return "Present";
+
+  const date = new Date(dateString);
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ];
+
+  return `${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+
+export const formatDateRange = (startDate, endDate) => {
+  const start = formatDate(startDate);
+  const end = endDate ? formatDate(endDate) : "Present";
+  return `${start} - ${end}`;
+};
+
+export default formatDateRange;
+===END_FILE===
+
+===FILE:src/lib/validateEmail.js===
+export const validateEmail = (email) => {
+  if (!email) return false;
+  
+  const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  
+  return emailRegex.test(email);
+};
+
+export const validateContactForm = (formData) => {
+  const errors = {};
+  
+  if (!formData.name || formData.name.trim().length < 2) {
+    errors.name = "Name must be at least 2 characters";
+  }
+  
+  if (!formData.email || !validateEmail(formData.email)) {
+    errors.email = "Please enter a valid email address";
+  }
+  
+  if (!formData.message || formData.message.trim().length < 10) {
+    errors.message = "Message must be at least 10 characters";
+  }
+  
+  return {
+    isValid: Object.keys(errors).length === 0,
+    errors
+  };
+};
+
+export default validateEmail;
+===END_FILE===
+
+===FILE:src/components/layout/Navbar.jsx===
+import { useState, useEffect } from "react";
+import { Box, Group, Text, Burger, Drawer, Stack, Anchor } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { smoothScrollTo, getActiveSection } from "../../lib/smoothScroll";
+import ThemeToggle from "../common/ThemeToggle";
+import { siteContent } from "../../data/siteContent";
+
+const Navbar = () => {
+  const [opened, setOpened] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = getActiveSection();
+      setActiveSection(section);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const elementId = href.replace("#", "");
+    smoothScrollTo(elementId);
+    setOpened(false);
+  };
+
+  const navLinks = siteContent.navigation.map((item) => (
+    <Anchor
+      key={item.id}
+      href={item.href}
+      onClick={(e) => handleNavClick(e, item.href)}
+      style={{
+        color: activeSection === item.id ? "var(--mantine-color-blue-6)" : "inherit",
+        fontWeight: activeSection === item.id ? 600 : 400,
+        textDecoration: "none",
+        transition: "color 0.2s ease"
+      }}
+    >
+      {item.label}
+    </Anchor>
+  ));
+
+  const mobileNavLinks = siteContent.navigation.map((item) => (
+    <Text
+      key={item.id}
+      component="a"
+      href={item.href}
+      onClick={(e) => handleNavClick(e, item.href)}
+      style={{
+        color: activeSection === item.id ? "var(--mantine-color-blue-6)" : "inherit",
+        fontWeight: activeSection === item.id ? 600 : 400,
+        textDecoration: "none",
+        fontSize: "1.25rem",
+        padding: "0.75rem 0",
+        cursor: "pointer"
+      }}
+    >
+      {item.label}
+    </Text>
+  ));
+
+  return (
+    <>
+      <Box
+        component="nav"
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+          backgroundColor: "var(--mantine-color-body)",
+          borderBottom: "1px solid var(--mantine-color-gray-3)",
+          padding: "1rem 0"
+        }}
+      >
+        <Group justify="space-between" align="center" style={{ maxWidth: "1320px", margin: "0 auto", padding: "0 1rem" }}>
+          <Text
+            component="a"
+            href="#hero"
+            onClick={(e) => handleNavClick(e, "#hero")}
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: 700,
+              textDecoration: "none",
+              color: "var(--mantine-color-blue-6)",
+              cursor: "pointer"
+            }}
+          >
+            {siteContent.personal.name.split(" ")[0]}
+          </Text>
+
+          {isMobile ? (
+            <Group gap="sm">
+              <ThemeToggle />
+              <Burger opened={opened} onClick={() => setOpened(!opened)} size="sm" />
+            </Group>
+          ) : (
+            <Group gap="xl">{navLinks}</Group>
+          )}
+        </Group>
+      </Box>
+
+      <Drawer
+        opened={opened}
+        onClose={() => setOpened(false)}
+        title={siteContent.personal.name.split(" ")[0]}
+        padding="md"
+        size="70%"
+        position="right"
+      >
+        <Stack gap="md">{mobileNavLinks}</Stack>
+      </Drawer>
+    </>
+  );
+};
+
+export default Navbar;
+===END_FILE===
+
+===FILE:src/components/layout/Footer.jsx===
+import { Box, Group, Text, Anchor, Stack } from "@mantine/core";
+import { IconChevronUp } from "@tabler/icons-react";
+import { smoothScrollTo } from "../../lib/smoothScroll";
+import SocialLinks from "../common/SocialLinks";
+import { siteContent } from "../../data/siteContent";
+
+const Footer = () => {
+  const handleBackToTop = () => {
+    smoothScrollTo("hero", 0);
+  };
+
+  const quickLinks = siteContent.navigation.map((item) => (
+    <Anchor
+      key={item.id}
+      href={item.href}
+      onClick={(e) => {
+        e.preventDefault();
+        const elementId = item.href.replace("#", "");
+        smoothScrollTo(elementId);
+      }}
+      style={{
+        color: "var(--mantine-color-gray-6)",
+        textDecoration: "none",
+        fontSize: "0.875rem",
+        transition: "color 0.2s ease"
+      }}
+    >
+      {item.label}
+    </Anchor>
+  ));
+
+  return (
+    <Box
+      component="footer"
+      style={{
+        backgroundColor: "var(--mantine-color-gray-0)",
+        borderTop: "1px solid var(--mantine-color-gray-3)",
+        padding: "2rem 0"
+      }}
+    >
+      <Box style={{ maxWidth: "1320px", margin: "0 auto", padding: "0 1rem" }}>
+        <Group justify="space-between" align="flex-start" style={{ marginBottom: "1.5rem" }}>
+          <Stack gap="xs">
+            <Text style={{ fontWeight: 600, fontSize: "1.125rem" }}>
+              {siteContent.personal.name}
+            </Text>
+            <Text size="sm" color="gray.6">
+              {siteContent.personal.title}
+            </Text>
+          </Stack>
+
+          <Group gap="xl" visibleFrom="sm">
+            <Stack gap="xs">
+              <Text size="sm" style={{ fontWeight: 500 }}>Quick Links</Text>
+              {quickLinks}
+            </Stack>
+          </Group>
+
+          <SocialLinks />
+        </Group>
+
+        <Group justify="space-between" align="center" style={{ paddingTop: "1rem", borderTop: "1px solid var(--mantine-color-gray-3)" }}>
+          <Text size="sm" color="gray.6">
+            © {new Date().getFullYear()} {siteContent.personal.name}. All rights reserved.
+          </Text>
+
+          <Text size="sm" color="gray.6">
+            Built with React & Mantine
+          </Text>
+        </Group>
+
+        <Box
+          style={{
+            position: "fixed",
+            bottom: "1.5rem",
+            right: "1.5rem",
+            zIndex: 50
+          }}
+        >
+          <Anchor
+            onClick={handleBackToTop}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "2.5rem",
+              height: "2.5rem",
+              borderRadius: "50%",
+              backgroundColor: "var(--mantine-color-blue-6)",
+              color: "white",
+              textDecoration: "none",
+              cursor: "pointer",
+              transition: "background-color 0.2s ease, transform 0.2s ease"
+            }}
+          >
+            <IconChevronUp size={20} />
+          </Anchor>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default Footer;
+===END_FILE===
+
+===FILE:src/components/common/SkillBar.jsx===
+import { useState, useEffect, useRef } from "react";
+import { Group, Text, Progress, Box } from "@mantine/core";
+
+const SkillBar = ({ skill, delay = 0 }) => {
+  const [animatedValue, setAnimatedValue] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setTimeout(() => {
+            setAnimatedValue(skill.proficiency);
+          }, delay);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [skill.proficiency, delay]);
+
+  return (
+    <Box ref={ref} style={{ marginBottom: "1rem" }}>
+      <Group justify="space-between" style={{ marginBottom: "0.5rem" }}>
+        <Text style={{ fontWeight: 500 }}>{skill.name}</Text>
+        <Group gap="xs">
+          <Text size="sm" color="gray.6">{skill.years}+ years</Text>
+          <Text size="sm" weight={600} color="blue.6">{skill.proficiency}%</Text>
+        </Group>
+      </Group>
+      <Progress
+        value={animatedValue}
+        color="blue"
+        size="lg"
+        radius="xl"
+        animated={isVisible}
+        style={{
+          transition: "width 0.5s ease-out"
+        }}
+      />
+    </Box>
+  );
+};
+
+export default SkillBar;
+===END_FILE===
+
+===FILE:src/components/common/ProjectCard.jsx===
+import { Card, Image, Text, Group, Badge, Button, Stack, Box } from "@mantine/core";
+import { IconExternalLink, IconBrandGithub } from "@tabler/icons-react";
+
+const ProjectCard = ({ project }) => {
+  const handleExternalLink = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  return (
+    <Card
+      style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease"
+      }}
+    >
+      <Card.Section>
+        <Image
+          src={project.image}
+          alt={project.title}
+          height={200}
+          style={{
+            objectFit: "cover",
+            borderTopLeftRadius: "var(--mantine-radius-lg)",
+            borderTopRightRadius: "var(--mantine-radius-lg)"
+          }}
+        />
+      </Card.Section>
+
+      <Stack gap="sm" style={{ flex: 1, padding: "1rem" }}>
+        <Text style={{ fontWeight: 600, fontSize: "1.25rem" }}>{project.title}</Text>
+        
+        <Text size="sm" color="gray.6} lineClamp={3}>
+          {project.description}
+        </Text>
+
+        <Group gap="xs" style={{ flexWrap: "wrap" }}>
+          {project.technologies.map((tech) => (
+            <Badge
+              key={tech}
+              variant="light"
+              color="blue"
+              size="sm"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </Group>
+      </Stack>
+
+      <Group gap="sm" style={{ padding: "0 1rem 1rem" }}>
+        {project.liveUrl && (
+          <Button
+            leftSection={<IconExternalLink size={16} />}
+            variant="filled"
+            size="sm"
+            onClick={() => handleExternalLink(project.liveUrl)}
+          >
+            Live Demo
+          </Button>
+        )}
+        
+        {project.githubUrl && (
+          <Button
+            leftSection={<IconBrandGithub size={16} />}
+            variant="outline"
+            size="sm"
+            onClick={() => handleExternalLink(project.githubUrl)}
+          >
+            GitHub
+          </Button>
+        )}
+      </Group>
+    </Card>
+  );
+};
+
+export default ProjectCard;
+===END_FILE===
+
+===FILE:src/components/common/SocialLinks.jsx===
+import { Group, ActionIcon } from "@mantine/core";
+import { IconBrandLinkedin, IconBrandGithub, IconBrandTwitter, IconMail } from "@tabler/icons-react";
+
+const SocialLinks = ({ links, size = "lg" }) => {
+  const iconSize = size === "sm" ? 18 : size === "lg" ? 22 : 20;
+
+  const getIcon = (name) => {
+    const iconMap = {
+      LinkedIn: IconBrandLinkedin,
+      GitHub: IconBrandGithub,
+      Twitter: IconBrandTwitter,
+      Email: IconMail
+    };
+    return iconMap[name] || IconMail;
+  };
+
+  return (
+    <Group gap="sm">
+      {links.map((link) => {
+        const Icon = getIcon(link.name);
+        return (
+          <ActionIcon
+            key={link.name}
+            component="a"
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            size={size}
+            variant="subtle"
+            color="gray.7"
+            style={{
+              transition: "color 0.2s ease, transform 0.2s ease"
+            }}
+          >
+            <Icon size={iconSize} />
+          </ActionIcon>
+        );
+      })}
+    </Group>
+  );
+};
+
+export default SocialLinks;
+===END_FILE===
+
+===FILE:src/components/common/ThemeToggle.jsx===
+import { ActionIcon, useMantineColorScheme } from "@mantine/core";
+import { IconSun, IconMoon } from "@tabler/icons-react";
+import { useTheme } from "../context/ThemeContext";
+
+const ThemeToggle = ({ size = "lg" }) => {
+  const { colorScheme, toggleColorScheme } = useTheme();
+  const iconSize = size === "sm" ? 18 : size === "lg" ? 22 : 20;
+
+  return (
+    <ActionIcon
+      onClick={toggleColorScheme}
+      size={size}
+      variant="subtle"
+      color="gray.7"
+      aria-label="Toggle color scheme"
+      style={{
+        transition: "color 0.2s ease, transform 0.2s ease"
+      }}
+    >
+      {colorScheme === "dark" ? (
+        <IconSun size={iconSize} />
+      ) : (
+        <IconMoon size={iconSize} />
+      )}
+    </ActionIcon>
+  );
+};
+
+export default ThemeToggle;
+===END_FILE===
+
+===FILE:src/components/sections/HeroSection.jsx===
+import { Container, Title, Text, Button, Group, Avatar, Box, Stack } from "@mantine/core";
+import { IconArrowDown, IconMail } from "@tabler/icons-react";
+import { smoothScrollTo } from "../../lib/smoothScroll";
+import { siteContent } from "../../data/siteContent";
+
+const HeroSection = () => {
+  const handleViewWork = () => {
+    smoothScrollTo("projects");
+  };
+
+  const handleContact = () => {
+    smoothScrollTo("contact");
+  };
+
+  return (
+    <Box
+      id="hero"
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        background: "linear-gradient(135deg, #EFF6FF 0%, #F5F3FF 100%)",
+        position: "relative",
+        overflow: "hidden"
+      }}
+    >
+      <Container size="lg" style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
+        <Stack
+          align="center"
+          gap="xl"
+          style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto" }}
+        >
+          <Avatar
+            src={siteContent.personal.avatar}
+            alt={siteContent.personal.name}
+            size={180}
+            radius="50%"
+            style={{
+              border: "4px solid #3B82F6",
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            }}
+          />
+
+          <Stack gap="md" style={{ maxWidth: "600px" }}>
+            <Title
+              order={1}
+              style={{
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                fontWeight: 800,
+                letterSpacing: "-0.02em",
+                lineHeight: 1.1
+              }}
+            >
+              {siteContent.personal.name}
+            </Title>
+
+            <Text
+              size="xl"
+              color="blue.6"
+              style={{ fontWeight: 600, fontSize: "1.5rem" }}
+            >
+              {siteContent.personal.title}
+            </Text>
+
+            <Text
+              size="lg"
+              color="gray.7"
+              style={{ lineHeight: 1.6, maxWidth: "540px", margin: "0 auto" }}
+            >
+              {siteContent.personal.tagline}
+            </Text>
+          </Stack>
+
+          <Group gap="lg" style={{ marginTop: "1rem" }}>
+            <Button
+              size="lg"
+              onClick={handleViewWork}
+              rightSection={<IconArrowDown size={20} />}
+              style={{
+                background: "linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)",
+                border: "none"
+              }}
+            >
+              View My Work
+            </Button>
+
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={handleContact}
+              leftSection={<IconMail size={20} />}
+            >
+              Contact Me
+            </Button>
+          </Group>
+        </Stack>
+      </Container>
+
+      <Box
+        style={{
+          position: "absolute",
+          bottom: "2rem",
+          left: "50%",
+          transform: "translateX(-50%)",
+          animation: "bounce 2s infinite"
+        }}
+      >
+        <IconArrowDown size={32} color="#9CA3AF" />
+      </Box>
+
+      <style>
+        {`
+          @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+          }
+        `}
+      </style>
+    </Box>
+  );
+};
+
+export default HeroSection;
+===END_FILE===
+
+===FILE:src/components/sections/AboutSection.jsx===
+import { Container, Title, Text, Group, Stack, Paper, Badge, Button } from "@mantine/core";
+import { IconDownload, IconCheck } from "@tabler/icons-react";
+import { siteContent } from "../../data/siteContent";
+import SocialLinks from "../common/SocialLinks";
+
+const AboutSection = () => {
+  return (
+    <Box
+      id="about"
+      style={{
+        padding: "6rem 0",
+        backgroundColor: "var(--mantine-color-gray-0)"
+      }}
+    >
+      <Container size="lg">
+        <Stack gap="xl">
+          <Stack gap="xs" style={{ textAlign: "center" }}>
+            <Title order={2} style={{ fontSize: "2.5rem", fontWeight: 700 }}>
+              About Me
+            </Title>
+            <Text color="gray.6" size="lg" style={{ maxWidth: "600px", margin: "0 auto" }}>
+              Get to know the engineer behind the code
+            </Text>
+          </Stack>
+
+          <Paper
+            shadow="md"
+            radius="lg"
+            style={{
+              padding: "3rem",
+              backgroundColor: "var(--mantine-color-body)"
+            }}
+          >
+            <Group align="flex-start" gap="xl" style={{ flexDirection: "row" }}>
+              <Stack gap="lg" style={{ flex: 1 }}>
+                {siteContent.about.bio.map((paragraph, index) => (
+                  <Text key={index} size="lg" style={{ lineHeight: 1.7 }}>
+                    {paragraph}
+                  </Text>
+                ))}
+
+                <Stack gap="sm" style={{ marginTop: "1rem" }}>
+                  {siteContent.about.highlights.map((highlight, index) => (
+                    <Group key={index} gap="sm">
+                      <Badge color="green" size="lg" variant="filled" style={{ minWidth: "32px", height: "24px" }}>
+                        <IconCheck size={14} />
+                      </Badge>
+                      <Text size="md">{highlight}</Text>
+                    </Group>
+                  ))}
+                </Stack>
+
+                <Group gap="lg" style={{ marginTop: "2rem" }}>
+                  <Button
+                    component="a"
+                    href={siteContent.personal.resumeUrl}
+                    download
+                    leftSection={<IconDownload size={18} />}
+                    size="md"
+                    style={{
+                      background: "linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)",
+                      border: "none"
+                    }}
+                  >
+                    Download Resume
+                  </Button>
+
+                  <SocialLinks links={siteContent.socialLinks} />
+                </Group>
+              </Stack>
+            </Group>
+          </Paper>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default AboutSection;
+===END_FILE===
+
+===FILE:src/components/sections/SkillsSection.jsx===
+import { Container, Title, Text, Tabs, Stack, Group, Box } from "@mantine/core";
+import { IconCode, IconServer, IconCloud, IconTools } from "@tabler/icons-react";
+import { siteContent } from "../../data/siteContent";
+import SkillBar from "../common/SkillBar";
+
+const SkillsSection = () => {
+  const categories = siteContent.skills.categories;
+  const categoryEntries = Object.entries(categories);
+
+  return (
+    <Box
+      id="skills"
+      style={{
+        padding: "6rem 0",
+        backgroundColor: "var(--mantine-color-gray-0)"
+      }}
+    >
+      <Container size="lg">
+        <Stack gap="xl">
+          <Stack gap="xs" style={{ textAlign: "center" }}>
+            <Title order={2} style={{ fontSize: "2.5rem", fontWeight: 700 }}>
+              Technical Skills
+            </Title>
+            <Text color="gray.6" size="lg" style={{ maxWidth: "600px", margin: "0 auto" }}>
+              Technologies I've mastered through years of hands-on experience
+            </Text>
+          </Stack>
+
+          <Tabs
+            defaultValue="frontend"
+            variant="primary"
+            style={{ width: "100%" }}
+          >
+            <Tabs.List
+              style={{
+                justifyContent: "center",
+                marginBottom: "2rem",
+                borderBottom: "1px solid var(--mantine-color-gray-3)"
+              }}
+            >
+              {categoryEntries.map(([key, category]) => {
+                const Icon = category.icon;
+                return (
+                  <Tabs.Tab
+                    key={key}
+                    value={key}
+                    leftSection={<Icon size={18} />}
+                    style={{
+                      fontSize: "1rem",
+                      fontWeight: 500,
+                      padding: "1rem 1.5rem"
+                    }}
+                  >
+                    {category.label}
+                  </Tabs.Tab>
+                );
+              })}
+            </Tabs.List>
+
+            {categoryEntries.map(([key, category]) => (
+              <Tabs.Panel key={key} value={key}>
+                <Box
+                  style={{
+                    maxWidth: "700px",
+                    margin: "0 auto",
+                    padding: "1rem"
+                  }}
+                >
+                  <Stack gap="lg">
+                    {category.skills.map((skill, index) => (
+                      <SkillBar
+                        key={skill.name}
+                        skill={skill}
+                        delay={index * 100}
+                      />
+                    ))}
+                  </Stack>
+                </Box>
+              </Tabs.Panel>
+            ))}
+          </Tabs>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default SkillsSection;
+===END_FILE===
+
+===FILE:src/components/sections/ExperienceSection.jsx===
+import { Container, Title, Text, Timeline, Card, Group, Badge, Box, Button, Stack, Image } from "@mantine/core";
+import { IconBriefcase, IconMapPin, IconCalendar } from "@tabler/icons-react";
+import { formatDateRange } from "../../lib/formatDate";
+import { siteContent } from "../../data/siteContent";
+
+const ExperienceSection = () => {
+  const experiences = [...siteContent.experience].reverse();
+
+  return (
+    <Box id="experience" style={{ padding: "4rem 0", backgroundColor: "var(--mantine-color-gray-0)" }}>
+      <Container size="lg">
+        <Stack align="center" style={{ marginBottom: "3rem" }}>
+          <Title order={2} style={{ textAlign: "center", position: "relative" }}>
+            Professional Experience
+            <Box
+              style={{
+                position: "absolute",
+                bottom: "-10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "60px",
+                height: "4px",
+                backgroundColor: "var(--mantine-color-blue-6)",
+                borderRadius: "2px"
+              }}
+            />
+          </Title>
+          <Text color="gray.6" style={{ textAlign: "center", maxWidth: "600px" }}>
+            A timeline of my professional journey, showcasing roles, achievements, and technologies used along the way.
+          </Text>
+        </Stack>
+
+        <Timeline active={0} bulletSize={28} lineWidth={2} color="blue.6">
+          {experiences.map((exp, index) => (
+            <Timeline.Item
+              key={exp.id}
+              bullet={<IconBriefcase size={16} />}
+              title={
+                <Group justify="space-between" style={{ width: "100%" }}>
+                  <div>
+                    <Text style={{ fontWeight: 600, fontSize: "1.25rem" }}>{exp.title}</Text>
+                    <Text color="blue.6" style={{ fontWeight: 500 }}>{exp.company}</Text>
+                  </div>
+                  <Group gap="xs" visibleFrom="sm">
+                    <IconCalendar size={16} color="var(--mantine-color-gray-6)" />
+                    <Text size="sm" color="gray.6">{formatDateRange(exp.startDate, exp.endDate)}</Text>
+                  </Group>
+                </Group>
+              }
+              style={{ marginBottom: "2rem" }}
+            >
+              <Card
+                style={{
+                  marginLeft: "2rem",
+                  marginTop: "1rem",
+                  borderLeft: "3px solid var(--mantine-color-blue-1)"
+                }}
+                shadow="sm"
+                padding="lg"
+              >
+                <Group justify="space-between" style={{ marginBottom: "1rem" }} hiddenFrom="sm">
+                  <Group gap="xs">
+                    <IconCalendar size={16} color="var(--mantine-color-gray-6)" />
+                    <Text size="sm" color="gray.6">{formatDateRange(exp.startDate, exp.endDate)}</Text>
+                  </Group>
+                  <Group gap="xs">
+                    <IconMapPin size={16} color="var(--mantine-color-gray-6)" />
+                    <Text size="sm" color="gray.6">{exp.location}</Text>
+                  </Group>
+                </Group>
+
+                <Group gap="xs" style={{ marginBottom: "1rem" }} visibleFrom="sm">
+                  <IconMapPin size={16} color="var(--mantine-color-gray-6)" />
+                  <Text size="sm" color="gray.6">{exp.location}</Text>
+                </Group>
+
+                <Stack gap="sm" style={{ marginBottom: "1rem" }}>
+                  <Text weight={500}>Key Responsibilities:</Text>
+                  <ul style={{ paddingLeft: "1.25rem", margin: 0 }}>
+                    {exp.responsibilities.map((resp, idx) => (
+                      <li key={idx} style={{ marginBottom: "0.25rem" }}>
+                        <Text size="sm" color="gray.7">{resp}</Text>
+                      </li>
+                    ))}
+                  </ul>
+                </Stack>
+
+                <Stack gap="sm" style={{ marginBottom: "1rem" }}>
+                  <Text weight={500}>Notable Achievements:</Text>
+                  <ul style={{ paddingLeft: "1.25rem", margin: 0 }}>
+                    {exp.achievements.map((ach, idx) => (
+                      <li key={idx} style={{ marginBottom: "0.25rem" }}>
+                        <Text size="sm" color="gray.7">{ach}</Text>
+                      </li>
+                    ))}
+                  </ul>
+                </Stack>
+
+                <Group gap="xs" style={{ flexWrap: "wrap" }}>
+                  {exp.technologies.map((tech) => (
+                    <Badge key={tech} variant="filled" color="blue" size="sm">
+                      {tech}
+                    </Badge>
+                  ))}
+                </Group>
+              </Card>
+            </Timeline.Item>
+          ))}
+        </Timeline>
+      </Container>
+    </Box>
+  );
+};
+
+export default ExperienceSection;
+===END_FILE===
+
+===FILE:src/components/sections/ProjectsSection.jsx===
+import { Container, Title, Text, SimpleGrid, Card, Group, Badge, Button, Box, Stack, Image, Modal, useMantineTheme } from "@mantine/core";
+import { IconExternalLink, IconBrandGithub, IconCode, IconFilter } from "@tabler/icons-react";
+import { useState } from "react";
+import { siteContent } from "../../data/siteContent";
+import ProjectCard from "../common/ProjectCard";
+
+const ProjectsSection = () => {
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [modalOpened, setModalOpened] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const theme = useMantineTheme();
+
+  const categories = [
+    { value: "all", label: "All Projects" },
+    { value: "fullstack", label: "Full Stack" },
+    { value: "frontend", label: "Frontend" },
+    { value: "backend", label: "Backend" },
+    { value: "mobile", label: "Mobile" },
+    { value: "devops", label: "DevOps" }
+  ];
+
+  const filteredProjects = activeCategory === "all"
+    ? siteContent.projects
+    : siteContent.projects.filter(p => p.category === activeCategory);
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setModalOpened(true);
+  };
+
+  return (
+    <Box id="projects" style={{ padding: "4rem 0", backgroundColor: "var(--mantine-color-gray-1)" }}>
+      <Container size="lg">
+        <Stack align="center" style={{ marginBottom: "3rem" }}>
+          <Title order={2} style={{ textAlign: "center", position: "relative" }}>
+            Featured Projects
+            <Box
+              style={{
+                position: "absolute",
+                bottom: "-10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "60px",
+                height: "4px",
+                backgroundColor: "var(--mantine-color-purple-6)",
+                borderRadius: "2px"
+              }}
+            />
+          </Title>
+          <Text color="gray.6" style={{ textAlign: "center", maxWidth: "600px" }}>
+            A showcase of my technical work, from web applications to infrastructure tools. Each project represents a unique challenge solved.
+          </Text>
+        </Stack>
+
+        <Group justify="center" gap="xs" style={{ marginBottom: "2rem", flexWrap: "wrap" }}>
+          {categories.map((cat) => (
+            <Button
+              key={cat.value}
+              variant={activeCategory === cat.value ? "filled" : "light"}
+              color={activeCategory === cat.value ? "blue" : "gray"}
+              size="sm"
+              onClick={() => setActiveCategory(cat.value)}
+              leftSection={cat.value !== "all" && <IconFilter size={14} />}
+            >
+              {cat.label}
+            </Button>
+          ))}
+        </Group>
+
+        <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="xl">
+          {filteredProjects.map((project, index) => (
+            <Box
+              key={project.id}
+              style={{
+                transform: `translateY(${index % 2 === 0 ? "0" : "20px"})`,
+                transition: "transform 0.3s ease"
+              }}
+            >
+              <ProjectCard project={project} />
+            </Box>
+          ))}
+        </SimpleGrid>
+
+        <Modal
+          opened={modalOpened}
+          onClose={() => setModalOpened(false)}
+          title={selectedProject?.title}
+          size="lg"
+          centered
+        >
+          {selectedProject && (
+            <Stack gap="md">
+              <Image
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                radius="md"
+                style={{ maxHeight: "300px", objectFit: "cover" }}
+              />
+              <Text>{selectedProject.description}</Text>
+              <Group gap="xs" style={{ flexWrap: "wrap" }}>
+                {selectedProject.technologies.map((tech) => (
+                  <Badge key={tech} variant="light" color="blue">
+                    {tech}
+                  </Badge>
+                ))}
+              </Group>
+              <Group gap="sm">
+                {selectedProject.liveUrl && (
+                  <Button
+                    leftSection={<IconExternalLink size={16} />}
+                    onClick={() => window.open(selectedProject.liveUrl, "_blank", "noopener,noreferrer")}
+                  >
+                    Live Demo
+                  </Button>
+                )}
+                {selectedProject.githubUrl && (
+                  <Button
+                    leftSection={<IconBrandGithub size={16} />}
+                    variant="outline"
+                    onClick={() => window.open(selectedProject.githubUrl, "_blank", "noopener,noreferrer")}
+                  >
+                    View on GitHub
+                  </Button>
+                )}
+              </Group>
+            </Stack>
+          )}
+        </Modal>
+      </Container>
+    </Box>
+  );
+};
+
+export default ProjectsSection;
+===END_FILE===
+
+===FILE:src/components/sections/ContactSection.jsx===
+import { Container, Title, Text, Card, Group, TextInput, Textarea, Button, Box, Stack, Alert, Grid, useMantineTheme } from "@mantine/core";
+import { IconMail, IconSend, IconCheck, IconX } from "@tabler/icons-react";
+import { useState } from "react";
+import { validateContactForm } from "../../lib/validateEmail";
+import { siteContent } from "../../data/siteContent";
+import SocialLinks from "../common/SocialLinks";
+
+const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const theme = useMantineTheme();
+
+  const handleChange = (field) => (event) => {
+    setFormData({
+      ...formData,
+      [field]: event.target.value
+    });
+    if (errors[field]) {
+      setErrors({
+        ...errors,
+        [field]: null
+      });
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const validation = validateContactForm(formData);
+    
+    if (validation.isValid) {
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } else {
+      setErrors(validation.errors);
+    }
+  };
+
+  return (
+    <Box id="contact" style={{ padding: "4rem 0", backgroundColor: "var(--mantine-color-gray-0)" }}>
+      <Container size="lg">
+        <Stack align="center" style={{ marginBottom: "3rem" }}>
+          <Title order={2} style={{ textAlign: "center", position: "relative" }}>
+            Get In Touch
+            <Box
+              style={{
+                position: "absolute",
+                bottom: "-10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "60px",
+                height: "4px",
+                backgroundColor: "var(--mantine-color-green-6)",
+                borderRadius: "2px"
+              }}
+            />
+          </Title>
+          <Text color="gray.6" style={{ textAlign: "center", maxWidth: "600px" }}>
+            Have a question, opportunity, or just want to say hello? I'd love to hear from you.
+          </Text>
+        </Stack>
+
+        <Grid gutter="xl">
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Card shadow="sm" padding="xl" style={{ height: "100%" }}>
+              <Stack gap="lg">
+                <div>
+                  <Text style={{ fontWeight: 600, fontSize: "1.25rem", marginBottom: "0.5rem" }}>
+                    Contact Information
+                  </Text>
+                  <Text color="gray.6">
+                    {siteContent.contact.availability}
+                  </Text>
+                  <Text size="sm" color="gray.6">
+                    {siteContent.contact.responseTime}
+                  </Text>
+                </div>
+
+                <Stack gap="md">
+                  <Group gap="sm">
+                    <IconMail size={20} color="var(--mantine-color-blue-6)" />
+                    <Text>{siteContent.personal.email}</Text>
+                  </Group>
+                </Stack>
+
+                <Box style={{ marginTop: "auto" }}>
+                  <Text style={{ fontWeight: 500, marginBottom: "0.5rem" }}>
+                    Connect with me:
+                  </Text>
+                  <SocialLinks links={siteContent.socialLinks} />
+                </Box>
+              </Stack>
+            </Card>
+          </Grid.Col>
+
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Card shadow="sm" padding="xl">
+              {submitted ? (
+                <Alert
+                  icon={<IconCheck size={16} />}
+                  title="Message Sent!"
+                  color="green"
+                  variant="light"
+                >
+                  Thank you for reaching out. I'll get back to you within 24 hours.
+                </Alert>
+              ) : (
+                <form onSubmit={handleSubmit}>
+                  <Stack gap="md">
+                    <TextInput
+                      label="Name"
+                      placeholder="Your name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange("name")}
+                      error={errors.name}
+                    />
+
+                    <TextInput
+                      label="Email"
+                      placeholder="your@email.com"
+                      required
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange("email")}
+                      error={errors.email}
+                    />
+
+                    <Textarea
+                      label="Message"
+                      placeholder="What would you like to discuss?"
+                      required
+                      minRows={4}
+                      value={formData.message}
+                      onChange={handleChange("message")}
+                      error={errors.message}
+                    />
+
+                    <Button
+                      type="submit"
+                      leftSection={<IconSend size={16} />}
+                      fullWidth
+                      size="lg"
+                    >
+                      Send Message
+                    </Button>
+                  </Stack>
+                </form>
+              )}
+            </Card>
+          </Grid.Col>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default ContactSection;
+===END_FILE===
+
+===FILE:src/App.jsx===
+import { Box } from "@mantine/core";
+import { ThemeProvider } from "./context/ThemeContext";
+import Navbar from "./components/layout/Navbar";
+import HeroSection from "./components/sections/HeroSection";
+import AboutSection from "./components/sections/AboutSection";
+import SkillsSection from "./components/sections/SkillsSection";
+import ExperienceSection from "./components/sections/ExperienceSection";
+import ProjectsSection from "./components/sections/ProjectsSection";
+import ContactSection from "./components/sections/ContactSection";
+import Footer from "./components/layout/Footer";
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <Box style={{ minHeight: "100vh", backgroundColor: "var(--mantine-color-body)" }}>
+        <Navbar />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <ContactSection />
+        <Footer />
+      </Box>
+    </ThemeProvider>
+  );
+};
+
+export default App;
+===END_FILE===

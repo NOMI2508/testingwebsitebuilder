@@ -1,0 +1,11 @@
+{
+  "id": "version_mrnk6s1o_c62fa7bf",
+  "prompt": "update the users products,orders,analytics and settting pages or components when i click on that they give 404",
+  "createdAt": "2026-07-16T13:42:43.839Z",
+  "changedFiles": [
+    "src/components/layout/SidebarNav.jsx",
+    "src/data/navigationItems.js",
+    "src/App.jsx"
+  ],
+  "status": "working"
+}

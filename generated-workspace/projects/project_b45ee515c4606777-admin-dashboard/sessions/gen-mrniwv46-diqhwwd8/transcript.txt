@@ -1,0 +1,859 @@
+
+===FILE:src/theme/theme.js===
+import { createTheme } from "@mantine/core";
+
+const siteTheme = createTheme({
+  colors: {
+    primary: [
+      "#EEF2FF",
+      "#E0E7FF",
+      "#C7D2FE",
+      "#A5B4FC",
+      "#818CF8",
+      "#6366F1",
+      "#4F46E5",
+      "#4338CA",
+      "#3730A3",
+      "#312E8A",
+    ],
+    secondary: [
+      "#ECFDF5",
+      "#D1FAE5",
+      "#A7F3D0",
+      "#76E4B5",
+      "#4ADE80",
+      "#22C55E",
+      "#16A34A",
+      "#15803D",
+      "#166534",
+      "#14532D",
+    ],
+  },
+  primaryColor: "primary",
+  primaryShade: 6,
+  defaultColorScheme: "light",
+  fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+  headings: {
+    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    fontWeight: 600,
+  },
+  components: {
+    Card: {
+      defaultProps: {
+        shadow: "sm",
+        padding: "md",
+        radius: "md",
+        withBorder: true,
+      },
+      styles: {
+        root: {
+          transition: "box-shadow 150ms ease, transform 150ms ease",
+        },
+      },
+    },
+    Button: {
+      defaultProps: {
+        radius: "md",
+      },
+    },
+    Badge: {
+      defaultProps: {
+        radius: "xl",
+        size: "sm",
+      },
+      styles: {
+        root: {
+          textTransform: "capitalize",
+        },
+      },
+    },
+    Table: {
+      defaultProps: {
+        highlightOnHover: true,
+        striped: true,
+      },
+    },
+    AppShell: {
+      defaultProps: {
+        header: { height: 60 },
+        navbar: { width: { base: 260 }, breakpoint: "sm" },
+        padding: 0,
+      },
+    },
+  },
+});
+
+export default siteTheme;
+===END_FILE===
+
+===FILE:src/data/mockStats.js===
+const mockStats = [
+  {
+    id: "users",
+    title: "Total Users",
+    value: "12,847",
+    change: "+12.5%",
+    trend: "up",
+    icon: "users",
+  },
+  {
+    id: "revenue",
+    title: "Revenue",
+    value: "$48,294",
+    change: "+8.2%",
+    trend: "up",
+    icon: "credit-card",
+  },
+  {
+    id: "orders",
+    title: "Orders",
+    value: "1,248",
+    change: "-3.1%",
+    trend: "down",
+    icon: "shopping-cart",
+  },
+  {
+    id: "performance",
+    title: "Performance",
+    value: "94.2%",
+    change: "+2.4%",
+    trend: "up",
+    icon: "chart-line",
+  },
+];
+
+export default mockStats;
+===END_FILE===
+
+===FILE:src/data/mockChartData.js===
+const mockChartData = {
+  revenue: {
+    title: "Revenue Trends",
+    type: "line",
+    data: [
+      { date: "Jan", value: 3200 },
+      { date: "Feb", value: 4100 },
+      { date: "Mar", value: 3800 },
+      { date: "Apr", value: 5200 },
+      { date: "May", value: 4800 },
+      { date: "Jun", value: 6100 },
+      { date: "Jul", value: 5900 },
+      { date: "Aug", value: 7200 },
+      { date: "Sep", value: 6800 },
+      { date: "Oct", value: 8100 },
+      { date: "Nov", value: 7900 },
+      { date: "Dec", value: 9200 },
+    ],
+  },
+  userActivity: {
+    title: "User Activity",
+    type: "bar",
+    data: [
+      { day: "Mon", active: 245, new: 32 },
+      { day: "Tue", active: 312, new: 45 },
+      { day: "Wed", active: 289, new: 28 },
+      { day: "Thu", active: 356, new: 51 },
+      { day: "Fri", active: 423, new: 67 },
+      { day: "Sat", active: 278, new: 22 },
+      { day: "Sun", active: 198, new: 18 },
+    ],
+  },
+  distribution: {
+    title: "User Distribution",
+    type: "pie",
+    data: [
+      { name: "Admin", value: 12, color: "#4F46E5" },
+      { name: "Editor", value: 45, color: "#10B981" },
+      { name: "User", value: 328, color: "#F59E0B" },
+      { name: "Guest", value: 184, color: "#6366F1" },
+    ],
+  },
+};
+
+export default mockChartData;
+===END_FILE===
+
+===FILE:src/data/mockActivity.js===
+const mockActivity = [
+  {
+    id: 1,
+    user: "Sarah Johnson",
+    avatar: "SJ",
+    action: "Updated user profile settings",
+    timestamp: "2024-01-15T10:30:00Z",
+    status: "success",
+  },
+  {
+    id: 2,
+    user: "Michael Chen",
+    avatar: "MC",
+    action: "Created new product listing",
+    timestamp: "2024-01-15T09:45:00Z",
+    status: "success",
+  },
+  {
+    id: 3,
+    user: "Emily Rodriguez",
+    avatar: "ER",
+    action: "Failed login attempt",
+    timestamp: "2024-01-15T09:15:00Z",
+    status: "warning",
+  },
+  {
+    id: 4,
+    user: "David Kim",
+    avatar: "DK",
+    action: "Deleted comment #4521",
+    timestamp: "2024-01-15T08:30:00Z",
+    status: "error",
+  },
+  {
+    id: 5,
+    user: "Lisa Thompson",
+    avatar: "LT",
+    action: "Uploaded new media files",
+    timestamp: "2024-01-15T08:00:00Z",
+    status: "success",
+  },
+  {
+    id: 6,
+    user: "James Wilson",
+    avatar: "JW",
+    action: "Modified system settings",
+    timestamp: "2024-01-15T07:45:00Z",
+    status: "success",
+  },
+  {
+    id: 7,
+    user: "Anna Patel",
+    avatar: "AP",
+    action: "Pending approval request",
+    timestamp: "2024-01-15T07:15:00Z",
+    status: "warning",
+  },
+  {
+    id: 8,
+    user: "Robert Garcia",
+    avatar: "RG",
+    action: "Completed order #8934",
+    timestamp: "2024-01-15T06:30:00Z",
+    status: "success",
+  },
+  {
+    id: 9,
+    user: "Maria Lopez",
+    avatar: "ML",
+    action: "Sent newsletter to 2,456 users",
+    timestamp: "2024-01-15T05:45:00Z",
+    status: "success",
+  },
+  {
+    id: 10,
+    user: "Thomas Brown",
+    avatar: "TB",
+    action: "Account verification failed",
+    timestamp: "2024-01-15T05:00:00Z",
+    status: "error",
+  },
+];
+
+export default mockActivity;
+===END_FILE===
+
+===FILE:src/data/navigationItems.js===
+const navigationItems = [
+  {
+    id: "dashboard",
+    label: "Dashboard",
+    icon: "dashboard",
+    route: "/",
+  },
+  {
+    id: "users",
+    label: "Users",
+    icon: "users",
+    route: "/users",
+  },
+  {
+    id: "products",
+    label: "Products",
+    icon: "package",
+    route: "/products",
+  },
+  {
+    id: "orders",
+    label: "Orders",
+    icon: "shopping-cart",
+    route: "/orders",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    icon: "chart-bar",
+    route: "/analytics",
+  },
+  {
+    id: "settings",
+    label: "Settings",
+    icon: "settings",
+    route: "/settings",
+  },
+];
+
+export default navigationItems;
+===END_FILE===
+
+===FILE:src/components/common/StatsCard.jsx===
+import { Card, Group, Text, ThemeIcon, Box } from "@mantine/core";
+import { IconArrowUp, IconArrowDown, IconUsers, IconCreditCard, IconShoppingCart, IconChartLine } from "@tabler/icons-react";
+
+const iconMap = {
+  users: IconUsers,
+  "credit-card": IconCreditCard,
+  "shopping-cart": IconShoppingCart,
+  "chart-line": IconChartLine,
+};
+
+function StatsCard({ stat }) {
+  const safeStat = stat ?? {};
+  const Icon = iconMap[safeStat.icon] ?? IconUsers;
+  const TrendIcon = safeStat.trend === "up" ? IconArrowUp : IconArrowDown;
+  const trendColor = safeStat.trend === "up" ? "secondary" : "red";
+
+  return (
+    <Card>
+      <Group justify="space-between" align="flex-start">
+        <Box>
+          <Text size="xs" c="dimmed" tt="uppercase" fw={600} mb={4}>
+            {safeStat.title ?? "Metric"}
+          </Text>
+          <Text size="2rem" fw={700} lh={1.2}>
+            {safeStat.value ?? "0"}
+          </Text>
+          <Group gap={4} mt={8}>
+            <ThemeIcon color={trendColor} size="sm" variant="light">
+              <TrendIcon size={12} />
+            </ThemeIcon>
+            <Text size="xs" c={trendColor} fw={500}>
+              {safeStat.change ?? "0%"}
+            </Text>
+            <Text size="xs" c="dimmed">
+              from last month
+            </Text>
+          </Group>
+        </Box>
+        <ThemeIcon size="xl" variant="light" color="primary">
+          <Icon size={24} />
+        </ThemeIcon>
+      </Group>
+    </Card>
+  );
+}
+
+export default StatsCard;
+===END_FILE===
+
+===FILE:src/components/common/MockChart.jsx===
+import { Paper, Text, Group, Box, Skeleton, Center } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+
+function MockChart({ chart, loading = false }) {
+  const safeChart = chart ?? {};
+  const safeData = Array.isArray(safeChart.data) ? safeChart.data : [];
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  if (loading) {
+    return (
+      <Paper>
+        <Skeleton height={24} width="60%" mb="sm" />
+        <Skeleton height={isMobile ? 180 : 240} />
+      </Paper>
+    );
+  }
+
+  const chartHeight = isMobile ? 180 : 240;
+
+  return (
+    <Paper>
+      <Text size="sm" fw={600} mb="md">
+        {safeChart.title ?? "Chart"}
+      </Text>
+      <Box h={chartHeight} style={{ position: "relative", backgroundColor: "var(--mantine-color-gray-0)" }}>
+        <Center h="100%">
+          <Text c="dimmed" size="sm">
+            {safeChart.type === "line" && "📈 Line chart visualization"}
+            {safeChart.type === "bar" && "📊 Bar chart visualization"}
+            {safeChart.type === "pie" && "🥧 Pie chart visualization"}
+          </Text>
+        </Center>
+      </Box>
+      {safeChart.type === "bar" && safeData.length > 0 && (
+        <Group justify="center" mt="sm" gap="xs">
+          {safeData.map((item, index) => (
+            <Box key={index} style={{ textAlign: "center" }}>
+              <Text size="xs" c="dimmed">{item.day ?? item.date ?? "?"}</Text>
+            </Box>
+          ))}
+        </Group>
+      )}
+    </Paper>
+  );
+}
+
+export default MockChart;
+===END_FILE===
+
+===FILE:src/components/common/SectionHeading.jsx===
+import { Title, Text, Box } from "@mantine/core";
+
+function SectionHeading({ title, description }) {
+  return (
+    <Box mb="lg">
+      <Title order={2} size="h3" fw={600} mb={description ? 4 : 0}>
+        {title ?? "Section"}
+      </Title>
+      {description && (
+        <Text c="dimmed" size="sm">
+          {description}
+        </Text>
+      )}
+    </Box>
+  );
+}
+
+export default SectionHeading;
+===END_FILE===
+
+===FILE:src/components/layout/DashboardHeader.jsx===
+import { AppShell, Group, Text, ActionIcon, Avatar, Menu, Switch, rem } from "@mantine/core";
+import { IconBell, IconSearch, IconMoon, IconSun, IconUser, IconSettings, IconLogout, IconChevronDown } from "@tabler/icons-react";
+import { useLocalStorage, useMantineColorScheme } from "@mantine/hooks";
+
+function DashboardHeader() {
+  const [opened, { toggle }] = useLocalStorage({ key: "header-menu-open", defaultValue: false });
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === "dark";
+
+  return (
+    <AppShell.Header>
+      <Group justify="space-between" h="100%" px="md" py="xs">
+        <Group>
+          <Text size="xl" fw={700} visibleFrom="sm">
+            Admin Dashboard
+          </Text>
+        </Group>
+        <Group gap="sm">
+          <ActionIcon variant="subtle" color="gray" hiddenFrom="xs">
+            <IconSearch size={18} />
+          </ActionIcon>
+          <ActionIcon variant="subtle" color="gray">
+            <IconBell size={18} />
+          </ActionIcon>
+          <Switch
+            size="xs"
+            checked={isDark}
+            onChange={toggleColorScheme}
+            onLabel={<IconSun size={12} stroke={2.5} />}
+            offLabel={<IconMoon size={12} stroke={2.5} />}
+          />
+          <Menu opened={opened} onChange={toggle} width={200}>
+            <Menu.Target>
+              <Group gap={4} style={{ cursor: "pointer" }}>
+                <Avatar size="sm" color="primary">
+                  <IconUser size={14} />
+                </Avatar>
+                <IconChevronDown size={14} stroke={1.5} hiddenFrom="xs" />
+              </Group>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Label>Account</Menu.Label>
+              <Menu.Item leftSection={<IconUser size={14} />}>
+                Profile
+              </Menu.Item>
+              <Menu.Item leftSection={<IconSettings size={14} />}>
+                Settings
+              </Menu.Item>
+              <Menu.Divider />
+              <Menu.Item leftSection={<IconLogout size={14} />} color="red">
+                Logout
+              </Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
+        </Group>
+      </Group>
+    </AppShell.Header>
+  );
+}
+
+export default DashboardHeader;
+===END_FILE===
+
+===FILE:src/components/layout/SidebarNav.jsx===
+import { AppShell, NavLink, Group, Box, Text, ActionIcon, ScrollArea } from "@mantine/core";
+import { IconDashboard, IconUsers, IconPackage, IconShoppingCart, IconChartBar, IconSettings, IconChevronLeft, IconChevronRight, IconMenu2 } from "@tabler/icons-react";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import navigationItems from "../../data/navigationItems";
+
+const iconMap = {
+  dashboard: IconDashboard,
+  users: IconUsers,
+  package: IconPackage,
+  "shopping-cart": IconShoppingCart,
+  "chart-bar": IconChartBar,
+  settings: IconSettings,
+};
+
+function SidebarNav() {
+  const [collapsed, { toggle }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const safeNavItems = Array.isArray(navigationItems) ? navigationItems : [];
+
+  const navLinks = safeNavItems.map((item) => {
+    const Icon = iconMap[item.icon] ?? IconDashboard;
+    return (
+      <NavLink
+        key={item.id}
+        href={item.route ?? "#"}
+        label={collapsed ? undefined : item.label ?? "Item"}
+        leftSection={<Icon size={18} stroke={1.5} />}
+        active={item.id === "dashboard"}
+        variant="filled"
+        color="primary"
+      />
+    );
+  });
+
+  if (isMobile) {
+    return null;
+  }
+
+  return (
+    <AppShell.Navbar p="xs" style={{ transition: "width 200ms ease" }}>
+      <Group justify="flex-end" mb="xs">
+        <ActionIcon
+          variant="subtle"
+          color="gray"
+          onClick={toggle}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {collapsed ? <IconChevronRight size={16} /> : <IconChevronLeft size={16} />}
+        </ActionIcon>
+      </Group>
+      <ScrollArea>
+        {navLinks}
+      </ScrollArea>
+    </AppShell.Navbar>
+  );
+}
+
+export default SidebarNav;
+===END_FILE===
+
+===FILE:src/components/sections/StatsOverview.jsx===
+import { SimpleGrid, Skeleton, Group } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import StatsCard from "../common/StatsCard";
+import SectionHeading from "../common/SectionHeading";
+import mockStats from "../../data/mockStats";
+
+function StatsOverview({ loading = false }) {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const safeStats = Array.isArray(mockStats) ? mockStats : [];
+
+  if (loading) {
+    return (
+      <div>
+        <SectionHeading title="Overview Statistics" description="Key performance metrics at a glance" />
+        <SimpleGrid cols={isMobile ? 1 : 2} spacing="md">
+          {[1, 2, 3, 4].map((item) => (
+            <Skeleton key={item} height={120} />
+          ))}
+        </SimpleGrid>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <SectionHeading title="Overview Statistics" description="Key performance metrics at a glance" />
+      <SimpleGrid cols={isMobile ? 1 : 2} spacing="md">
+        {safeStats.map((stat) => (
+          <StatsCard key={stat?.id ?? Math.random()} stat={stat} />
+        ))}
+      </SimpleGrid>
+    </div>
+  );
+}
+
+export default StatsOverview;
+===END_FILE===
+
+===FILE:src/components/sections/ChartsSection.jsx===
+import { Grid, GridCol, Skeleton } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import MockChart from "../common/MockChart";
+import SectionHeading from "../common/SectionHeading";
+import mockChartData from "../../data/mockChartData";
+
+function ChartsSection({ loading = false }) {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const safeChartData = mockChartData ?? {};
+
+  if (loading) {
+    return (
+      <div>
+        <SectionHeading title="Analytics Overview" description="Data visualizations for system metrics" />
+        <Grid gutter="md">
+          <GridCol span={isMobile ? 12 : 6}>
+            <Skeleton height={280} />
+          </GridCol>
+          <GridCol span={isMobile ? 12 : 6}>
+            <Skeleton height={280} />
+          </GridCol>
+          <GridCol span={12}>
+            <Skeleton height={280} mt="md" />
+          </GridCol>
+        </Grid>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <SectionHeading title="Analytics Overview" description="Data visualizations for system metrics" />
+      <Grid gutter="md">
+        <GridCol span={isMobile ? 12 : 6}>
+          <MockChart chart={safeChartData.revenue} />
+        </GridCol>
+        <GridCol span={isMobile ? 12 : 6}>
+          <MockChart chart={safeChartData.userActivity} />
+        </GridCol>
+        <GridCol span={12}>
+          <MockChart chart={safeChartData.distribution} />
+        </GridCol>
+      </Grid>
+    </div>
+  );
+}
+
+export default ChartsSection;
+===END_FILE===
+
+===FILE:src/components/sections/ActivityTable.jsx===
+import { Table, Pagination, Group, Text, Badge, Avatar, Box, Skeleton, Center } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { useState } from "react";
+import SectionHeading from "../common/SectionHeading";
+import mockActivity from "../../data/mockActivity";
+
+function ActivityTable({ loading = false }) {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [activePage, setPage] = useState(1);
+  const itemsPerPage = 5;
+  
+  const safeActivity = Array.isArray(mockActivity) ? mockActivity : [];
+  const totalPages = Math.max(1, Math.ceil(safeActivity.length / itemsPerPage));
+  
+  const paginatedData = safeActivity.slice(
+    (activePage - 1) * itemsPerPage,
+    activePage * itemsPerPage
+  );
+
+  const getStatusColor = (status) => {
+    switch (status) {
+      case "success":
+        return "secondary";
+      case "warning":
+        return "yellow";
+      case "error":
+        return "red";
+      default:
+        return "gray";
+    }
+  };
+
+  const formatTimestamp = (timestamp) => {
+    if (!timestamp) return "—";
+    try {
+      const date = new Date(timestamp);
+      return date.toLocaleString(undefined, {
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return "—";
+    }
+  };
+
+  if (loading) {
+    return (
+      <div>
+        <SectionHeading title="Recent Activity" description="Latest user actions and system events" />
+        <Box>
+          {[1, 2, 3, 4, 5].map((row) => (
+            <Skeleton key={row} height={50} mb="xs" />
+          ))}
+        </Box>
+      </div>
+    );
+  }
+
+  const rows = paginatedData.map((item) => (
+    <Table.Tr key={item?.id ?? Math.random()}>
+      <Table.Td>
+        <Group gap="sm">
+          <Avatar size="sm" name={item?.user ?? "Unknown"} color="primary">
+            {item?.avatar ?? "?"}
+          </Avatar>
+          <Text size="sm" fw={500}>
+            {item?.user ?? "Unknown User"}
+          </Text>
+        </Group>
+      </Table.Td>
+      <Table.Td>
+        <Text size="sm" lineClamp={isMobile ? 1 : 2}>
+          {item?.action ?? "—"}
+        </Text>
+      </Table.Td>
+      <Table.Td>
+        <Text size="sm" c="dimmed">
+          {formatTimestamp(item?.timestamp)}
+        </Text>
+      </Table.Td>
+      <Table.Td>
+        <Badge color={getStatusColor(item?.status)} variant="light">
+          {item?.status ?? "unknown"}
+        </Badge>
+      </Table.Td>
+    </Table.Tr>
+  ));
+
+  return (
+    <div>
+      <SectionHeading title="Recent Activity" description="Latest user actions and system events" />
+      <Box style={{ overflowX: isMobile ? "auto" : "visible" }}>
+        <Table>
+          <Table.Thead>
+            <Table.Tr>
+              <Table.Th>User</Table.Th>
+              <Table.Th>Action</Table.Th>
+              <Table.Th>Timestamp</Table.Th>
+              <Table.Th>Status</Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+          <Table.Tbody>
+            {rows.length > 0 ? rows : (
+              <Table.Tr>
+                <Table.Td colSpan={4}>
+                  <Center py="xl">
+                    <Text c="dimmed">No recent activity to display</Text>
+                  </Center>
+                </Table.Td>
+              </Table.Tr>
+            )}
+          </Table.Tbody>
+        </Table>
+      </Box>
+      {safeActivity.length > itemsPerPage && (
+        <Group justify="center" mt="md">
+          <Pagination
+            total={totalPages}
+            value={activePage}
+            onChange={setPage}
+            size={isMobile ? "sm" : "md"}
+          />
+        </Group>
+      )}
+    </div>
+  );
+}
+
+export default ActivityTable;
+===END_FILE===
+
+===FILE:src/App.jsx===
+import { AppShell, Burger, Group, Text, Drawer, ScrollArea, NavLink } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { IconDashboard, IconUsers, IconPackage, IconShoppingCart, IconChartBar, IconSettings } from "@tabler/icons-react";
+import DashboardHeader from "./components/layout/DashboardHeader";
+import SidebarNav from "./components/layout/SidebarNav";
+import StatsOverview from "./components/sections/StatsOverview";
+import ChartsSection from "./components/sections/ChartsSection";
+import ActivityTable from "./components/sections/ActivityTable";
+import navigationItems from "./data/navigationItems";
+
+const iconMap = {
+  dashboard: IconDashboard,
+  users: IconUsers,
+  package: IconPackage,
+  "shopping-cart": IconShoppingCart,
+  "chart-bar": IconChartBar,
+  settings: IconSettings,
+};
+
+function App() {
+  const [mobileNavOpened, { toggle: toggleMobileNav, close: closeMobileNav }] = useDisclosure(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const safeNavItems = Array.isArray(navigationItems) ? navigationItems : [];
+
+  const mobileNavLinks = safeNavItems.map((item) => {
+    const Icon = iconMap[item.icon] ?? IconDashboard;
+    return (
+      <NavLink
+        key={item.id}
+        href={item.route ?? "#"}
+        label={item.label ?? "Item"}
+        leftSection={<Icon size={18} stroke={1.5} />}
+        active={item.id === "dashboard"}
+        variant="filled"
+        color="primary"
+        onClick={closeMobileNav}
+      />
+    );
+  });
+
+  return (
+    <AppShell
+      header={{ height: 60 }}
+      navbar={{ width: { base: 260 }, breakpoint: "sm", collapsed: { mobile: true } }}
+      padding="md"
+    >
+      <AppShell.Header>
+        <Group justify="space-between" h="100%" px="md" py="xs">
+          <Group>
+            {isMobile && (
+              <Burger
+                opened={mobileNavOpened}
+                onClick={toggleMobileNav}
+                aria-label="Toggle navigation"
+                size="sm"
+              />
+            )}
+            <Text size="xl" fw={700}>
+              Admin Dashboard
+            </Text>
+          </Group>
+        </Group>
+      </AppShell.Header>
+
+      <AppShell.Navbar p="xs" hiddenFrom="sm">
+        <ScrollArea>
+          {mobileNavLinks}
+        </ScrollArea>
+      </AppShell.Navbar>
+
+      <AppShell.Main>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
+          <StatsOverview />
+          <ChartsSection />
+          <ActivityTable />
+        </div>
+      </AppShell.Main>
+    </AppShell>
+  );
+}
+
+export default App;
+===END_FILE===

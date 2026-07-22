@@ -1,0 +1,182 @@
+{
+  "entryFile": "src/App.jsx",
+  "architectureSummary": "A React + Mantine single-page portfolio with smooth-scrolling navigation across 7 main sections (Hero, About, Skills, Experience, Projects, Contact, Footer). Uses Mantine's layout, form, and data-display components with custom theme configuration for dark/light mode support. Content is centralized in siteContent.js, with reusable UI patterns extracted to common components. The experience emphasizes technical credibility through visual skill indicators, project showcases, and a structured timeline.",
+  "files": [
+    {
+      "path": "src/data/siteContent.js",
+      "category": "data",
+      "responsibility": "Centralized structured content including personal bio, skills with proficiency levels, work experience timeline, project portfolio with screenshots and links, and navigation configuration",
+      "dependsOn": []
+    },
+    {
+      "path": "src/theme/theme.js",
+      "category": "theme",
+      "responsibility": "Mantine design token configuration with primary/secondary color palette, typography scales (Inter for headings, Fira Code for technical elements), spacing, shadows, and component default overrides",
+      "dependsOn": []
+    },
+    {
+      "path": "src/context/ThemeContext.jsx",
+      "category": "context",
+      "responsibility": "React context for managing dark/light mode state with localStorage persistence and system preference detection",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/smoothScroll.js",
+      "category": "utility",
+      "responsibility": "Utility function for smooth scroll behavior to page sections with offset calculation for fixed navbar",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/formatDate.js",
+      "category": "utility",
+      "responsibility": "Formats date ranges for experience entries (e.g., 'Jan 2020 - Present', '2018 - 2020')",
+      "dependsOn": []
+    },
+    {
+      "path": "src/lib/validateEmail.js",
+      "category": "utility",
+      "responsibility": "Email validation regex and helper function for contact form input validation",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/layout/Navbar.jsx",
+      "category": "layout",
+      "responsibility": "Sticky navigation header with logo, section links, mobile hamburger menu, active section indicator, and theme toggle integration",
+      "dependsOn": [
+        "src/lib/smoothScroll.js",
+        "src/components/common/ThemeToggle.jsx"
+      ]
+    },
+    {
+      "path": "src/components/layout/Footer.jsx",
+      "category": "layout",
+      "responsibility": "Page footer with copyright, quick navigation links, social media icons, tech stack mention, and back-to-top functionality",
+      "dependsOn": [
+        "src/components/common/SocialLinks.jsx"
+      ]
+    },
+    {
+      "path": "src/components/common/SkillBar.jsx",
+      "category": "common",
+      "responsibility": "Reusable animated skill proficiency bar using Mantine Progress with percentage display and label, supports staggered animation on scroll",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/ProjectCard.jsx",
+      "category": "common",
+      "responsibility": "Reusable project showcase card with image, title, description, technology tags, and action buttons for demo/GitHub links",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/SocialLinks.jsx",
+      "category": "common",
+      "responsibility": "Reusable social media link component with icons for LinkedIn, GitHub, email, and other professional profiles",
+      "dependsOn": []
+    },
+    {
+      "path": "src/components/common/ThemeToggle.jsx",
+      "category": "common",
+      "responsibility": "Toggle button component for switching between light and dark themes with icon indicators",
+      "dependsOn": [
+        "src/context/ThemeContext.jsx"
+      ]
+    },
+    {
+      "path": "src/components/sections/HeroSection.jsx",
+      "category": "section",
+      "responsibility": "Primary hero area with professional headshot/avatar, name, title, tagline, primary and secondary CTA buttons with scroll indicator animation",
+      "dependsOn": [
+        "src/lib/smoothScroll.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/AboutSection.jsx",
+      "category": "section",
+      "responsibility": "Personal introduction section with professional photo, biography text, key highlights, and resume download button",
+      "dependsOn": [
+        "src/components/common/SocialLinks.jsx"
+      ]
+    },
+    {
+      "path": "src/components/sections/SkillsSection.jsx",
+      "category": "section",
+      "responsibility": "Technical skills showcase with category tabs (Frontend, Backend, DevOps, Tools), skill bars with proficiency percentages and years of experience",
+      "dependsOn": [
+        "src/components/common/SkillBar.jsx"
+      ]
+    },
+    {
+      "path": "src/components/sections/ExperienceSection.jsx",
+      "category": "section",
+      "responsibility": "Work experience timeline in reverse chronological order using Mantine Timeline, with company logos, expandable job details, and technology tags per role",
+      "dependsOn": [
+        "src/lib/formatDate.js"
+      ]
+    },
+    {
+      "path": "src/components/sections/ProjectsSection.jsx",
+      "category": "section",
+      "responsibility": "Project gallery with filtering by technology tags, project cards in staggered grid layout, and modal/lightbox for detailed project views",
+      "dependsOn": [
+        "src/components/common/ProjectCard.jsx"
+      ]
+    },
+    {
+      "path": "src/components/sections/ContactSection.jsx",
+      "category": "section",
+      "responsibility": "Contact conversion section with client-side form (name, email, message), validation feedback, success/error notifications, and availability status display",
+      "dependsOn": [
+        "src/lib/validateEmail.js",
+        "src/components/common/SocialLinks.jsx"
+      ]
+    },
+    {
+      "path": "src/App.jsx",
+      "category": "entry",
+      "responsibility": "Root application component composing all major page sections with Mantine provider, theme context wrapper, and smooth scroll navigation setup",
+      "dependsOn": [
+        "src/theme/theme.js",
+        "src/context/ThemeContext.jsx",
+        "src/components/layout/Navbar.jsx",
+        "src/components/sections/HeroSection.jsx",
+        "src/components/sections/AboutSection.jsx",
+        "src/components/sections/SkillsSection.jsx",
+        "src/components/sections/ExperienceSection.jsx",
+        "src/components/sections/ProjectsSection.jsx",
+        "src/components/sections/ContactSection.jsx",
+        "src/components/layout/Footer.jsx"
+      ]
+    }
+  ],
+  "batches": [
+    [
+      "src/data/siteContent.js",
+      "src/theme/theme.js",
+      "src/context/ThemeContext.jsx",
+      "src/lib/smoothScroll.js",
+      "src/lib/formatDate.js"
+    ],
+    [
+      "src/lib/validateEmail.js",
+      "src/components/layout/Navbar.jsx",
+      "src/components/layout/Footer.jsx",
+      "src/components/common/SkillBar.jsx",
+      "src/components/common/ProjectCard.jsx"
+    ],
+    [
+      "src/components/common/SocialLinks.jsx",
+      "src/components/common/ThemeToggle.jsx",
+      "src/components/sections/HeroSection.jsx",
+      "src/components/sections/AboutSection.jsx",
+      "src/components/sections/SkillsSection.jsx"
+    ],
+    [
+      "src/components/sections/ExperienceSection.jsx",
+      "src/components/sections/ProjectsSection.jsx",
+      "src/components/sections/ContactSection.jsx"
+    ],
+    [
+      "src/App.jsx"
+    ]
+  ]
+}

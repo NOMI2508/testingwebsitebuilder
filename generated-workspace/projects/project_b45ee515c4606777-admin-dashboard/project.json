@@ -1,0 +1,17 @@
+{
+  "id": "project_b45ee515c4606777",
+  "name": "Admin Dashboard",
+  "slug": "admin-dashboard",
+  "type": "dashboard",
+  "description": "A modern, responsive admin dashboard built with Next.js and Mantine UI components. Features include a collapsible sidebar navigation, header with user profile and dark mode toggle, statistics overview cards, mock data visualizations with charts, and a recent activity table. All data is mocked for frontend-only demonstration.",
+  "status": "active",
+  "createdAt": "2026-07-16T13:04:36.066Z",
+  "updatedAt": "2026-07-16T13:42:43.841Z",
+  "activeSessionId": null,
+  "entryFile": "src/App.jsx",
+  "previewStatus": "ready",
+  "lastWorkingVersionId": "version_mrnk6s1o_c62fa7bf",
+  "deploymentUrl": null,
+  "deployedAt": null,
+  "deployedVersionId": null
+}

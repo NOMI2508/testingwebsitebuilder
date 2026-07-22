@@ -1,0 +1,423 @@
+
+===FILE:src/components/product/ProductInfo.jsx===
+import { Stack, Group, Text, Button, ActionIcon, Divider, Paper, rem } from "@mantine/core";
+import { IconShoppingCart, IconHeart } from "@tabler/icons-react";
+import RatingStars from "../common/RatingStars";
+import SizeSelector from "./SizeSelector";
+import ColorSelector from "./ColorSelector";
+import QuantityControl from "./QuantityControl";
+import formatPrice from "../../lib/formatPrice";
+
+const ProductInfo = ({ 
+  product, 
+  selectedSize, 
+  selectedColor, 
+  quantity,
+  onSizeSelect,
+  onColorSelect,
+  onQuantityChange,
+  onAddToCart 
+}) => {
+  const safeProduct = product || {};
+  const name = safeProduct.name || "Unnamed Product";
+  const price = typeof safeProduct.price === "number" ? safeProduct.price : 0;
+  const salePrice = typeof safeProduct.salePrice === "number" ? safeProduct.salePrice : null;
+  const rating = typeof safeProduct.rating === "number" ? safeProduct.rating : 0;
+  const reviewCount = typeof safeProduct.reviewCount === "number" ? safeProduct.reviewCount : 0;
+  const description = safeProduct.description || "";
+  const sizes = Array.isArray(safeProduct.sizes) ? safeProduct.sizes : [];
+  const colors = Array.isArray(safeProduct.colors) ? safeProduct.colors : [];
+  const material = safeProduct.material || "";
+  const inStock = safeProduct.inStock !== false;
+
+  const displayPrice = salePrice || price;
+  const hasDiscount = salePrice && salePrice < price;
+
+  const handleAddToCart = () => {
+    if (onAddToCart && inStock && selectedSize) {
+      onAddToCart();
+    }
+  };
+
+  return (
+    <Stack gap="lg">
+      <div>
+        <Group justify="space-between" align="flex-start" mb="xs">
+          <div>
+            <Text size="xl" fw={700} lh={1.2}>
+              {name}
+            </Text>
+            <Group gap="xs" mt="xs">
+              <RatingStars rating={rating} reviewCount={reviewCount} />
+            </Group>
+          </div>
+          <Group gap="xs" align="flex-end">
+            <Text fw={700} size="xl" c="gold">
+              {formatPrice(displayPrice)}
+            </Text>
+            {hasDiscount && (
+              <Text size="sm" c="dimmed" td="line-through">
+                {formatPrice(price)}
+              </Text>
+            )}
+          </Group>
+        </Group>
+
+        <Text size="sm" c="dimmed" lh={1.6}>
+          {description}
+        </Text>
+      </div>
+
+      <Divider />
+
+      <SizeSelector
+        sizes={sizes}
+        selectedSize={selectedSize}
+        onSelectSize={onSizeSelect}
+      />
+
+      <ColorSelector
+        colors={colors}
+        selectedColor={selectedColor}
+        onSelectColor={onColorSelect}
+      />
+
+      <QuantityControl
+        quantity={quantity}
+        min={1}
+        max={10}
+        onChange={onQuantityChange}
+      />
+
+      <Group gap="md" mt="md">
+        <Button
+          leftSection={<IconShoppingCart size={rem(18)} />}
+          size="md"
+          radius="md"
+          onClick={handleAddToCart}
+          disabled={!inStock || !selectedSize}
+          style={{ flex: 1 }}
+        >
+          Add to Cart
+        </Button>
+        <ActionIcon
+          variant="outline"
+          size="md"
+          radius="md"
+          aria-label="Add to wishlist"
+        >
+          <IconHeart size={rem(18)} />
+        </ActionIcon>
+      </Group>
+
+      {material && (
+        <Paper p="md" radius="md" bg="slate.0">
+          <Text size="sm" fw={500} mb={4}>
+            Materials
+          </Text>
+          <Text size="sm" c="dimmed">
+            {material}
+          </Text>
+        </Paper>
+      )}
+
+      <Paper p="md" radius="md" bg="slate.0">
+        <Text size="sm" fw={500} mb={4}>
+          Shipping & Returns
+        </Text>
+        <Text size="sm" c="dimmed">
+          Free shipping on orders over $150. 30-day free returns. Crafted with care and delivered with pride.
+        </Text>
+      </Paper>
+    </Stack>
+  );
+};
+
+export default ProductInfo;
+===END_FILE===
+
+===FILE:src/components/sections/BestSellers.jsx===
+import { Container, Group, Text, SimpleGrid, rem } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
+import { useDisclosure, useState } from "@mantine/hooks";
+import ProductCard from "../common/ProductCard";
+import RatingStars from "../common/RatingStars";
+import mockProducts from "../../data/mockProducts";
+
+const BestSellers = () => {
+  const products = Array.isArray(mockProducts) ? mockProducts : [];
+  const bestSellers = products
+    .sort((a, b) => (b?.reviewCount || 0) - (a?.reviewCount || 0))
+    .slice(0, 4);
+
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [quickViewOpened, { open: openQuickView, close: closeQuickView }] = useDisclosure(false);
+
+  const handleQuickView = (product) => {
+    setQuickViewProduct(product);
+    openQuickView();
+  };
+
+  return (
+    <Container size="lg" py={64} id="best-sellers">
+      <Group justify="space-between" mb={32}>
+        <Text size="32px" fw={700} c="dark">
+          Best Sellers
+        </Text>
+        <Text
+          component="a"
+          href="#products"
+          size="sm"
+          c="slate"
+          style={{ textDecoration: "none", cursor: "pointer" }}
+        >
+          View All
+        </Text>
+      </Group>
+
+      <SimpleGrid cols={{ base: 1, xs: 2, sm: 2, lg: 4 }} spacing="lg">
+        {bestSellers.map((product) => (
+          <ProductCard
+            key={product?.id}
+            product={product}
+            onQuickView={handleQuickView}
+          />
+        ))}
+      </SimpleGrid>
+    </Container>
+  );
+};
+
+export default BestSellers;
+===END_FILE===
+
+===FILE:src/components/sections/ProductFilters.jsx===
+import { Container, Group, TextInput, Select, Slider, Text, rem, Box } from "@mantine/core";
+import { IconSearch, IconX } from "@tabler/icons-react";
+import { useDisclosure, useInputState, useState } from "@mantine/hooks";
+import siteContent from "../../data/siteContent";
+
+const ProductFilters = ({ onSearch, onCategoryChange, onPriceChange, onSortChange }) => {
+  const categories = siteContent?.categories || [];
+  const [searchValue, setSearchValue] = useInputState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [priceRange, setPriceRange] = useState([0, 300]);
+  const [sortBy, setSortBy] = useState("featured");
+
+  const categoryOptions = [
+    { value: "all", label: "All Categories" },
+    ...categories.map((cat) => ({
+      value: cat?.id || "",
+      label: cat?.name || ""
+    }))
+  ];
+
+  const sortOptions = [
+    { value: "featured", label: "Featured" },
+    { value: "price-low", label: "Price: Low to High" },
+    { value: "price-high", label: "Price: High to Low" },
+    { value: "newest", label: "Newest" },
+    { value: "popular", label: "Most Popular" }
+  ];
+
+  const handleSearchChange = (value) => {
+    setSearchValue(value);
+    if (onSearch) {
+      onSearch(value);
+    }
+  };
+
+  const handleCategoryChangeLocal = (value) => {
+    setSelectedCategory(value);
+    if (onCategoryChange) {
+      onCategoryChange(value);
+    }
+  };
+
+  const handlePriceChangeLocal = (value) => {
+    setPriceRange(value);
+    if (onPriceChange) {
+      onPriceChange(value);
+    }
+  };
+
+  const handleSortChangeLocal = (value) => {
+    setSortBy(value);
+    if (onSortChange) {
+      onSortChange(value);
+    }
+  };
+
+  const clearSearch = () => {
+    setSearchValue("");
+    if (onSearch) {
+      onSearch("");
+    }
+  };
+
+  return (
+    <Container size="lg" py={24} id="filters">
+      <Group justify="space-between" mb="lg" wrap="wrap">
+        <TextInput
+          placeholder="Search shoes..."
+          value={searchValue}
+          onChange={(e) => handleSearchChange(e.target.value)}
+          leftSection={<IconSearch size={rem(18)} />}
+          rightSection={
+            searchValue ? (
+              <Box
+                component="button"
+                type="button"
+                onClick={clearSearch}
+                style={{
+                  border: "none",
+                  background: "transparent",
+                  cursor: "pointer",
+                  padding: 0
+                }}
+              >
+                <IconX size={rem(16)} />
+              </Box>
+            ) : null
+          }
+          style={{ flex: 1, minWidth: rem(200), maxWidth: rem(300) }}
+        />
+
+        <Group gap="sm" wrap="wrap">
+          <Select
+            data={categoryOptions}
+            value={selectedCategory}
+            onChange={handleCategoryChangeLocal}
+            placeholder="Category"
+            clearable={false}
+            style={{ minWidth: rem(150) }}
+          />
+
+          <Select
+            data={sortOptions}
+            value={sortBy}
+            onChange={handleSortChangeLocal}
+            placeholder="Sort by"
+            clearable={false}
+            style={{ minWidth: rem(150) }}
+          />
+        </Group>
+      </Group>
+
+      <Group mb="xl">
+        <Text size="sm" fw={500} c="dimmed" mr="xs">
+          Price Range:
+        </Text>
+        <Slider
+          min={0}
+          max={300}
+          step={10}
+          value={priceRange}
+          onChange={handlePriceChangeLocal}
+          label={(value) => `$${value[0]} - $${value[1]}`}
+          style={{ flex: 1, maxWidth: rem(400) }}
+        />
+      </Group>
+    </Container>
+  );
+};
+
+export default ProductFilters;
+===END_FILE===
+
+===FILE:src/pages/ProductDetail.jsx===
+import { Container, Grid, Loader, Center, Text, rem } from "@mantine/core";
+import { useState, useEffect } from "react";
+import { useDisclosure } from "@mantine/hooks";
+import { useCart } from "../context/CartContext";
+import ProductGallery from "../components/product/ProductGallery";
+import ProductInfo from "../components/product/ProductInfo";
+import mockProducts from "../data/mockProducts";
+
+const ProductDetail = ({ productId }) => {
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const { addItem } = useCart();
+
+  const products = Array.isArray(mockProducts) ? mockProducts : [];
+
+  useEffect(() => {
+    setLoading(true);
+    const foundProduct = products.find((p) => p?.id === productId);
+    setProduct(foundProduct || null);
+    setLoading(false);
+  }, [productId, products]);
+
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
+
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
+  };
+
+  const handleAddToCart = () => {
+    if (product && selectedSize) {
+      addItem(product, quantity, selectedSize, selectedColor);
+    }
+  };
+
+  if (loading) {
+    return (
+      <Center py={80}>
+        <Loader size="lg" />
+      </Center>
+    );
+  }
+
+  if (!product) {
+    return (
+      <Container size="lg" py={80}>
+        <Center>
+          <Text size="xl" c="dimmed">
+            Product not found
+          </Text>
+        </Center>
+      </Container>
+    );
+  }
+
+  const images = Array.isArray(product?.images) ? product.images : [];
+  const sizes = Array.isArray(product?.sizes) ? product.sizes : [];
+  const colors = Array.isArray(product?.colors) ? product.colors : [];
+
+  return (
+    <Container size="lg" py={48}>
+      <Grid gutter={{ base: "md", md: 48 }}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <ProductGallery
+            images={images}
+            productName={product?.name}
+          />
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <ProductInfo
+            product={product}
+            selectedSize={selectedSize}
+            selectedColor={selectedColor}
+            quantity={quantity}
+            onSizeSelect={handleSizeSelect}
+            onColorSelect={handleColorSelect}
+            onQuantityChange={handleQuantityChange}
+            onAddToCart={handleAddToCart}
+          />
+        </Grid.Col>
+      </Grid>
+    </Container>
+  );
+};
+
+export default ProductDetail;
+===END_FILE===

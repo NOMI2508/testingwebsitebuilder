@@ -1,0 +1,1088 @@
+{
+  "sessionId": "gen-mrnnb57x-f9ueiuba",
+  "projectId": "project_59dc192ca55e1d1e",
+  "status": "completed-with-errors",
+  "mode": "initial",
+  "createdAt": "2026-07-16T15:10:06.384Z",
+  "updatedAt": "2026-07-16T15:15:57.326Z",
+  "currentBatch": 5,
+  "requestedPaths": [
+    "src/App.jsx"
+  ],
+  "completedPaths": [
+    "src/theme/theme.js",
+    "src/data/imageAssets.js",
+    "src/lib/formatPrice.js",
+    "src/data/products.js",
+    "src/context/CartContext.jsx",
+    "src/components/common/SearchBar.jsx",
+    "src/components/common/QuantitySelector.jsx",
+    "src/components/common/FilterPanel.jsx",
+    "src/components/layout/Header.jsx",
+    "src/components/layout/StoreLayout.jsx",
+    "src/components/common/ProductCard.jsx",
+    "src/components/sections/FilterBarSection.jsx",
+    "src/components/sections/ProductGridSection.jsx",
+    "src/components/product/ProductGallery.jsx",
+    "src/components/product/ProductInfo.jsx",
+    "src/components/cart/CartItem.jsx",
+    "src/components/cart/CartDrawer.jsx",
+    "src/components/cart/CheckoutForm.jsx",
+    "src/pages/HomePage.jsx",
+    "src/pages/ProductDetailsPage.jsx",
+    "src/pages/CheckoutPage.jsx",
+    "src/pages/OrderConfirmationPage.jsx",
+    "src/pages/NotFoundPage.jsx",
+    "src/routes/AppRouter.jsx",
+    "src/App.jsx"
+  ],
+  "currentFilePath": null,
+  "streamOffset": 62313,
+  "lastError": null,
+  "spec": {
+    "schemaVersion": "2.0",
+    "status": "ready",
+    "request": {
+      "mode": "create",
+      "executionStrategy": "plan-and-build",
+      "scope": "project",
+      "summary": "Create a frontend e-commerce website with product cards, search, filters, product details, cart drawer, quantity controls, and checkout form using mock data only.",
+      "confidence": 0.95,
+      "constraints": [
+        "Mock data only - no backend persistence",
+        "Frontend only - no real payments",
+        "React with Mantine components"
+      ],
+      "preserve": [],
+      "nonGoals": [
+        "User authentication",
+        "Real payment processing",
+        "Backend API integration",
+        "Order history persistence",
+        "Admin dashboard"
+      ]
+    },
+    "project": {
+      "name": "ShopEasy E-commerce",
+      "type": "ecommerce",
+      "summary": "A modern frontend e-commerce website showcasing products with search and filtering capabilities, a slide-in cart drawer for managing selections, and a checkout form for completing purchases. All product and cart data is managed client-side using mock data.",
+      "purpose": "Allow users to browse products, search and filter by category/price, view product details, manage cart items, and complete a visual checkout flow.",
+      "targetAudience": [
+        "Online shoppers",
+        "E-commerce browsers",
+        "Retail customers"
+      ],
+      "primaryGoal": "Complete checkout form submission (visual only, no actual payment processing)"
+    },
+    "assumptions": [
+      "Products will be displayed in a responsive grid layout",
+      "Cart state will persist in browser session storage",
+      "Checkout form will validate input but not submit to a real backend",
+      "Product images will use placeholder images from a service like Unsplash or Picsum",
+      "Categories will include common e-commerce types (electronics, clothing, home, etc.)",
+      "Price filtering will use a range slider or input fields",
+      "Cart drawer will slide in from the right side of the screen"
+    ],
+    "changeImpact": {
+      "create": [
+        "Home page with product grid",
+        "Product detail page",
+        "Cart drawer component",
+        "Search and filter components",
+        "Checkout form component",
+        "Mock product data"
+      ],
+      "modify": [],
+      "preserve": [],
+      "remove": [],
+      "riskLevel": "low",
+      "risks": [
+        "Cart state may be lost on page refresh - mitigated by using session storage",
+        "No real payment processing - mitigated by clear visual indication this is a demo"
+      ]
+    },
+    "pages": [
+      {
+        "name": "Home",
+        "route": "/",
+        "purpose": "Display product catalog with search and filtering capabilities",
+        "primaryAction": "Add product to cart",
+        "sections": [
+          {
+            "name": "Header",
+            "purpose": "Navigation and cart access",
+            "contentRequirements": [
+              "Logo/brand name",
+              "Search bar",
+              "Cart icon with item count"
+            ],
+            "interactions": [
+              "Open cart drawer on cart icon click",
+              "Submit search on enter or button click"
+            ],
+            "states": [
+              "Default",
+              "Search focused",
+              "Cart has items"
+            ],
+            "responsiveBehavior": "Logo left, search center, cart right on desktop; stacked on mobile with hamburger menu"
+          },
+          {
+            "name": "FilterBar",
+            "purpose": "Allow users to filter products by category and price range",
+            "contentRequirements": [
+              "Category filter buttons or dropdown",
+              "Price range inputs or slider",
+              "Clear filters button"
+            ],
+            "interactions": [
+              "Apply category filter",
+              "Apply price filter",
+              "Clear all filters"
+            ],
+            "states": [
+              "Default",
+              "Filters active",
+              "No results"
+            ],
+            "responsiveBehavior": "Horizontal scrollable chips on mobile; vertical sidebar or horizontal bar on desktop"
+          },
+          {
+            "name": "ProductGrid",
+            "purpose": "Display filtered products in card format",
+            "contentRequirements": [
+              "Product cards showing image, name, price, rating",
+              "Empty state when no products match"
+            ],
+            "interactions": [
+              "Click product to view details",
+              "Quick add to cart from card"
+            ],
+            "states": [
+              "Loading",
+              "Default",
+              "Empty",
+              "Error"
+            ],
+            "responsiveBehavior": "1 column mobile, 2 tablet, 3-4 desktop"
+          }
+        ]
+      },
+      {
+        "name": "ProductDetail",
+        "route": "/product/:id",
+        "purpose": "Show detailed product information and allow adding to cart",
+        "primaryAction": "Add to cart with quantity selection",
+        "sections": [
+          {
+            "name": "ProductGallery",
+            "purpose": "Display product images",
+            "contentRequirements": [
+              "Main product image",
+              "Thumbnail navigation"
+            ],
+            "interactions": [
+              "Switch main image on thumbnail click"
+            ],
+            "states": [
+              "Default",
+              "Loading"
+            ],
+            "responsiveBehavior": "Stacked thumbnails below main image on mobile; thumbnails right of main on desktop"
+          },
+          {
+            "name": "ProductInfo",
+            "purpose": "Display product details and add-to-cart controls",
+            "contentRequirements": [
+              "Product name",
+              "Price",
+              "Description",
+              "Rating",
+              "Quantity selector",
+              "Add to cart button"
+            ],
+            "interactions": [
+              "Increase/decrease quantity",
+              "Add to cart"
+            ],
+            "states": [
+              "Default",
+              "Added to cart confirmation"
+            ],
+            "responsiveBehavior": "Full width on mobile; split layout with gallery on left, info on right on desktop"
+          }
+        ]
+      },
+      {
+        "name": "Checkout",
+        "route": "/checkout",
+        "purpose": "Collect shipping and payment information for order completion",
+        "primaryAction": "Submit checkout form",
+        "sections": [
+          {
+            "name": "CheckoutForm",
+            "purpose": "Collect customer information and display order summary",
+            "contentRequirements": [
+              "Shipping address fields",
+              "Payment method selection",
+              "Order summary",
+              "Place order button"
+            ],
+            "interactions": [
+              "Form field validation",
+              "Submit order"
+            ],
+            "states": [
+              "Default",
+              "Submitting",
+              "Success",
+              "Error"
+            ],
+            "responsiveBehavior": "Single column on mobile; two-column with order summary on right on desktop"
+          }
+        ]
+      }
+    ],
+    "components": [
+      {
+        "name": "ProductCard",
+        "purpose": "Display product summary with image, name, price, and quick add action",
+        "reuse": "shared",
+        "states": [
+          "default",
+          "hover",
+          "loading"
+        ],
+        "accessibility": [
+          "Image alt text with product name",
+          "Keyboard navigable",
+          "Sufficient color contrast"
+        ]
+      },
+      {
+        "name": "CartDrawer",
+        "purpose": "Slide-in panel showing cart items and checkout action",
+        "reuse": "shared",
+        "states": [
+          "closed",
+          "open",
+          "empty",
+          "with-items"
+        ],
+        "accessibility": [
+          "Focus trap when open",
+          "Escape key closes drawer",
+          "ARIA labels for quantity controls"
+        ]
+      },
+      {
+        "name": "QuantitySelector",
+        "purpose": "Allow users to select quantity for cart items",
+        "reuse": "shared",
+        "states": [
+          "default",
+          "minimum reached",
+          "maximum reached"
+        ],
+        "accessibility": [
+          "Increment/decrement buttons with aria-labels",
+          "Numeric input with keyboard support"
+        ]
+      },
+      {
+        "name": "SearchBar",
+        "purpose": "Enable product search by name or description",
+        "reuse": "shared",
+        "states": [
+          "default",
+          "focused",
+          "has-query"
+        ],
+        "accessibility": [
+          "Label for screen readers",
+          "Clear button with aria-label",
+          "Autocomplete suggestions"
+        ]
+      },
+      {
+        "name": "FilterPanel",
+        "purpose": "Display category and price filters",
+        "reuse": "shared",
+        "states": [
+          "default",
+          "filters-active"
+        ],
+        "accessibility": [
+          "Grouped form controls with fieldset/legend",
+          "Clear button accessible"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "name": "Product Browsing",
+        "description": "Users can view products in a responsive grid with images, names, prices, and ratings",
+        "priority": "required",
+        "implementationLevel": "visual",
+        "dataSource": "mock",
+        "dependencies": [],
+        "edgeCases": [
+          "No products match filters",
+          "Slow loading images"
+        ]
+      },
+      {
+        "name": "Search",
+        "description": "Users can search products by name or description with instant results",
+        "priority": "required",
+        "implementationLevel": "interactive",
+        "dataSource": "mock",
+        "dependencies": [],
+        "edgeCases": [
+          "Empty search query",
+          "No search results"
+        ]
+      },
+      {
+        "name": "Category Filtering",
+        "description": "Users can filter products by category using clickable buttons or dropdown",
+        "priority": "required",
+        "implementationLevel": "interactive",
+        "dataSource": "mock",
+        "dependencies": [],
+        "edgeCases": [
+          "Selecting 'All' categories",
+          "Category has no products"
+        ]
+      },
+      {
+        "name": "Price Filtering",
+        "description": "Users can filter products by minimum and maximum price",
+        "priority": "required",
+        "implementationLevel": "interactive",
+        "dataSource": "mock",
+        "dependencies": [],
+        "edgeCases": [
+          "Invalid price range",
+          "No products in price range"
+        ]
+      },
+      {
+        "name": "Product Details View",
+        "description": "Users can click a product to see full details, images, and add to cart",
+        "priority": "required",
+        "implementationLevel": "visual",
+        "dataSource": "mock",
+        "dependencies": [],
+        "edgeCases": [
+          "Invalid product ID in URL",
+          "Product not found"
+        ]
+      },
+      {
+        "name": "Cart Drawer",
+        "description": "Slide-in cart showing items, quantities, subtotal, and checkout button",
+        "priority": "required",
+        "implementationLevel": "interactive",
+        "dataSource": "local-storage",
+        "dependencies": [],
+        "edgeCases": [
+          "Cart is empty",
+          "Quantity reaches zero",
+          "Cart exceeds available stock"
+        ]
+      },
+      {
+        "name": "Quantity Controls",
+        "description": "Users can increase or decrease item quantities in cart with validation",
+        "priority": "required",
+        "implementationLevel": "interactive",
+        "dataSource": "local-storage",
+        "dependencies": [
+          "CartDrawer"
+        ],
+        "edgeCases": [
+          "Minimum quantity (1)",
+          "Maximum reasonable quantity (99)",
+          "Decimal input"
+        ]
+      },
+      {
+        "name": "Checkout Form",
+        "description": "Form to collect shipping address and payment information with validation",
+        "priority": "required",
+        "implementationLevel": "interactive",
+        "dataSource": "local-storage",
+        "dependencies": [
+          "CartDrawer"
+        ],
+        "edgeCases": [
+          "Missing required fields",
+          "Invalid email format",
+          "Invalid card number format"
+        ]
+      },
+      {
+        "name": "Order Confirmation",
+        "description": "Success page shown after checkout form submission",
+        "priority": "recommended",
+        "implementationLevel": "visual",
+        "dataSource": "static",
+        "dependencies": [
+          "CheckoutForm"
+        ],
+        "edgeCases": [
+          "User returns to cart after confirmation"
+        ]
+      }
+    ],
+    "userFlows": [
+      {
+        "name": "Browse and Add to Cart",
+        "actor": "Shopper",
+        "entryPoint": "Home page",
+        "steps": [
+          "View product grid",
+          "Use search or filters to find products",
+          "Click product card to view details",
+          "Select quantity",
+          "Click 'Add to Cart'",
+          "View cart drawer confirmation"
+        ],
+        "successOutcome": "Product appears in cart drawer with correct quantity and subtotal updates",
+        "failureStates": [
+          "Product not found - redirect to home",
+          "Invalid quantity - show validation error"
+        ]
+      },
+      {
+        "name": "Checkout Process",
+        "actor": "Shopper",
+        "entryPoint": "Cart drawer checkout button",
+        "steps": [
+          "Review cart items in drawer",
+          "Click 'Checkout' button",
+          "Fill shipping information",
+          "Select payment method",
+          "Click 'Place Order'",
+          "See order confirmation"
+        ],
+        "successOutcome": "Form validates and shows success message",
+        "failureStates": [
+          "Validation errors on form - highlight fields",
+          "Empty cart - redirect to home"
+        ]
+      }
+    ],
+    "dataModel": {
+      "strategy": "mock",
+      "entities": [
+        {
+          "name": "Product",
+          "purpose": "Represent items available for purchase",
+          "fields": [
+            "id: unique identifier",
+            "name: product title",
+            "description: long-form details",
+            "price: numeric value",
+            "category: product type",
+            "image: URL to product image",
+            "rating: 1-5 star rating",
+            "stock: available quantity"
+          ],
+          "relationships": [],
+          "ownership": "public-read"
+        },
+        {
+          "name": "CartItem",
+          "purpose": "Track products added to cart with quantities",
+          "fields": [
+            "productId: reference to Product",
+            "quantity: number of items",
+            "priceAtAdd: snapshot of price"
+          ],
+          "relationships": [
+            "belongsTo: Product"
+          ],
+          "ownership": "session"
+        }
+      ]
+    },
+    "integrations": [
+      {
+        "name": "Placeholder Images",
+        "purpose": "Provide product images without requiring actual assets",
+        "required": false,
+        "credentialsRequired": [],
+        "failureFallback": "Show generic product placeholder icon"
+      }
+    ],
+    "designSystem": {
+      "styleKeywords": [
+        "clean",
+        "modern",
+        "minimal",
+        "shopping-focused",
+        "trust-building"
+      ],
+      "artDirection": "Clean, trustworthy e-commerce aesthetic with ample white space, clear typography hierarchy, and subtle shadows for product cards. Focus on product imagery with consistent aspect ratios and subtle hover effects to indicate interactivity.",
+      "colorDirection": {
+        "primary": "Blue (#2563eb) for primary actions and trust",
+        "secondary": "Gray (#64748b) for secondary text and borders",
+        "background": "White (#ffffff) for clean, spacious feel",
+        "surface": "Light gray (#f8fafc) for cards and drawers",
+        "text": "Dark gray (#1e293b) for primary text",
+        "mutedText": "Gray (#94a3b8) for secondary text",
+        "accent": "Green (#10b981) for success states and prices",
+        "success": "Green (#10b981) for confirmations",
+        "warning": "Amber (#f59e0b) for alerts",
+        "error": "Red (#ef4444) for errors"
+      },
+      "typographyDirection": "Inter or system fonts for clean readability. Bold headings (700), medium body text (500), regular secondary text (400). Clear hierarchy with large product names and prominent prices.",
+      "spacing": "comfortable",
+      "borderRadius": "rounded",
+      "layoutComposition": "Centered max-width container (1200px) with consistent section padding. Product grid uses CSS Grid with gap rhythm. Drawer overlays content with backdrop blur effect.",
+      "surfaceTreatment": "Subtle box-shadow on product cards (0 1px 3px rgba(0,0,0,0.1)). Drawer has elevated shadow (0 10px 25px rgba(0,0,0,0.15)). Buttons have slight elevation on hover.",
+      "visualHierarchy": [
+        "Header navigation",
+        "Search and filters",
+        "Product grid/cards",
+        "Product detail content",
+        "Cart drawer",
+        "Checkout form"
+      ],
+      "motionAndInteraction": [
+        "Drawer slides in from right with fade",
+        "Product cards lift slightly on hover",
+        "Button color transitions on hover",
+        "Smooth scroll to top on page navigation"
+      ],
+      "componentStyling": [
+        "Mantine Card for product cards with shadow",
+        "Mantine Drawer for cart with right placement",
+        "Mantine Button with filled primary style",
+        "Mantine Input with clean borders"
+      ],
+      "imagery": "Product-focused lifestyle or studio shots with consistent 4:3 or 1:1 aspect ratio. Clean white or neutral backgrounds. Alt text describes product name and key features.",
+      "responsiveApproach": "Mobile-first with breakpoints at 768px (tablet) and 1024px (desktop). Single column mobile, multi-column desktop. Touch-friendly controls on mobile."
+    },
+    "content": {
+      "tone": "Friendly, trustworthy, and focused on product benefits. Clear calls-to-action with no jargon.",
+      "messageHierarchy": [
+        "Find what you need easily",
+        "Quality products at fair prices",
+        "Simple, secure checkout"
+      ],
+      "headlineIdeas": [
+        "Shop the Latest Collection",
+        "Quality Products, Simple Prices",
+        "Your One-Stop Shop for Everything"
+      ],
+      "ctaIdeas": [
+        "Add to Cart",
+        "View Details",
+        "Proceed to Checkout",
+        "Place Your Order"
+      ],
+      "requiredContent": [
+        "Product catalog (mock data)",
+        "Category names",
+        "Placeholder images",
+        "Form field labels and validation messages"
+      ],
+      "seo": {
+        "titleDirection": "ShopEasy - Quality Products at Great Prices | Online Store",
+        "descriptionDirection": "Browse our curated collection of quality products. Easy search, filtering, and checkout. Free shipping on orders over $50.",
+        "keywords": [
+          "online shopping",
+          "ecommerce",
+          "products",
+          "checkout",
+          "cart"
+        ]
+      }
+    },
+    "technicalRequirements": {
+      "previewTarget": "react-mantine",
+      "language": "JavaScript",
+      "responsive": true,
+      "accessibility": true,
+      "backendRequired": false,
+      "databaseRequired": false,
+      "authenticationRequired": false,
+      "paymentsRequired": false,
+      "fileUploadsRequired": false,
+      "realtimeRequired": false,
+      "analyticsRequired": false,
+      "preferredExistingPatterns": [
+        "Mantine component library",
+        "React Router for navigation",
+        "Session storage for cart persistence"
+      ],
+      "avoid": [
+        "Backend API calls",
+        "Real payment gateways",
+        "User authentication",
+        "Complex state management libraries"
+      ]
+    },
+    "implementationPlan": [
+      {
+        "id": "step-1",
+        "title": "Set up project structure and mock data",
+        "objective": "Create React app with Mantine, define mock product data and routing",
+        "dependsOn": [],
+        "affectedAreas": [
+          "Project setup",
+          "Mock data",
+          "Routing"
+        ],
+        "implementationLevel": "visual",
+        "verification": [
+          "App loads without errors",
+          "Routes defined correctly",
+          "Mock data accessible"
+        ]
+      },
+      {
+        "id": "step-2",
+        "title": "Build Header with Search and Cart",
+        "objective": "Create header component with search bar and cart icon that opens drawer",
+        "dependsOn": [
+          "step-1"
+        ],
+        "affectedAreas": [
+          "Header component",
+          "Cart drawer component",
+          "State management"
+        ],
+        "implementationLevel": "interactive",
+        "verification": [
+          "Search input works",
+          "Cart icon shows item count",
+          "Drawer opens/closes"
+        ]
+      },
+      {
+        "id": "step-3",
+        "title": "Create ProductCard and ProductGrid",
+        "objective": "Build reusable product card and grid layout with mock data",
+        "dependsOn": [
+          "step-1"
+        ],
+        "affectedAreas": [
+          "ProductCard component",
+          "ProductGrid section",
+          "Home page"
+        ],
+        "implementationLevel": "visual",
+        "verification": [
+          "Products display in grid",
+          "Cards show correct info",
+          "Responsive layout works"
+        ]
+      },
+      {
+        "id": "step-4",
+        "title": "Implement Search and Filter functionality",
+        "objective": "Add search bar and filter controls to filter product grid",
+        "dependsOn": [
+          "step-3"
+        ],
+        "affectedAreas": [
+          "SearchBar component",
+          "FilterPanel component",
+          "Home page"
+        ],
+        "implementationLevel": "interactive",
+        "verification": [
+          "Search filters products",
+          "Category filter works",
+          "Price filter works",
+          "Clear filters resets"
+        ]
+      },
+      {
+        "id": "step-5",
+        "title": "Build Product Detail page",
+        "objective": "Create detailed product view with image gallery and add-to-cart",
+        "dependsOn": [
+          "step-3"
+        ],
+        "affectedAreas": [
+          "ProductDetail page",
+          "ProductGallery",
+          "ProductInfo",
+          "QuantitySelector"
+        ],
+        "implementationLevel": "visual",
+        "verification": [
+          "Product details load",
+          "Quantity selector works",
+          "Add to cart updates drawer"
+        ]
+      },
+      {
+        "id": "step-6",
+        "title": "Implement Cart Drawer with Quantity Controls",
+        "objective": "Complete cart functionality with item management and checkout",
+        "dependsOn": [
+          "step-2",
+          "step-5"
+        ],
+        "affectedAreas": [
+          "CartDrawer component",
+          "QuantitySelector",
+          "Cart state management"
+        ],
+        "implementationLevel": "interactive",
+        "verification": [
+          "Cart persists in session storage",
+          "Quantity changes update totals",
+          "Remove item works",
+          "Checkout navigates correctly"
+        ]
+      },
+      {
+        "id": "step-7",
+        "title": "Build Checkout Form and Confirmation",
+        "objective": "Create checkout form with validation and success state",
+        "dependsOn": [
+          "step-6"
+        ],
+        "affectedAreas": [
+          "Checkout page",
+          "CheckoutForm component"
+        ],
+        "implementationLevel": "interactive",
+        "verification": [
+          "Form validates required fields",
+          "Invalid formats show errors",
+          "Success page displays after submit"
+        ]
+      }
+    ],
+    "qualityPlan": {
+      "responsive": [
+        "Test product grid at 320px, 768px, 1024px widths",
+        "Verify cart drawer works on mobile",
+        "Check filter layout on tablet"
+      ],
+      "accessibility": [
+        "Verify all interactive elements keyboard accessible",
+        "Check color contrast ratios",
+        "Ensure form labels are associated",
+        "Test screen reader navigation"
+      ],
+      "functional": [
+        "Search returns correct results",
+        "Filters update product grid",
+        "Cart totals calculate correctly",
+        "Form validation triggers appropriately"
+      ],
+      "visual": [
+        "Product cards align in grid",
+        "Drawer animation is smooth",
+        "Hover states provide feedback",
+        "Consistent spacing and typography"
+      ],
+      "performance": [
+        "Images lazy load",
+        "No layout shift on image load",
+        "Initial render under 2 seconds",
+        "Bundle size reasonable"
+      ],
+      "security": [
+        "No sensitive data in client code",
+        "Form has no actual submission endpoint",
+        "Input sanitized for display"
+      ],
+      "seo": [
+        "Each page has unique title",
+        "Meta descriptions present",
+        "Proper heading hierarchy (h1, h2, h3)",
+        "Images have alt attributes"
+      ]
+    },
+    "acceptanceCriteria": [
+      "User can view products in a responsive grid on home page",
+      "User can search products by name and see filtered results",
+      "User can filter products by category and price range",
+      "User can click a product to view full details",
+      "User can add products to cart with selected quantity",
+      "User can open cart drawer to see items and totals",
+      "User can modify quantities in cart drawer",
+      "User can remove items from cart",
+      "User can navigate to checkout from cart drawer",
+      "User can fill checkout form with validation",
+      "User sees success message after form submission",
+      "Cart persists when user navigates between pages"
+    ],
+    "builderHandoff": {
+      "firstBuildSlice": "Home page with product grid, header with search/cart, and basic cart drawer functionality",
+      "recommendedBuildOrder": [
+        "step-1",
+        "step-2",
+        "step-3",
+        "step-4",
+        "step-5",
+        "step-6",
+        "step-7"
+      ],
+      "routeTo": "builder",
+      "completionDefinition": "All acceptance criteria verified, responsive at all breakpoints, accessible navigation, and visual design consistent across pages"
+    },
+    "clarifyingQuestions": []
+  },
+  "plan": {
+    "entryFile": "src/App.jsx",
+    "architectureSummary": "The architecture centers on a shared StoreLayout providing consistent header and cart access. HomePage presents the product discovery experience with filtering. ProductDetailsPage shows individual product information. CheckoutPage handles the purchase flow. CartContext manages cart state with session storage persistence. All product data is centralized in mock data files with image references through the asset plan.",
+    "files": [
+      {
+        "path": "src/theme/theme.js",
+        "category": "theme",
+        "responsibility": "Define Mantine theme extensions with semantic color roles, typography scales, spacing rhythm, and component defaults that support the minimal product-focus design direction",
+        "dependsOn": []
+      },
+      {
+        "path": "src/data/imageAssets.js",
+        "category": "data",
+        "responsibility": "Centralize all image asset references with Unsplash URLs, alt text, and metadata for consistent product imagery across the application",
+        "dependsOn": []
+      },
+      {
+        "path": "src/data/products.js",
+        "category": "data",
+        "responsibility": "Define mock product data with realistic names, descriptions, pricing, categories, and image references for the entire product catalog",
+        "dependsOn": [
+          "src/data/imageAssets.js"
+        ]
+      },
+      {
+        "path": "src/context/CartContext.jsx",
+        "category": "context",
+        "responsibility": "Provide cart state management with add, remove, update quantity operations and session storage persistence across page navigation",
+        "dependsOn": [
+          "src/data/products.js"
+        ]
+      },
+      {
+        "path": "src/lib/formatPrice.js",
+        "category": "utility",
+        "responsibility": "Format numeric prices as currency strings with consistent decimal and thousand separators",
+        "dependsOn": []
+      },
+      {
+        "path": "src/components/layout/StoreLayout.jsx",
+        "category": "layout",
+        "responsibility": "Provide consistent page wrapper with Header component and Outlet for page content, ensuring cart drawer is accessible on all pages",
+        "dependsOn": [
+          "src/components/layout/Header.jsx",
+          "src/components/cart/CartDrawer.jsx"
+        ]
+      },
+      {
+        "path": "src/components/layout/Header.jsx",
+        "category": "layout",
+        "responsibility": "Render top navigation bar with brand logo, search functionality, and cart access button with item count indicator",
+        "dependsOn": [
+          "src/components/common/SearchBar.jsx"
+        ]
+      },
+      {
+        "path": "src/components/common/SearchBar.jsx",
+        "category": "common",
+        "responsibility": "Provide accessible search input with clear button and submit handling for product filtering",
+        "dependsOn": []
+      },
+      {
+        "path": "src/components/common/ProductCard.jsx",
+        "category": "common",
+        "responsibility": "Display product summary with image, name, price, rating, and quick add-to-cart action in a consistent card format",
+        "dependsOn": [
+          "src/context/CartContext.jsx",
+          "src/lib/formatPrice.js"
+        ]
+      },
+      {
+        "path": "src/components/common/QuantitySelector.jsx",
+        "category": "common",
+        "responsibility": "Provide numeric input with increment/decrement buttons for selecting product quantities with validation against stock limits",
+        "dependsOn": []
+      },
+      {
+        "path": "src/components/common/FilterPanel.jsx",
+        "category": "common",
+        "responsibility": "Display category filter chips and price range slider for narrowing product results with clear and apply controls",
+        "dependsOn": []
+      },
+      {
+        "path": "src/components/sections/FilterBarSection.jsx",
+        "category": "section",
+        "responsibility": "Present filter controls in a horizontal bar below the header with category chips and price range slider for product filtering",
+        "dependsOn": [
+          "src/components/common/FilterPanel.jsx"
+        ]
+      },
+      {
+        "path": "src/components/sections/ProductGridSection.jsx",
+        "category": "section",
+        "responsibility": "Render responsive grid of ProductCard components with empty state handling when no products match filters",
+        "dependsOn": [
+          "src/components/common/ProductCard.jsx"
+        ]
+      },
+      {
+        "path": "src/components/product/ProductGallery.jsx",
+        "category": "feature",
+        "responsibility": "Display main product image with thumbnail navigation for viewing multiple product views on detail page",
+        "dependsOn": []
+      },
+      {
+        "path": "src/components/product/ProductInfo.jsx",
+        "category": "feature",
+        "responsibility": "Display product details including name, price, description, rating, and add-to-cart controls with quantity selector",
+        "dependsOn": [
+          "src/components/common/QuantitySelector.jsx",
+          "src/context/CartContext.jsx",
+          "src/lib/formatPrice.js"
+        ]
+      },
+      {
+        "path": "src/components/cart/CartDrawer.jsx",
+        "category": "feature",
+        "responsibility": "Render slide-in cart panel showing cart items with images, quantities, prices, subtotal, and checkout action",
+        "dependsOn": [
+          "src/context/CartContext.jsx",
+          "src/components/common/QuantitySelector.jsx",
+          "src/lib/formatPrice.js"
+        ]
+      },
+      {
+        "path": "src/components/cart/CartItem.jsx",
+        "category": "feature",
+        "responsibility": "Render individual cart item with product image, name, price, quantity selector, and remove action",
+        "dependsOn": [
+          "src/context/CartContext.jsx",
+          "src/components/common/QuantitySelector.jsx",
+          "src/lib/formatPrice.js"
+        ]
+      },
+      {
+        "path": "src/components/cart/CheckoutForm.jsx",
+        "category": "feature",
+        "responsibility": "Collect shipping address and payment information with form validation and order summary display",
+        "dependsOn": [
+          "src/lib/formatPrice.js"
+        ]
+      },
+      {
+        "path": "src/pages/HomePage.jsx",
+        "category": "page",
+        "responsibility": "Compose the home page experience with Header, FilterBarSection, and ProductGridSection for product browsing",
+        "dependsOn": [
+          "src/components/layout/StoreLayout.jsx",
+          "src/components/sections/FilterBarSection.jsx",
+          "src/components/sections/ProductGridSection.jsx"
+        ]
+      },
+      {
+        "path": "src/pages/ProductDetailsPage.jsx",
+        "category": "page",
+        "responsibility": "Render product detail view with ProductGallery and ProductInfo components for individual product examination",
+        "dependsOn": [
+          "src/components/layout/StoreLayout.jsx",
+          "src/components/product/ProductGallery.jsx",
+          "src/components/product/ProductInfo.jsx"
+        ]
+      },
+      {
+        "path": "src/pages/CheckoutPage.jsx",
+        "category": "page",
+        "responsibility": "Present checkout form with shipping and payment fields alongside order summary for completing purchase",
+        "dependsOn": [
+          "src/components/layout/StoreLayout.jsx",
+          "src/components/cart/CheckoutForm.jsx"
+        ]
+      },
+      {
+        "path": "src/pages/OrderConfirmationPage.jsx",
+        "category": "page",
+        "responsibility": "Display order success message with order summary and continue shopping action after checkout completion",
+        "dependsOn": [
+          "src/components/layout/StoreLayout.jsx"
+        ]
+      },
+      {
+        "path": "src/pages/NotFoundPage.jsx",
+        "category": "page",
+        "responsibility": "Handle invalid routes with helpful 404 message and navigation back to home or products",
+        "dependsOn": [
+          "src/components/layout/StoreLayout.jsx"
+        ]
+      },
+      {
+        "path": "src/routes/AppRouter.jsx",
+        "category": "utility",
+        "responsibility": "Configure React Router with all routes including dynamic product detail route and wildcard for 404 handling",
+        "dependsOn": [
+          "src/pages/HomePage.jsx",
+          "src/pages/ProductDetailsPage.jsx",
+          "src/pages/CheckoutPage.jsx",
+          "src/pages/OrderConfirmationPage.jsx",
+          "src/pages/NotFoundPage.jsx"
+        ]
+      },
+      {
+        "path": "src/App.jsx",
+        "category": "entry",
+        "responsibility": "Compose MantineProvider with custom theme and AppRouter as the single entry point for the entire application",
+        "dependsOn": [
+          "src/theme/theme.js",
+          "src/routes/AppRouter.jsx",
+          "src/context/CartContext.jsx"
+        ]
+      }
+    ],
+    "batches": [
+      [
+        "src/theme/theme.js",
+        "src/data/imageAssets.js",
+        "src/lib/formatPrice.js",
+        "src/data/products.js",
+        "src/context/CartContext.jsx"
+      ],
+      [
+        "src/components/common/SearchBar.jsx",
+        "src/components/common/QuantitySelector.jsx",
+        "src/components/common/FilterPanel.jsx",
+        "src/components/layout/Header.jsx",
+        "src/components/layout/StoreLayout.jsx"
+      ],
+      [
+        "src/components/common/ProductCard.jsx",
+        "src/components/sections/FilterBarSection.jsx",
+        "src/components/sections/ProductGridSection.jsx",
+        "src/components/product/ProductGallery.jsx",
+        "src/components/product/ProductInfo.jsx"
+      ],
+      [
+        "src/components/cart/CartItem.jsx",
+        "src/components/cart/CartDrawer.jsx",
+        "src/components/cart/CheckoutForm.jsx",
+        "src/pages/HomePage.jsx",
+        "src/pages/ProductDetailsPage.jsx"
+      ],
+      [
+        "src/pages/CheckoutPage.jsx",
+        "src/pages/OrderConfirmationPage.jsx",
+        "src/pages/NotFoundPage.jsx",
+        "src/routes/AppRouter.jsx"
+      ],
+      [
+        "src/App.jsx"
+      ]
+    ]
+  },
+  "prompt": "Create a frontend e-commerce website  Include product cards, search, filters, product details, cart drawer, quantity controls, and checkout form. Use mock data only."
+}
